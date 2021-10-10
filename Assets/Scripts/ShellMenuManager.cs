@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ShellMenuManager : MonoBehaviour
 {
@@ -45,6 +46,6 @@ public class ShellMenuManager : MonoBehaviour
 	// Go back to main menu
 	void OpenMainMenu()
 	{
-
+		SceneManager.LoadScene( "MainMenu", LoadSceneMode.Single );
 	}
 }
