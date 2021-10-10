@@ -5,15 +5,16 @@ using UnityEngine.UI;
 
 public class StatsManager : MonoBehaviour
 {
-	public static int MAX_POINT = 5;
-
-	private int Point = MAX_POINT;
 	public Canvas Bar;
+
+	private int MaxPoint;
+	private int Point;
 
     // Start is called before the first frame update
     void Start()
 	{
-		
+		MaxPoint = Bar.transform.childCount;
+		Point = MaxPoint;
     }
 
     // Update is called once per frame
@@ -48,7 +49,7 @@ public class StatsManager : MonoBehaviour
 	// Increase point by 1
 	public void GainPoint()
 	{
-		if( Point < MAX_POINT )
+		if( Point < MaxPoint )
 		{
 			Bar.transform.GetChild( Point ).gameObject.SetActive( true );
 			Point++;
