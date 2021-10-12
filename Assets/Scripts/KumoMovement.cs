@@ -12,7 +12,7 @@ public class KumoMovement : MonoBehaviour
 
     private bool faceRight = true;
 
-    private bool isGrounded, isClimbable;
+    private bool isGrounded, isClimbable, drop;
     public Transform groundCheck, topCheck;
     public float checkRadius;
     public LayerMask whatIsGround, climbWall;
@@ -43,6 +43,7 @@ public class KumoMovement : MonoBehaviour
         if(isGrounded == true)
         {
             extraJumps = extraJumpsValue;
+            drop = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
@@ -55,7 +56,7 @@ public class KumoMovement : MonoBehaviour
         }
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-        isClimbable = Physics2D.OverlapCircle(topCheck.position, checkRadius, climbWall);
+        if(drop == false)isClimbable = Physics2D.OverlapCircle(topCheck.position, checkRadius, climbWall);
 
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * Speed, rb.velocity.y);
@@ -99,13 +100,20 @@ public class KumoMovement : MonoBehaviour
 
         if (isClimbable)
         {
-            rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+            rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                
                 isClimbable = false;
-                rb.constraints = ~RigidbodyConstraints2D.FreezePositionY;
+                drop = true;
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             }
         }
+        else
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
+
     }
 
     void FixedUpdate()
