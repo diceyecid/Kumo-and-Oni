@@ -35,7 +35,7 @@ public class OniMovement : MonoBehaviour
             extraJumps = extraJumpsValue;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
+        if (Input.GetKeyDown(KeyCode.Keypad2) && extraJumps > 0)
         {
             rb.velocity = Vector2.up * jumpForce;
             extraJumps--;
@@ -66,9 +66,7 @@ public class OniMovement : MonoBehaviour
     void Flip()
     {
         faceRight = !faceRight;
-        Vector3 Scaler = transform.lossyScale;
-        Scaler.x *= -1;
-        transform.localScale = Scaler;
+        transform.Rotate(0f, 180f, 0f);
     }
 }
 
