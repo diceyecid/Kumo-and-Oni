@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ShellMenuManager : MonoBehaviour
 {
+	public GameObject Overlay;
 	public Button InitButton;
 	public Canvas ShellMenu;
 
@@ -21,7 +22,7 @@ public class ShellMenuManager : MonoBehaviour
 		OptionsButton = ShellMenu.transform.Find( "OptionsButton" ).GetComponent<Button>();
 		MainMenuButton = ShellMenu.transform.Find( "MainMenuButton" ).GetComponent<Button>();
 
-		// Hide the shell menu by default 
+		// Hide the shell menu by default
       	ShellMenu.gameObject.SetActive( false );
 
 		// Button listeners
@@ -34,6 +35,7 @@ public class ShellMenuManager : MonoBehaviour
 	// Turn on and turn off shell menu
 	void ToggleShellMenu()
 	{
+		Overlay.gameObject.SetActive( !Overlay.gameObject.activeSelf );
 		ShellMenu.gameObject.SetActive( !ShellMenu.gameObject.activeSelf );
 	}
 
