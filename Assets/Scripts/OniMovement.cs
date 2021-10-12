@@ -20,6 +20,8 @@ public class OniMovement : MonoBehaviour
     private int extraJumps;
     public int extraJumpsValue;
 
+    public Animator animator;
+
 
     void Start()
     {
@@ -30,6 +32,8 @@ public class OniMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         if (isGrounded == true)
         {
             extraJumps = extraJumpsValue;
@@ -47,8 +51,10 @@ public class OniMovement : MonoBehaviour
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
-        moveInput = Input.GetAxis("Horizontal2");
-        rb.velocity = new Vector2(moveInput * Speed, rb.velocity.y);
+        moveInput = Input.GetAxisRaw("Horizontal2") * Speed;
+        animator.SetFloat("Speed", moveInput);
+        rb.velocity = new Vector2(moveInput , rb.velocity.y);
+        
 
         if (faceRight == false && moveInput > 0)
         {

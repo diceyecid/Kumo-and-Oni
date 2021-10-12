@@ -22,5 +22,5 @@ public class SimpleEnemy : MonoBehaviour
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
-
 }
+
