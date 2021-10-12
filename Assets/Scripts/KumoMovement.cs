@@ -12,10 +12,10 @@ public class KumoMovement : MonoBehaviour
 
     private bool faceRight = true;
 
-    private bool isGrounded;
-    public Transform groundCheck;
+    private bool isGrounded, isClimbable;
+    public Transform groundCheck, topCheck;
     public float checkRadius;
-    public LayerMask whatIsGround;
+    public LayerMask whatIsGround, climbWall;
 
     private int extraJumps;
     public int extraJumpsValue;
@@ -55,6 +55,7 @@ public class KumoMovement : MonoBehaviour
         }
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        isClimbable = Physics2D.OverlapCircle(topCheck.position, checkRadius, climbWall);
 
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * Speed, rb.velocity.y);
@@ -95,6 +96,16 @@ public class KumoMovement : MonoBehaviour
             rb.velocity = new Vector2(xWallForce * -moveInput, yWallForce);
         }
 
+
+        if (isClimbable)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                isClimbable = false;
+                rb.constraints = ~RigidbodyConstraints2D.FreezePositionY;
+            }
+        }
     }
 
     void FixedUpdate()
