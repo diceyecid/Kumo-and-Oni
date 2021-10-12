@@ -59,10 +59,11 @@ public class KumoMovement : MonoBehaviour
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * Speed, rb.velocity.y);
 
-        if(faceRight == false && moveInput > 0)
+        if (faceRight == false && moveInput > 0)
         {
             Flip();
-        }else if(faceRight == true && moveInput < 0)
+        }
+        else if (faceRight == true && moveInput < 0)
         {
             Flip();
         }
@@ -72,7 +73,9 @@ public class KumoMovement : MonoBehaviour
         if (isTouchingFront == true && isGrounded == false && moveInput != 0)
         {
             wallSliding = true;
-        }else{
+            
+        }
+        else{
             wallSliding = false;
         }
 
@@ -94,10 +97,10 @@ public class KumoMovement : MonoBehaviour
 
     }
 
-   /* void FixedUpdate()
+    void FixedUpdate()
     {
-       
-    }*/
+        
+    }
 
     void Flip()
     {
@@ -110,5 +113,21 @@ public class KumoMovement : MonoBehaviour
     void SetWallJumpingToFalse()
     {
         wallJumping = false;
+        if (rb.velocity.y > 0) rb.velocity = new Vector2(rb.velocity.x, 2);
+    }
+
+    void move()
+    {
+        moveInput = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(moveInput * Speed, rb.velocity.y);
+
+        if (faceRight == false && moveInput > 0)
+        {
+            Flip();
+        }
+        else if (faceRight == true && moveInput < 0)
+        {
+            Flip();
+        }
     }
 }
