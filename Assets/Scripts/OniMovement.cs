@@ -39,12 +39,12 @@ public class OniMovement : MonoBehaviour
             extraJumps = extraJumpsValue;
         }
 
-        if (Input.GetKeyDown(KeyCode.Keypad2) && extraJumps > 0)
+        if (Input.GetKeyDown(KeyCode.Period) && extraJumps > 0)
         {
             rb.velocity = Vector2.up * jumpForce;
             extraJumps--;
         }
-        else if (Input.GetKeyDown(KeyCode.Keypad2) && extraJumps == 0 && isGrounded == true)
+        else if (Input.GetKeyDown(KeyCode.Period) && extraJumps == 0 && isGrounded == true)
         {
             rb.velocity = Vector2.up * jumpForce;
         }

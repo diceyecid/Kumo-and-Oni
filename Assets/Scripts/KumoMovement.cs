@@ -46,11 +46,11 @@ public class KumoMovement : MonoBehaviour
             drop = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.K) && extraJumps > 0)
+        if (Input.GetKeyDown(KeyCode.G) && extraJumps > 0)
         {
             rb.velocity = Vector2.up * jumpForce;
             extraJumps--;
-        }else if(Input.GetKeyDown(KeyCode.K) && extraJumps == 0 && isGrounded == true)
+        }else if(Input.GetKeyDown(KeyCode.G) && extraJumps == 0 && isGrounded == true)
         {
             rb.velocity = Vector2.up * jumpForce;
         }
@@ -86,7 +86,7 @@ public class KumoMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
 
-        if(Input.GetKeyDown(KeyCode.K) && wallSliding == true)
+        if(Input.GetKeyDown(KeyCode.G) && wallSliding == true)
         {
             wallJumping = true;
             Invoke("SetWallJumpingToFalse", wallJumpTime);
@@ -101,7 +101,7 @@ public class KumoMovement : MonoBehaviour
         if (isClimbable)
         {
             rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
-            if (Input.GetKeyDown(KeyCode.K))
+            if (Input.GetKeyDown(KeyCode.G))
             {
                 
                 isClimbable = false;
