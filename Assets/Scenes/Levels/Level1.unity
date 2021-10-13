@@ -923,6 +923,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of ef0d90b (Update Level1.unity)
   m_LocalPosition: {x: 22.387344, y: -1.274, z: 0}
@@ -938,6 +939,9 @@ Transform:
 >>>>>>> parent of a66faaf (changed attack and jump key)
 =======
 >>>>>>> parent of ef0d90b (Update Level1.unity)
+=======
+  m_LocalPosition: {x: 22.387344, y: -1.31, z: 0}
+>>>>>>> parent of a66faaf (changed attack and jump key)
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children:
   - {fileID: 801162968}
