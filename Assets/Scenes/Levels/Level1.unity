@@ -751,7 +751,7 @@ GameObject:
   m_Layer: 0
   m_Name: Ground Check
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -763,7 +763,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801162967}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.073, y: -1.176, z: 0}
+  m_LocalPosition: {x: -0.013, y: -1.223, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0.33333334}
   m_Children: []
   m_Father: {fileID: 964046742}
@@ -921,6 +921,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 22.387344, y: -1.274, z: 0}
 =======
   m_LocalPosition: {x: 22.391, y: -1.275, z: 0}
@@ -928,6 +929,9 @@ Transform:
 =======
   m_LocalPosition: {x: 22.387344, y: -1.31, z: 0}
 >>>>>>> parent of 26cd0c0 (fix character landing leap issue by changing the colliders used)
+=======
+  m_LocalPosition: {x: 22.387344, y: -1.31, z: 0}
+>>>>>>> parent of a66faaf (changed attack and jump key)
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children:
   - {fileID: 801162968}
@@ -948,9 +952,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07249673, y: -0.8664279}
+  m_Offset: {x: -0.038827658, y: -0.8290181}
   serializedVersion: 2
-  m_Radius: 0.31152457
+  m_Radius: 0.32274795
 --- !u!95 &964046744
 Animator:
   serializedVersion: 3
