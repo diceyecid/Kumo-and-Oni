@@ -121,7 +121,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 4800
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -169,10 +169,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 142
-        width: 16
-        height: 16
+        x: 48
+        y: 240
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,10 +190,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 142
-        width: 16
-        height: 16
+        x: 96
+        y: 240
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,10 +211,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_2
       rect:
         serializedVersion: 2
-        x: 48
-        y: 142
-        width: 16
-        height: 16
+        x: 144
+        y: 240
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,10 +232,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_3
       rect:
         serializedVersion: 2
-        x: 64
-        y: 142
-        width: 16
-        height: 16
+        x: 192
+        y: 240
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +253,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_4
       rect:
         serializedVersion: 2
-        x: 80
-        y: 142
-        width: 16
-        height: 16
+        x: 240
+        y: 240
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,10 +274,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_5
       rect:
         serializedVersion: 2
-        x: 112
-        y: 142
-        width: 16
-        height: 16
+        x: 336
+        y: 240
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,10 +295,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_6
       rect:
         serializedVersion: 2
-        x: 112
-        y: 126
-        width: 16
-        height: 16
+        x: 48
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,10 +316,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_7
       rect:
         serializedVersion: 2
-        x: 16
-        y: 110
-        width: 16
-        height: 16
+        x: 96
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +337,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_8
       rect:
         serializedVersion: 2
-        x: 32
-        y: 110
-        width: 16
-        height: 16
+        x: 144
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,10 +358,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_9
       rect:
         serializedVersion: 2
-        x: 48
-        y: 110
-        width: 16
-        height: 16
+        x: 240
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,10 +379,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_10
       rect:
         serializedVersion: 2
-        x: 80
-        y: 110
-        width: 16
-        height: 16
+        x: 288
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -400,10 +400,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_11
       rect:
         serializedVersion: 2
-        x: 96
-        y: 110
-        width: 16
-        height: 16
+        x: 336
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -421,10 +421,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_12
       rect:
         serializedVersion: 2
-        x: 112
-        y: 110
-        width: 16
-        height: 16
+        x: 48
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -442,10 +442,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_13
       rect:
         serializedVersion: 2
-        x: 16
-        y: 94
-        width: 16
-        height: 16
+        x: 96
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -463,10 +463,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_14
       rect:
         serializedVersion: 2
-        x: 32
-        y: 94
-        width: 16
-        height: 16
+        x: 144
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -484,10 +484,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_15
       rect:
         serializedVersion: 2
-        x: 48
-        y: 94
-        width: 16
-        height: 16
+        x: 240
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -505,10 +505,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_16
       rect:
         serializedVersion: 2
-        x: 80
-        y: 94
-        width: 16
-        height: 16
+        x: 288
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -526,10 +526,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_17
       rect:
         serializedVersion: 2
-        x: 96
-        y: 94
-        width: 16
-        height: 16
+        x: 336
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -547,10 +547,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_18
       rect:
         serializedVersion: 2
-        x: 112
-        y: 94
-        width: 16
-        height: 16
+        x: 48
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -568,10 +568,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_19
       rect:
         serializedVersion: 2
-        x: 16
-        y: 78
-        width: 16
-        height: 16
+        x: 96
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -589,10 +589,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_20
       rect:
         serializedVersion: 2
-        x: 32
-        y: 78
-        width: 16
-        height: 16
+        x: 144
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -610,10 +610,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_21
       rect:
         serializedVersion: 2
-        x: 48
-        y: 78
-        width: 16
-        height: 16
+        x: 240
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -631,10 +631,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_22
       rect:
         serializedVersion: 2
-        x: 80
-        y: 78
-        width: 16
-        height: 16
+        x: 288
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -652,10 +652,10 @@ TextureImporter:
       name: Environment 1 Atlas-Sheet_23
       rect:
         serializedVersion: 2
-        x: 96
-        y: 78
-        width: 16
-        height: 16
+        x: 336
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -665,27 +665,6 @@ TextureImporter:
       bones: []
       spriteID: c2b1f7ee961a0bb10800000000000000
       internalID: 1995272111270075180
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Environment 1 Atlas-Sheet_24
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 78
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f059efe7a903dcd0800000000000000
-      internalID: -2534671548390223632
       vertices: []
       indices: 
       edges: []
