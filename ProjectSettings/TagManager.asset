@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Oni
   - Kumo
+  - climb
   layers:
   - Default
   - TransparentFX

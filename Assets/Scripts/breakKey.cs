@@ -19,7 +19,8 @@ public class breakKey : MonoBehaviour
     {
         if (fall)
         {
-            
+            print(1);
+            this.GetComponent<pressPiano>().enabled = false;
             this.rb.velocity = new Vector2(0, -6f);
         }
     }
@@ -30,17 +31,17 @@ public class breakKey : MonoBehaviour
         {
             animator.SetBool("isTrigger", true);
         }
-
-        
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
         if (collision.transform.tag == "Oni")
         {
             animator.enabled = false;
             fall = true;
         }
+
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        
 
     }
     private void OnTriggerExit2D(Collider2D collision)
