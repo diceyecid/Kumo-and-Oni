@@ -6,7 +6,9 @@ public class pressPiano : MonoBehaviour
 {
     private bool pressing;
     private Rigidbody2D rb;
-    public int top, bot;
+    public float top, bot, length;
+    public GameObject kumo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +18,11 @@ public class pressPiano : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (pressing && this.transform.position.y > -1)
+        if (pressing && this.transform.position.y > bot)
         {
             rb.velocity = new Vector2(0, -1.5f);
         }
-        else if (pressing == false && this.transform.position.y < 0)
+        else if (pressing == false && this.transform.position.y < top)
         {
             rb.velocity = new Vector2(0, 2);
         }
@@ -29,14 +30,20 @@ public class pressPiano : MonoBehaviour
         {
             rb.velocity = new Vector2(0, 0);
         }
+        
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        print(1);
         if (collision.transform.tag == "Oni")
         {
             pressing = true;
+        }
+
+        if (kumo.GetComponent<KumoMovement>().isClimbable && collision.transform.tag == "Kumo")
+        {
+            kumo.transform.position = new Vector3(kumo.transform.position.x, transform.position.y - length, kumo.transform.position.z);
         }
     }
 
@@ -46,5 +53,10 @@ public class pressPiano : MonoBehaviour
         {
             pressing = false;
         }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        
     }
 }

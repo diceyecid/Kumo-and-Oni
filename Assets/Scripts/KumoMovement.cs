@@ -12,10 +12,11 @@ public class KumoMovement : MonoBehaviour
 
     private bool faceRight = true;
 
-    private bool isGrounded, isClimbable, drop;
+    private bool isGrounded, drop;
     public Transform groundCheck, topCheck;
     public float checkRadius;
     public LayerMask whatIsGround, climbWall;
+    public bool isClimbable;
 
     private int extraJumps;
     public int extraJumpsValue;
