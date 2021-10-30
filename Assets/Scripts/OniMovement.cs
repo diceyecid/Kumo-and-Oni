@@ -74,5 +74,15 @@ public class OniMovement : MonoBehaviour
         faceRight = !faceRight;
         transform.Rotate(0f, 180f, 0f);
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "rope")
+        {
+            print(1);
+            //transform.position = new Vector2(collision.transform.position.x,transform.position.y);
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+    }
 }
 
