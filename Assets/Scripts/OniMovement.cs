@@ -54,7 +54,7 @@ public class OniMovement : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         moveInput = Input.GetAxisRaw("Horizontal2") * Speed;
-        animator.SetFloat("Speed", moveInput);
+        animator.SetFloat("Speed", Mathf.Abs(moveInput));
         rb.velocity = new Vector2(moveInput , rb.velocity.y);
         
 
