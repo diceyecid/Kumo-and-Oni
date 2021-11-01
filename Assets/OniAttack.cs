@@ -19,16 +19,20 @@ public class OniAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad1))
+        if (Input.GetKeyDown(KeyCode.Keypad1) && animator.GetBool("attacking") == false)
         {
             Attack();
+        }
+        else
+        {
+            animator.SetBool("attacking", false);
         }
     }
 
     void Attack()
     {
         //play an attack animation 
-        animator.SetTrigger("Attack");
+        animator.SetBool("attacking", true);
 
         //Detect enemies in range of attack
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);

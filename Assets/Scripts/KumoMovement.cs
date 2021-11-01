@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class KumoMovement : MonoBehaviour
 {
-    public float Speed = 1;
+    public float Speed = 1, dist;
     public float jumpForce = 1;
-    private float moveInput;
+    private float moveInput, Inputver;
 
     private Rigidbody2D rb;
 
@@ -16,7 +16,7 @@ public class KumoMovement : MonoBehaviour
     public bool drop;
     public Transform groundCheck, topCheck;
     public float checkRadius;
-    public LayerMask whatIsGround, climbWall;
+    public LayerMask whatIsGround, climbWall, ropeLayer;
     public bool isClimbable;
 
     private int extraJumps;
@@ -31,7 +31,7 @@ public class KumoMovement : MonoBehaviour
     public float xWallForce;
     public float yWallForce;
     public float wallJumpTime;
-
+    private bool attached;
 
     void Start()
     {
@@ -98,8 +98,28 @@ public class KumoMovement : MonoBehaviour
             rb.velocity = new Vector2(xWallForce * -moveInput, yWallForce);
         }
 
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up, dist, ropeLayer);
 
-        
+        if (hit.collider != null && attached == false)
+        {
+            attached = true;
+        }
+        else
+        {
+            attached = false;
+        }
+
+        if (attached)
+        {
+            Inputver = Input.GetAxisRaw("Vertical2");
+            rb.velocity = new Vector2(rb.velocity.x, Inputver * Speed);
+            rb.gravityScale = 0;
+        }
+        else
+        {
+            rb.gravityScale = 1.6f;
+        }
+
     }
 
     void Flip()

@@ -6,22 +6,24 @@ public class OniMovement : MonoBehaviour
 {
     public float Speed = 1;
     public float jumpForce = 1;
-    private float moveInput;
+    private float moveInput, Inputver;
 
     private Rigidbody2D rb;
 
     private bool faceRight = true;
 
-    private bool isGrounded;
+    private bool isGrounded, attached;
     public Transform groundCheck;
     public float checkRadius;
-    public LayerMask whatIsGround;
+    public LayerMask whatIsGround, ropeLayer;
+
+    private Transform attachedTo;
 
     private int extraJumps;
     public int extraJumpsValue;
 
     public Animator animator;
-
+    public float dist;
 
     void Start()
     {
@@ -65,7 +67,29 @@ public class OniMovement : MonoBehaviour
             Flip();
         }
 
- 
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up, dist, ropeLayer);
+
+        if (hit.collider != null && attached == false)
+        {
+            attached = true;
+        }
+        else
+        {
+            attached = false;
+        }
+
+        if (attached)
+        {
+            Inputver = Input.GetAxisRaw("Vertical");
+            rb.velocity = new Vector2(rb.velocity.x, Inputver * Speed);
+            rb.gravityScale = 0;
+        }
+        else
+        {
+            rb.gravityScale = 1.6f;
+        }
+
+        
     }
 
 
@@ -73,16 +97,6 @@ public class OniMovement : MonoBehaviour
     {
         faceRight = !faceRight;
         transform.Rotate(0f, 180f, 0f);
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.tag == "rope")
-        {
-            print(1);
-            //transform.position = new Vector2(collision.transform.position.x,transform.position.y);
-            rb.velocity = new Vector2(0, rb.velocity.y);
-        }
     }
 }
 
