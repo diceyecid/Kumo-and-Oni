@@ -19,7 +19,7 @@ public class OniAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad1) && animator.GetBool("attacking") == false)
+        if ((Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Comma)) && animator.GetBool("attacking") == false)
         {
             Attack();
         }
