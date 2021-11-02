@@ -15924,9 +15924,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8023758891148014539, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023758891358126244, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8023758892367326520, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: m_Name
       value: Oni (bigger scale reference)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023758892367326520, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8023758892367326528, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: m_RootOrder
@@ -37810,8 +37822,28 @@ PrefabInstance:
       value: Kumo
       objectReference: {fileID: 0}
     - target: {fileID: 2768218997918998265, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768218997918998265, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768218997925607640, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768218998438626886, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768218999001677873, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768218999793147932, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
