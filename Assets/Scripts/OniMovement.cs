@@ -39,22 +39,38 @@ public class OniMovement : MonoBehaviour
         if (isGrounded == true)
         {
             extraJumps = extraJumpsValue;
+            //if (animator.GetBool("falling")) animator.SetBool("landing", true);
+            animator.SetBool("jumping", false);
+            animator.SetBool("falling", false);
+        }
+        else
+        {
+            if (rb.velocity.y < 0)
+            {
+                animator.SetBool("falling", true);
+            }
         }
 
         if ((Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Period)) && extraJumps > 0)
         {
             rb.velocity = Vector2.up * jumpForce;
+            animator.SetBool("jumping", true);
             extraJumps--;
         }
         else if ((Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Period)) && extraJumps == 0 && isGrounded == true)
         {
             rb.velocity = Vector2.up * jumpForce;
+            animator.SetBool("jumping", true);
         }
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         moveInput = Input.GetAxisRaw("Horizontal2") * Speed;
-        animator.SetFloat("Speed", Mathf.Abs(moveInput));
+        if(isGrounded) animator.SetFloat("Speed", Mathf.Abs(moveInput));
+        else
+        {
+            animator.SetFloat("Speed", 0);
+        }
         rb.velocity = new Vector2(moveInput , rb.velocity.y);
         
 
