@@ -19,11 +19,11 @@ public class pressPiano : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pressing && this.transform.position.y > bot)
+        if (pressing && this.transform.localPosition.y + 0.5f > bot)
         {
             rb.velocity = new Vector2(0, -1.5f);
         }
-        else if (pressing == false && this.transform.position.y < top)
+        else if (pressing == false && this.transform.localPosition.y + 0.5f < top)
         {
             rb.velocity = new Vector2(0, 2);
         }
