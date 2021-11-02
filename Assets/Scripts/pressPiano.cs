@@ -25,7 +25,6 @@ public class pressPiano : MonoBehaviour
         }
         else if (pressing == false && this.transform.localPosition.y + 0.5f < top)
         {
-            print(this.transform.position.y);
             rb.velocity = new Vector2(0, 2);
         }
         else
