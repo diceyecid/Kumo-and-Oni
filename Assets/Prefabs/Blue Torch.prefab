@@ -11,14 +11,6 @@ GameObject:
   - component: {fileID: 6176940178592198635}
   - component: {fileID: 3963779818028747819}
   - component: {fileID: 807913070568553032}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  - component: {fileID: 6688137122762223362}
-  - component: {fileID: 4107202228761248701}
-=======
->>>>>>> 549689795ab375b8a72b1dcf683141e6d870cdbd
-=======
->>>>>>> cfb9060d0ceb5ed188e15a0a1fbf9d3d85f39d93
   m_Layer: 0
   m_Name: Blue Torch
   m_TagString: Untagged
@@ -110,8 +102,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
 --- !u!114 &6688137122762223362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +140,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1.625}
   m_EdgeRadius: 0
-=======
->>>>>>> 549689795ab375b8a72b1dcf683141e6d870cdbd
-=======
->>>>>>> cfb9060d0ceb5ed188e15a0a1fbf9d3d85f39d93

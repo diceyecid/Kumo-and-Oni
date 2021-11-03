@@ -4,28 +4,15 @@ using UnityEngine;
 
 public class UndergroundEntrance : MonoBehaviour
 {
-	public GameObject torchGroup;
-	//private GameObject redTorch;
-	//private GameObject blueTorch;
-	//private GameObject greenTorch;
-	//private GameObjecf yellowTorch;
 	public GameObject floorGate;
-
 	public  GameObject[] torches;
+
 	private string correctOrder;
 	private string currentOrder;
 	
     // Start is called before the first frame update
     void Start()
     {
-		//torchGroup = this.transform.Find( "Torch Group" ).GetComponent<GameObject>();
-		//redTorch = torchGroup.transform.Find( "Red Torch" ).GetComponent<GameObject>();
-		//blueTorch = torchGroup.transform.Find( "Blue Torch" ).GetComponent<GameObject>();
-		//greenTorch = torchGroup.transform.Find( "Green Torch" ).GetComponent<GameObject>();
-		//yellowTorch = torchGroup.transform.Find( "Yellow Torch" ).GetComponent<GameObject>();
-		//torches = torchGroup.GetChildren();
-		//floorGate = this.transform.Find( "Floor Gate" ).GetComponent<GameObject>();
-
 		correctOrder = "3120";
 		currentOrder = "";
     }
@@ -37,7 +24,6 @@ public class UndergroundEntrance : MonoBehaviour
 		
 		if( currentOrder == correctOrder )
 		{
-
 			floorGate.SetActive( false );
 		}
     }
