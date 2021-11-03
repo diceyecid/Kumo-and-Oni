@@ -9,6 +9,7 @@ TagManager:
   - climb
   - rope
   - arrows
+  - kunai
   layers:
   - Default
   - TransparentFX
