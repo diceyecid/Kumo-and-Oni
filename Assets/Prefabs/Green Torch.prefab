@@ -12,10 +12,13 @@ GameObject:
   - component: {fileID: 2823627181948837249}
   - component: {fileID: -378456926741343685}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 6442208791114209848}
   - component: {fileID: 135577136429782951}
 =======
 >>>>>>> 549689795ab375b8a72b1dcf683141e6d870cdbd
+=======
+>>>>>>> cfb9060d0ceb5ed188e15a0a1fbf9d3d85f39d93
   m_Layer: 0
   m_Name: Green Torch
   m_TagString: Untagged
@@ -108,6 +111,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &6442208791114209848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,3 +152,5 @@ BoxCollider2D:
   m_EdgeRadius: 0
 =======
 >>>>>>> 549689795ab375b8a72b1dcf683141e6d870cdbd
+=======
+>>>>>>> cfb9060d0ceb5ed188e15a0a1fbf9d3d85f39d93

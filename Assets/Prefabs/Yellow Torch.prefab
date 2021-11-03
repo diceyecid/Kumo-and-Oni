@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 3428050646083179841}
   - component: {fileID: 2823627181948837249}
   - component: {fileID: -378456926741343685}
@@ -19,6 +20,11 @@ GameObject:
   - component: {fileID: 2823627181948837249}
   - component: {fileID: -378456926741343685}
 >>>>>>> 549689795ab375b8a72b1dcf683141e6d870cdbd
+=======
+  - component: {fileID: 8852262997202681001}
+  - component: {fileID: 2823627181948837249}
+  - component: {fileID: -378456926741343685}
+>>>>>>> cfb9060d0ceb5ed188e15a0a1fbf9d3d85f39d93
   m_Layer: 0
   m_Name: Yellow Torch
   m_TagString: Untagged
@@ -27,18 +33,24 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!224 &3428050646083179841
 RectTransform:
 =======
 --- !u!4 &8852262997202681001
 Transform:
 >>>>>>> 549689795ab375b8a72b1dcf683141e6d870cdbd
+=======
+--- !u!4 &8852262997202681001
+Transform:
+>>>>>>> cfb9060d0ceb5ed188e15a0a1fbf9d3d85f39d93
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501292926539197530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_LocalPosition: {x: 0, y: 0, z: 198.8375}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -53,13 +65,18 @@ Transform:
   m_SizeDelta: {x: 0.5, y: 1.625}
   m_Pivot: {x: 0.5, y: 0.5}
 =======
+=======
+>>>>>>> cfb9060d0ceb5ed188e15a0a1fbf9d3d85f39d93
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 >>>>>>> 549689795ab375b8a72b1dcf683141e6d870cdbd
+=======
+>>>>>>> cfb9060d0ceb5ed188e15a0a1fbf9d3d85f39d93
 --- !u!95 &2823627181948837249
 Animator:
   serializedVersion: 3
@@ -130,6 +147,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!114 &974064633765995405
 MonoBehaviour:
@@ -471,3 +489,5 @@ MonoBehaviour:
       m_Calls: []
 =======
 >>>>>>> 549689795ab375b8a72b1dcf683141e6d870cdbd
+=======
+>>>>>>> cfb9060d0ceb5ed188e15a0a1fbf9d3d85f39d93
