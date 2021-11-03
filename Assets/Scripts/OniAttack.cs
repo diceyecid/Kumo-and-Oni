@@ -11,6 +11,9 @@ public class OniAttack : MonoBehaviour
     public int damage = 40;
     private Rigidbody2D rb;
 
+    public Transform firePoint;
+    public GameObject arrowPrefab;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -61,10 +64,19 @@ public class OniAttack : MonoBehaviour
         {
             if (collision.tag == "arrows")
             {
+
                 print("parry");
+                Shoot();
                 Destroy(collision.gameObject);
             }
         }
+    }
+
+    void Shoot()
+    {
+        //shooting logic
+        Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
+
     }
 }
 

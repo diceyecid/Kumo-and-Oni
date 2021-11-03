@@ -6,6 +6,7 @@ public class Kunai : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+
     public float fireRate = 0.5f;
     private float nextFire;
     public Animator animator;
