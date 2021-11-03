@@ -15,8 +15,8 @@ public class EnemyScript : MonoBehaviour
     public float attackRange = 0.5f;
     public int damage = 40;
     private Rigidbody2D rb;
-    public float attackTimerCounter = 2f;
-    float attackTimer;
+    public float fireRate = 1.5f;
+    private float nextFire;
 
     bool isFacingLeft;
     private float distToPlayer;
@@ -28,7 +28,8 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        attackTimer = 0.1f;
+        transform.localScale = new Vector2(1, 1);
+        isFacingLeft = true;
     }
 
     // Update is called once per frame
@@ -163,20 +164,17 @@ public class EnemyScript : MonoBehaviour
             isFacingLeft = false;
             animator.SetFloat("Speed", Mathf.Abs(moveSpeed));
 
-            if (distToOni < distToAp)
+            if (distToOni < distToAp || distToKumo < distToAp)
             {
-                if(attackTimer > 0f)
+                if (Time.time > nextFire)
                 {
-                    attackTimer -= Time.deltaTime;
-                    if(attackTimer <= 0f)
-                    {
-                        Attack();
-                    }
+                    nextFire = Time.time + fireRate;
+                    Attack();
                 }
                 
             }
-            else if (distToOni > distToAp)
-            {
+            else if (distToOni > distToAp || distToKumo > distToAp)
+            { 
                 animator.SetBool("Attacking", false);
             }
         }
@@ -188,11 +186,15 @@ public class EnemyScript : MonoBehaviour
             isFacingLeft = true;
             animator.SetFloat("Speed", Mathf.Abs(moveSpeed));
 
-            if (distToOni < distToAp)
+            if (distToOni < distToAp || distToKumo < distToAp)
             {
-                Attack();
+                if (Time.time > nextFire)
+                {
+                    nextFire = Time.time + fireRate;
+                    Attack();
+                }
             }
-            else if (distToOni > distToAp)
+            else if (distToOni > distToAp || distToKumo > distToAp)
             {
                 animator.SetBool("Attacking", false);
             }
@@ -213,8 +215,7 @@ public class EnemyScript : MonoBehaviour
     void Attack()
     {
         animator.SetBool("Attacking", true);
-        StopChasingPlayer();
-        animator.SetFloat("Speed", 0);
+        //StopChasingPlayer();
 
         //Detect enemies in range of attack
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
@@ -225,8 +226,6 @@ public class EnemyScript : MonoBehaviour
             Debug.Log("We hit " + player.name);
             player.GetComponent<PlayerHealth>().TakeDamage(damage);
         }
-
-        attackTimer = attackTimerCounter;
     }
 
     void OnDrawGizmosSelected()
