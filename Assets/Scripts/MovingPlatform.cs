@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovingPlatform : MonoBehaviour
 {
 	public GameObject platform;
-	public GameObject trigger;
+	public int movingDistance;
 	public int movingDuration;
 
 	private bool isTriggered;
@@ -16,7 +16,7 @@ public class MovingPlatform : MonoBehaviour
     void Start()
     {
 		isTriggered = false;
-		speed = -2 / movingDuration;
+		speed = -1 * movingDistance / movingDuration;
 		timeCount = 0;
     }
 
@@ -32,6 +32,7 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnTriggerEnter2D( Collider2D collision )
 	{
+		print( "trigger" );
 		if( !isTriggered )
 		{
 			isTriggered = true;
