@@ -55,7 +55,6 @@ public class KumoMovement : MonoBehaviour
         }
         else
         {
-            print(rb.velocity.y);
             if (rb.velocity.y < 0)
             {
                 animator.SetBool("jumping", false);
@@ -74,7 +73,7 @@ public class KumoMovement : MonoBehaviour
             animator.SetBool("climbing", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.K) && extraJumps > 0)
+        if (Input.GetKeyDown(KeyCode.G) && extraJumps > 0)
         {
             rb.velocity = Vector2.up * jumpForce;
             extraJumps--;
@@ -99,13 +98,13 @@ public class KumoMovement : MonoBehaviour
 
         isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, checkRadius, whatIsGround);
         horClimb = Physics2D.OverlapCircle(topCheck.position, checkRadius, whatIsGround);
+
         if (isTouchingFront == true && isGrounded == false && moveInput != 0 && wallJumping == false && climbing == false && attached == false)
         {
             wallSliding = true;
             animator.SetBool("jumping", false);
             animator.SetBool("falling", false);
             animator.SetBool("hanging", true);
-            Flip();
         }
         else{
             wallSliding = false;
@@ -119,7 +118,7 @@ public class KumoMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
 
-        if(Input.GetKeyDown(KeyCode.K) && wallSliding == true)
+        if(Input.GetKeyDown(KeyCode.G) && wallSliding == true)
         {
             wallJumping = true;
             animator.SetBool("walljumping", true);

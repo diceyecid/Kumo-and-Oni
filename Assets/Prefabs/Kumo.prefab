@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 2768218997918998271}
   - component: {fileID: 2768218997918998264}
   - component: {fileID: 2768218997918998258}
+  - component: {fileID: 932881208852351153}
+  - component: {fileID: 7021980298345268720}
   m_Layer: 9
   m_Name: Kumo
   m_TagString: Kumo
@@ -78,7 +80,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1187334533
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d388ea9f80cdcd64faf818cdf63cef68, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -182,13 +184,14 @@ MonoBehaviour:
   ropeLayer:
     serializedVersion: 2
     m_Bits: 0
-  isClimbable: 0
+  climbing: 0
   extraJumpsValue: 1
   frontCheck: {fileID: 2768218999793147923}
   wallSlidingSpeed: 2
   xWallForce: 3
   yWallForce: 5
   wallJumpTime: 0.18
+  animator: {fileID: 932881208852351153}
 --- !u!114 &2768218997918998258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,6 +206,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 2768218998438626885}
   bulletPrefab: {fileID: 3316484188493569912, guid: cf8ea678f0a03324aac66ca7e8bfbba7, type: 3}
+  fireRate: 0.5
+  animator: {fileID: 932881208852351153}
+--- !u!95 &932881208852351153
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2768218997918998265}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b1d6ca7c93810484d9cd6a086b94b965, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7021980298345268720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2768218997918998265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d2ad25e20e1e740af47a651140f83d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &2768218997925607640
 GameObject:
   m_ObjectHideFlags: 0

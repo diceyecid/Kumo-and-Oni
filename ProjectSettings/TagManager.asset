@@ -8,6 +8,8 @@ TagManager:
   - Kumo
   - climb
   - rope
+  - arrows
+  - kunai
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Enemies
   - rope
   - Player
-  - 
+  - ballistaArrow
   - 
   - 
   - 
