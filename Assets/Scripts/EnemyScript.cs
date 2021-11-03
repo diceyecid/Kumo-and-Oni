@@ -166,7 +166,7 @@ public class EnemyScript : MonoBehaviour
         }
 
         Vector2 endPos = castPoint.position + Vector3.right * castDist;
-        RaycastHit2D hit = Physics2D.Linecast(castPoint.position, endPos, 1 << LayerMask.NameToLayer("Action"));
+        RaycastHit2D hit = Physics2D.Linecast(castPoint.position, endPos, 1 << LayerMask.NameToLayer("Player"));
 
         if (hit.collider != null)
         {
