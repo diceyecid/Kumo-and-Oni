@@ -155,7 +155,7 @@ public class EnemyScript : MonoBehaviour
         if (transform.position.x < Kumo.position.x || transform.position.x < Oni.position.x)
         {
             //enemy is to the left side of the player, so move right
-            rb.velocity = new Vector2(moveSpeed, 0);
+            rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
             transform.localScale = new Vector2(-1, 1);
             isFacingLeft = false;
             animator.SetFloat("Speed", Mathf.Abs(moveSpeed));
@@ -172,7 +172,7 @@ public class EnemyScript : MonoBehaviour
         else if (transform.position.x > Kumo.position.x || transform.position.x > Oni.position.x)
         {
             //enemy is to the right side of the player , so move left
-            rb.velocity = new Vector2(-moveSpeed, 0);
+            rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
             transform.localScale = new Vector2(1, 1);
             isFacingLeft = true;
             animator.SetFloat("Speed", Mathf.Abs(moveSpeed));
@@ -192,7 +192,7 @@ public class EnemyScript : MonoBehaviour
     {
         isAgro = false;
         isSearching = false;
-        rb.velocity = new Vector2(0, 0);
+        rb.velocity = new Vector2(0, rb.velocity.y);
         animator.SetFloat("Speed", 0);
         print("Stop walking");
     }
