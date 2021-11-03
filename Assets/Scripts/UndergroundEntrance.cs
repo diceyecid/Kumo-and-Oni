@@ -9,12 +9,16 @@ public class UndergroundEntrance : MonoBehaviour
 
 	private string correctOrder;
 	private string currentOrder;
+	private bool isFloorDropAnim;
+	private float timeCount;
 	
     // Start is called before the first frame update
     void Start()
     {
 		correctOrder = "3120";
 		currentOrder = "";
+		isFloorDropAnim = false;
+		timeCount = 0;
     }
 
     // Update is called once per frame
@@ -24,6 +28,18 @@ public class UndergroundEntrance : MonoBehaviour
 		
 		if( currentOrder == correctOrder )
 		{
+			isFloorDropAnim = true;
+		}
+
+		if( isFloorDropAnim )
+		{
+			floorGate.transform.Translate( 0, timeCount * -1, 0 );
+			timeCount += Time.deltaTime;
+		}
+	
+		if( timeCount >= 20 )
+		{
+			isFloorDropAnim = false;
 			floorGate.SetActive( false );
 		}
     }
