@@ -167,7 +167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8023758892367326520, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8023758892367326528, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: m_RootOrder
@@ -253,7 +253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3322621650441282832, guid: b6349390be8382b47b091ad30bfe2cff, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3322621650441282844, guid: b6349390be8382b47b091ad30bfe2cff, type: 3}
       propertyPath: offset.z
@@ -427,7 +427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2768218997918998265, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2768218997918998265, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
       propertyPath: m_TagString
@@ -562,6 +562,26 @@ PrefabInstance:
       propertyPath: kumo
       value: 
       objectReference: {fileID: 1099398938}
+    - target: {fileID: 6966063095524318779, guid: 81104b0760255494da42b2e57f3f5e16, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[0].m_Data
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966063095524318779, guid: 81104b0760255494da42b2e57f3f5e16, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[2].m_Data
+      value: 
+      objectReference: {fileID: 4707616800375678627, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+    - target: {fileID: 6966063095524318779, guid: 81104b0760255494da42b2e57f3f5e16, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[0].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966063095524318779, guid: 81104b0760255494da42b2e57f3f5e16, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[2].m_RefCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966063095524318779, guid: 81104b0760255494da42b2e57f3f5e16, type: 3}
+      propertyPath: m_Tiles.Array.data[352].second.m_TileSpriteIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6966063095577976627, guid: 81104b0760255494da42b2e57f3f5e16, type: 3}
       propertyPath: kumo
       value: 
