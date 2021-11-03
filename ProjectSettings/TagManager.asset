@@ -42,14 +42,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 362576217
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: GUI
     uniqueID: 412784667
-    locked: 0
-  - name: Background
-    uniqueID: 362576217
     locked: 0
   - name: Map
     uniqueID: 2766217251

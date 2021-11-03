@@ -14,9 +14,8 @@ public class EnemyScript : MonoBehaviour
     public LayerMask enemyLayers;
     public float attackRange = 0.5f;
     public int damage = 40;
-    public float nextAttackTimer;
-
     private Rigidbody2D rb;
+
     bool isFacingLeft;
     private float distToPlayer;
     private bool isAgro = false;
@@ -56,14 +55,19 @@ public class EnemyScript : MonoBehaviour
         {
             //agro enemy
             isAgro = true;
+            
         }
         else
         {
-            if (!isSearching)
+            if (isAgro)
             {
-                isSearching = true;
-                Invoke("StopChasingPlayer", 3);
+                if (!isSearching)
+                {
+                    isSearching = true;
+                    Invoke("StopChasingPlayer", 3);
+                }
             }
+            
         }
 
         if (isAgro)
@@ -104,57 +108,6 @@ public class EnemyScript : MonoBehaviour
         }
     }*/
 
-    void ChasePlayer()
-    {
-        float distToKumo = Vector2.Distance(transform.position, Kumo.position);
-        //print("distToKumo:" + distToKumo);
-
-        float distToOni = Vector2.Distance(transform.position, Oni.position);
-        //print("distToOni:" + distToOni);
-
-        float distToAp = Vector2.Distance(transform.position, attackPoint.position);
-
-        if (transform.position.x < Kumo.position.x || transform.position.x < Oni.position.x)
-        {
-            //enemy is to the left side of the player, so move right
-            rb.velocity = new Vector2(moveSpeed, 0);
-            transform.localScale = new Vector2(-1, 1);
-            isFacingLeft = false;
-            animator.SetFloat("Speed", Mathf.Abs(moveSpeed));
-
-            if (distToOni < distToAp)
-            {
-                    Attack();
-            }
-            else if(distToOni > distToAp)
-            {
-                animator.SetBool("Attacking", false);
-            }
-        }
-        else if (transform.position.x > Kumo.position.x || transform.position.x > Oni.position.x)
-        {
-            //enemy is to the right side of the player , so move left
-            rb.velocity = new Vector2(-moveSpeed, 0);
-            transform.localScale = new Vector2(1, 1);
-            isFacingLeft = true;
-            animator.SetFloat("Speed", Mathf.Abs(moveSpeed));
-
-            if (distToOni < distToAp)
-            {
-                Attack();
-            }
-            else if (distToOni > distToAp)
-            {
-                animator.SetBool("Attacking", false);
-            }
-        }
-    }
-
-    void StopChasingPlayer()
-    {
-        rb.velocity = new Vector2(0, 0);
-    }
-
     bool CanSeePlayer(float distance)
     {
         bool val = false;
@@ -166,6 +119,7 @@ public class EnemyScript : MonoBehaviour
         }
 
         Vector2 endPos = castPoint.position + Vector3.right * castDist;
+
         RaycastHit2D hit = Physics2D.Linecast(castPoint.position, endPos, 1 << LayerMask.NameToLayer("Player"));
 
         if (hit.collider != null)
@@ -188,10 +142,67 @@ public class EnemyScript : MonoBehaviour
         return val;
     }
 
-    void Attack()
+    void ChasePlayer()
+    {
+       /* float distToKumo = Vector2.Distance(transform.position, Kumo.position);
+        //print("distToKumo:" + distToKumo);
+
+        float distToOni = Vector2.Distance(transform.position, Oni.position);
+        //print("distToOni:" + distToOni);
+
+        float distToAp = Vector2.Distance(transform.position, attackPoint.position);*/
+
+        if (transform.position.x < Kumo.position.x || transform.position.x < Oni.position.x)
+        {
+            //enemy is to the left side of the player, so move right
+            rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+            transform.localScale = new Vector2(-1, 1);
+            isFacingLeft = false;
+            animator.SetFloat("Speed", Mathf.Abs(moveSpeed));
+
+/*            if (distToOni < distToAp)
+            {
+                    Attack();
+            }
+            else if(distToOni > distToAp)
+            {
+                animator.SetBool("Attacking", false);
+            }*/
+        }
+        else if (transform.position.x > Kumo.position.x || transform.position.x > Oni.position.x)
+        {
+            //enemy is to the right side of the player , so move left
+            rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+            transform.localScale = new Vector2(1, 1);
+            isFacingLeft = true;
+            animator.SetFloat("Speed", Mathf.Abs(moveSpeed));
+
+          /*  if (distToOni < distToAp)
+            {
+                Attack();
+            }
+            else if (distToOni > distToAp)
+            {
+                animator.SetBool("Attacking", false);
+            }*/
+        }
+    }
+
+    void StopChasingPlayer()
+    {
+        isAgro = false;
+        isSearching = false;
+        rb.velocity = new Vector2(0, rb.velocity.y);
+        animator.SetFloat("Speed", 0);
+        print("Stop walking");
+    }
+
+
+
+    /*void Attack()
     {
         animator.SetBool("Attacking", true);
-        rb.velocity = new Vector2(0, 0);
+        rb.velocity = new Vector2(0, rb.velocity.y);
         animator.SetFloat("Speed", Mathf.Abs(moveSpeed));
 
         //Detect enemies in range of attack
@@ -203,7 +214,7 @@ public class EnemyScript : MonoBehaviour
             Debug.Log("We hit " + player.name);
             player.GetComponent<PlayerHealth>().TakeDamage(damage);
         }
-    }
+    }*/
 
     void OnDrawGizmosSelected()
     {
