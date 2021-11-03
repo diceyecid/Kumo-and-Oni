@@ -17,7 +17,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.name);
+        //Debug.Log(collision.name);
 
         SimpleEnemy enemy = collision.GetComponent<SimpleEnemy>();
         if(enemy != null)
@@ -27,10 +27,14 @@ public class Bullet : MonoBehaviour
 
         //Instantiate(impactEffect, transform.position, transform.rotation);
 
-		if( collision.transform.gameObject.layer != 9 )
-		{
-			Destroy(gameObject); 
-		}
     }
+
+	private void OnTriggerStay2D( Collider2D collision )
+	{
+		//if( collision.transform.gameObject.layer != 9 )
+		//{
+			//Destroy(gameObject); 
+		//}
+	}
 
 }
