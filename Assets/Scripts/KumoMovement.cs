@@ -17,7 +17,7 @@ public class KumoMovement : MonoBehaviour
     public Transform groundCheck, topCheck;
     public float checkRadius;
     public LayerMask whatIsGround, climbWall, ropeLayer;
-    public bool isClimbable;
+    public bool climbing;
 
     private int extraJumps;
     public int extraJumpsValue;
@@ -55,10 +55,23 @@ public class KumoMovement : MonoBehaviour
         }
         else
         {
+            print(rb.velocity.y);
             if (rb.velocity.y < 0)
             {
+                animator.SetBool("jumping", false);
                 animator.SetBool("falling", true);
+                climbing = false;
             }
+        }
+
+        if (climbing)
+        {
+            animator.SetBool("jumping", false);
+            animator.SetBool("climbing", true);
+        }
+        else
+        {
+            animator.SetBool("climbing", false);
         }
 
         if (Input.GetKeyDown(KeyCode.K) && extraJumps > 0)
@@ -67,11 +80,7 @@ public class KumoMovement : MonoBehaviour
             extraJumps--;
             animator.SetBool("jumping", true);
         }
-        else if(Input.GetKeyDown(KeyCode.K) && extraJumps == 0 && isGrounded == true)
-        {
-            rb.velocity = Vector2.up * jumpForce;
-            animator.SetBool("jumping", true);
-        }
+
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         //if(drop == false)isClimbable = Physics2D.OverlapCircle(topCheck.position, checkRadius, climbWall);
@@ -90,7 +99,7 @@ public class KumoMovement : MonoBehaviour
 
         isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, checkRadius, whatIsGround);
         horClimb = Physics2D.OverlapCircle(topCheck.position, checkRadius, whatIsGround);
-        if (isTouchingFront == true && isGrounded == false && moveInput != 0 && wallJumping == false)
+        if (isTouchingFront == true && isGrounded == false && moveInput != 0 && wallJumping == false && climbing == false && attached == false)
         {
             wallSliding = true;
             animator.SetBool("jumping", false);
@@ -143,14 +152,10 @@ public class KumoMovement : MonoBehaviour
         {
             rb.gravityScale = 1.6f;
         }
-        if (isGrounded && horClimb == false) animator.SetFloat("Speed", Mathf.Abs(moveInput));
+        if (isGrounded && horClimb == false || climbing) animator.SetFloat("Speed", Mathf.Abs(moveInput));
         else
         {
             animator.SetFloat("Speed", 0);
-        }
-        if (isGrounded == animator.GetBool("hanging"))
-        {
-            print(1);
         }
 
     }

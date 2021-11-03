@@ -54,6 +54,7 @@ public class pressPiano : MonoBehaviour
         {
             kumo.transform.position = new Vector2(kumo.transform.position.x, transform.position.y - length);
             kumo.GetComponent<Rigidbody2D>().velocity = new Vector2(kumo.GetComponent<Rigidbody2D>().velocity.x, 0);
+            kumo.GetComponent<KumoMovement>().climbing = true;
         }
         
     }
@@ -63,8 +64,8 @@ public class pressPiano : MonoBehaviour
         if (collision.transform.tag == "Oni")
         {
             pressing = false;
-
         }
+
     }
 
 
