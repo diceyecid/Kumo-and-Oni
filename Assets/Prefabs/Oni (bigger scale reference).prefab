@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 8023758892367326534}
   - component: {fileID: 8023758892367326533}
   - component: {fileID: 8023758892367326535}
+  - component: {fileID: -4935773782275201953}
   m_Layer: 9
   m_Name: Oni (bigger scale reference)
   m_TagString: Oni
@@ -137,7 +138,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1187334533
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1af0a3f67b6cb48cb962bcb592923aa2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -274,5 +275,21 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 128
+  arrows:
+    serializedVersion: 2
+    m_Bits: 0
   attackRange: 0.2
   damage: 40
+--- !u!114 &-4935773782275201953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8023758892367326520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d2ad25e20e1e740af47a651140f83d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
