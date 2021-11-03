@@ -30,6 +30,7 @@ public class EnemyScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         transform.localScale = new Vector2(1, 1);
         isFacingLeft = true;
+        animator.SetBool("AnimationDone", true);
     }
 
     // Update is called once per frame
@@ -148,57 +149,60 @@ public class EnemyScript : MonoBehaviour
 
     void ChasePlayer()
     {
-        float distToKumo = Vector2.Distance(transform.position, Kumo.position);
-        //print("distToKumo:" + distToKumo);
+        
 
-        float distToOni = Vector2.Distance(transform.position, Oni.position);
-        //print("distToOni:" + distToOni);
+            float distToKumo = Vector2.Distance(transform.position, Kumo.position);
+            //print("distToKumo:" + distToKumo);
 
-        float distToAp = Vector2.Distance(transform.position, attackPoint.position);
+            float distToOni = Vector2.Distance(transform.position, Oni.position);
+            //print("distToOni:" + distToOni);
 
-        if (transform.position.x < Kumo.position.x || transform.position.x < Oni.position.x)
-        {
-            //enemy is to the left side of the player, so move right
-            rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
-            transform.localScale = new Vector2(-1, 1);
-            isFacingLeft = false;
-            animator.SetFloat("Speed", Mathf.Abs(moveSpeed));
+            float distToAp = Vector2.Distance(transform.position, attackPoint.position);
 
-            if (distToOni < distToAp || distToKumo < distToAp)
+            if (transform.position.x < Kumo.position.x || transform.position.x < Oni.position.x)
             {
-                if (Time.time > nextFire)
+                //enemy is to the left side of the player, so move right
+                rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+                transform.localScale = new Vector2(-1, 1);
+                isFacingLeft = false;
+                animator.SetFloat("Speed", Mathf.Abs(moveSpeed));
+
+                if (distToOni < distToAp || distToKumo < distToAp)
                 {
-                    nextFire = Time.time + fireRate;
-                    Attack();
+                    if (Time.time > nextFire)
+                    {
+                        nextFire = Time.time + fireRate;
+                        Attack();
+                    }
+
                 }
-                
-            }
-            else if (distToOni > distToAp || distToKumo > distToAp)
-            { 
-                animator.SetBool("Attacking", false);
-            }
-        }
-        else if (transform.position.x > Kumo.position.x || transform.position.x > Oni.position.x)
-        {
-            //enemy is to the right side of the player , so move left
-            rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
-            transform.localScale = new Vector2(1, 1);
-            isFacingLeft = true;
-            animator.SetFloat("Speed", Mathf.Abs(moveSpeed));
-
-            if (distToOni < distToAp || distToKumo < distToAp)
-            {
-                if (Time.time > nextFire)
+                else if (distToOni > distToAp || distToKumo > distToAp)
                 {
-                    nextFire = Time.time + fireRate;
-                    Attack();
+                    animator.SetBool("Attacking", false);
                 }
             }
-            else if (distToOni > distToAp || distToKumo > distToAp)
+            else if (transform.position.x > Kumo.position.x || transform.position.x > Oni.position.x)
             {
-                animator.SetBool("Attacking", false);
+                //enemy is to the right side of the player , so move left
+                rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+                transform.localScale = new Vector2(1, 1);
+                isFacingLeft = true;
+                animator.SetFloat("Speed", Mathf.Abs(moveSpeed));
+
+                if (distToOni < distToAp || distToKumo < distToAp)
+                {
+                    if (Time.time > nextFire)
+                    {
+                        nextFire = Time.time + fireRate;
+                        Attack();
+                    }
+                }
+                else if (distToOni > distToAp || distToKumo > distToAp)
+                {
+                    animator.SetBool("Attacking", false);
+                }
             }
-        }
+       
     }
 
     void StopChasingPlayer()
@@ -214,18 +218,19 @@ public class EnemyScript : MonoBehaviour
 
     void Attack()
     {
-        animator.SetBool("Attacking", true);
-        //StopChasingPlayer();
+            animator.SetBool("Attacking", true);
+            //StopChasingPlayer();
 
-        //Detect enemies in range of attack
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+            //Detect enemies in range of attack
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-        // Damage them
-        foreach (Collider2D player in hitEnemies)
-        {
-            Debug.Log("We hit " + player.name);
-            player.GetComponent<PlayerHealth>().TakeDamage(damage);
-        }
+            // Damage them
+            foreach (Collider2D player in hitEnemies)
+            {
+                Debug.Log("We hit " + player.name);
+                player.GetComponent<PlayerHealth>().TakeDamage(damage);
+            }
+
     }
 
     void OnDrawGizmosSelected()
@@ -234,5 +239,17 @@ public class EnemyScript : MonoBehaviour
             return;
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+    void FinishAnimation()
+    {
+        animator.SetBool("AnimationDone", true);
+
+    }
+
+    private void InitiateAnimation()
+    {
+        animator.SetBool("AnimationDone", false);
+
     }
 }
