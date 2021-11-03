@@ -13,7 +13,11 @@ public class Kunai : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
+            this.GetComponent<Animator>().SetBool("attacking", true);
+            
         }
+
+        this.GetComponent<Animator>().SetBool("attacking", false);
     }
 
     void Shoot()
