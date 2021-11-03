@@ -27,7 +27,10 @@ public class Bullet : MonoBehaviour
 
         //Instantiate(impactEffect, transform.position, transform.rotation);
 
-        Destroy(gameObject); 
+		if( collision.transform.gameObject.layer != 9 )
+		{
+			Destroy(gameObject); 
+		}
     }
 
 }
