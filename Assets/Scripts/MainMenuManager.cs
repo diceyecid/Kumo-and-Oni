@@ -11,6 +11,7 @@ public class MainMenuManager : MonoBehaviour
 	private Button PlayButton;
 	private Button OptionsButton;
 	private Button CreditsButton;
+	private Button ExitButton;
 
     // Start is called before the first frame update
     void Start()
@@ -19,15 +20,26 @@ public class MainMenuManager : MonoBehaviour
 		PlayButton = MainMenuButtons.transform.Find( "PlayButton" ).GetComponent<Button>();
 		OptionsButton = MainMenuButtons.transform.Find( "OptionsButton" ).GetComponent<Button>();
 		CreditsButton = MainMenuButtons.transform.Find( "CreditsButton" ).GetComponent<Button>();
+		ExitButton = this.transform.Find( "ExitButton" ).GetComponent<Button>();
 
 		// Button listeners
 		PlayButton.onClick.AddListener( LoadLevel1 );
+		ExitButton.onClick.AddListener( QuitGame );
     }
 
     // Load level 1 of the game
-	void LoadLevel1()
+	private void LoadLevel1()
 	{
 		SceneManager.LoadScene( "Level1", LoadSceneMode.Single );
 		SceneManager.LoadScene( "GUI", LoadSceneMode.Additive );
+	}
+
+	private void QuitGame()
+	{
+		#if UNITY_EDITOR
+			UnityEditor.EditorApplication.isPlaying = false;
+		#else
+			Application.Quit();
+		#endif
 	}
 }
