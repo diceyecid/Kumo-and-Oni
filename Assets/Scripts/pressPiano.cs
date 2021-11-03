@@ -40,7 +40,7 @@ public class pressPiano : MonoBehaviour
     {
         if (collision.transform.tag == "Kumo" && climbing == false)
         {
-            print(1);
+
             climbing = true;
         }
     }
