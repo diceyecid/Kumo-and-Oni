@@ -55,7 +55,6 @@ public class KumoMovement : MonoBehaviour
         }
         else
         {
-            print(rb.velocity.y);
             if (rb.velocity.y < 0)
             {
                 animator.SetBool("jumping", false);

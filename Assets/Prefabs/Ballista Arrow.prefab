@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: -2115365445489914697}
   - component: {fileID: 3964272191590099962}
   - component: {fileID: 122141015430388049}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ballista Arrow
-  m_TagString: Untagged
+  m_TagString: arrows
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,14 +116,14 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.51, y: 0.09}
+    oldSize: {x: 1.0625, y: 0.1875}
     newSize: {x: 0.51, y: 0.09}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -144,5 +144,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1edb09a93fa8a4347b435c88160cd2ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 8
   damage: 40
