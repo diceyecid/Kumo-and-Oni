@@ -320,6 +320,7 @@ GameObject:
   - component: {fileID: 339298704}
   - component: {fileID: 339298706}
   - component: {fileID: 339298705}
+  - component: {fileID: 339298707}
   m_Layer: 3
   m_Name: Moving Platform
   m_TagString: Untagged
@@ -412,6 +413,32 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &339298707
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339298702}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 72.24534, y: 0.51090145}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4243011, y: 0.8215897}
+  m_EdgeRadius: 0
 --- !u!1001 &553860993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15966,7 +15993,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451737858}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -16152,7 +16179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8023758892367326528, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.436
+      value: 60.106
       objectReference: {fileID: 0}
     - target: {fileID: 8023758892367326528, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: m_LocalPosition.y
@@ -38315,7 +38342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2768218997918998259, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.2
+      value: 69.38
       objectReference: {fileID: 0}
     - target: {fileID: 2768218997918998259, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -38469,11 +38496,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4853574612920232911, guid: 29ca98865a4194b3db7cc74adef80d30, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 57.26
+      value: 71.25
       objectReference: {fileID: 0}
     - target: {fileID: 4853574612920232911, guid: 29ca98865a4194b3db7cc74adef80d30, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.46
+      value: -1.49
       objectReference: {fileID: 0}
     - target: {fileID: 4853574612920232911, guid: 29ca98865a4194b3db7cc74adef80d30, type: 3}
       propertyPath: m_LocalPosition.z

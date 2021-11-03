@@ -22,11 +22,11 @@ public class MovingPlatform : MonoBehaviour
     {
 
     }
-
-    private void OnTiggerEnter2D( Collider2D collision )
+    private void OnTriggerEnter2D( Collider2D collision)
 	{
 		Debug.Log( "entered" );
-		if( !isTriggered && collision.transform.gameObject == trigger )
+		print(1);
+		if( !isTriggered && collision.transform.gameObject == trigger)
 		{
 			Debug.Log( "triggered" );
 			float speed  = 2 / movingDuration;
