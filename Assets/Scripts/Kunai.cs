@@ -6,32 +6,40 @@ public class Kunai : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public float fireRate = 0.5f;
+    private float nextFire;
+    public Animator animator;
 
-    public int timer = 20;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+
+    }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && timer == 20)
+        if (Input.GetButtonDown("Fire1") && animator.GetBool("attacking") == false)
         {
-            Shoot();
-            this.GetComponent<Animator>().SetBool("attacking", true);
-            timer--;
-            
+            if(Time.time > nextFire)
+            {
+                nextFire = Time.time + fireRate;
+                Shoot();
+            }
+
         }
-        if (timer  == 0)
+        else
         {
-            timer = 20;
-            this.GetComponent<Animator>().SetBool("attacking", false);
+            animator.SetBool("attacking", false);
         }
-        if (timer > 0 && timer < 20)
-        {
-            timer--;
-        }
+
     }
 
     void Shoot()
     {
         //shooting logic
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        animator.SetBool("attacking", true);
+
     }
 }
