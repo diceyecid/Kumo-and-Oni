@@ -1192,5 +1192,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spearman
       objectReference: {fileID: 0}
+    - target: {fileID: 5276110499845050690, guid: 47ee1bfb998731e44a5e979728205da7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.428
+      objectReference: {fileID: 0}
+    - target: {fileID: 5276110499845050690, guid: 47ee1bfb998731e44a5e979728205da7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.277
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47ee1bfb998731e44a5e979728205da7, type: 3}
