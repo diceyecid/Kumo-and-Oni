@@ -104,7 +104,6 @@ public class KumoMovement : MonoBehaviour
             animator.SetBool("jumping", false);
             animator.SetBool("falling", false);
             animator.SetBool("hanging", true);
-            Flip();
         }
         else{
             wallSliding = false;
