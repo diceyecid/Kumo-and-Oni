@@ -8,35 +8,32 @@ public class MovingPlatform : MonoBehaviour
 	public GameObject trigger;
 	public int movingDuration;
 
-	private bool isTriggered = false;
-	private double timeCount = 0;
+	private bool isTriggered;
+	private float speed;
+	private double timeCount;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+		isTriggered = false;
+		speed = -2 / movingDuration;
+		timeCount = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-    private void OnTriggerEnter2D( Collider2D collision)
-	{
-		Debug.Log( "entered" );
-		print(1);
-		if( !isTriggered && collision.transform.gameObject == trigger)
+		if( isTriggered && timeCount < movingDuration )
 		{
-			Debug.Log( "triggered" );
-			float speed  = 2 / movingDuration;
+			platform.transform.Translate( 0, Time.deltaTime * speed, 0 );
+			timeCount += Time.deltaTime;
+		}
+    }
 
-			while( timeCount < movingDuration )
-			{
-				platform.transform.Translate( 0, (float)( timeCount * speed ), 0 );
-				timeCount += Time.deltaTime;
-			}
-
+    private void OnTriggerEnter2D( Collider2D collision )
+	{
+		if( !isTriggered )
+		{
 			isTriggered = true;
 		}
 	}
