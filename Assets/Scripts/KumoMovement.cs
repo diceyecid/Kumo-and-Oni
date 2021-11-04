@@ -114,7 +114,7 @@ public class KumoMovement : MonoBehaviour
 
         if (wallSliding)
         {
-            
+
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
 
