@@ -85,7 +85,6 @@ public class OniMovement : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up, dist, ropeLayer);
 
-        print(attached);
         if (hit.collider != null && attached == false)
         {
             
