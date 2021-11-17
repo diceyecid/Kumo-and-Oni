@@ -100,8 +100,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   smoothTime: 0.5
-  offset: {x: 0, y: 1, z: -50}
-  maxZoom: 12
-  minZoom: 9
+  offset: {x: 0, y: 1, z: -60}
+  maxZoom: 20
+  minZoom: 18
   zoomLimter: 18
   cam: {fileID: 3322621650441282846}
