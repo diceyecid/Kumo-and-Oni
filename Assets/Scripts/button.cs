@@ -17,7 +17,6 @@ public class button : MonoBehaviour
         
         if (exit == true && this.transform.position.y <= -1)
         {
-            print(1);
             this.transform.position = new Vector2(this.transform.position.x, this.transform.position.y + 0.1f);
         }
         else if (exit == true && this.transform.position.y >= -1)
