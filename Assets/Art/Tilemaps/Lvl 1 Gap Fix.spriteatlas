@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lvl 1 Gap Fix
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: e0b549a6958fdd940a589c019743bc37, type: 3}
+    - {fileID: 2800000, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+    - {fileID: 2800000, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+    - {fileID: 2800000, guid: 6d9fec11f8589a046bea1a04ebacbe2e, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 5990215498662929856, guid: 6d9fec11f8589a046bea1a04ebacbe2e, type: 3}
+  - {fileID: 4278621627682816441, guid: 6d9fec11f8589a046bea1a04ebacbe2e, type: 3}
+  - {fileID: -1851614585762445233, guid: 6d9fec11f8589a046bea1a04ebacbe2e, type: 3}
+  - {fileID: 4014360146882392030, guid: 6d9fec11f8589a046bea1a04ebacbe2e, type: 3}
+  - {fileID: -6610253020818966630, guid: 6d9fec11f8589a046bea1a04ebacbe2e, type: 3}
+  - {fileID: -8598649104569827965, guid: 6d9fec11f8589a046bea1a04ebacbe2e, type: 3}
+  - {fileID: -5508730883306770088, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: 5471212883752380692, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: 2646795109626025010, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: -982087426489305135, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: -583493554944551354, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: 4003835642796092787, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: -4590525132981212220, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: 6077288614380315452, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: -6409862747416588317, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: -8009861602621878908, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: 2078563487248415053, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: 5908135920084091075, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: 6627244529444379496, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: -2736906733126020318, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: -1427206883369664617, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: 3438559085924185780, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: 4084507670319355, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: 6366260760934983655, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: 4060487291051160598, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: 1334310564230581855, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: -7110983858952665915, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: -8206927321329829468, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: 1995272111270075180, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: -1494873401313379364, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
+  - {fileID: -3953658795263785151, guid: e0b549a6958fdd940a589c019743bc37, type: 3}
+  - {fileID: 4099374978436872190, guid: e0b549a6958fdd940a589c019743bc37, type: 3}
+  - {fileID: 1642005178787821036, guid: e0b549a6958fdd940a589c019743bc37, type: 3}
+  - {fileID: -8050008862080272509, guid: e0b549a6958fdd940a589c019743bc37, type: 3}
+  - {fileID: 6204941418062432846, guid: e0b549a6958fdd940a589c019743bc37, type: 3}
+  - {fileID: -5621515850732775399, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+  - {fileID: 6789752033248594641, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+  - {fileID: -1361836977063457059, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+  - {fileID: 1456030785158843609, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+  - {fileID: 3633489436635773055, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+  - {fileID: 4707616800375678627, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+  - {fileID: -2412174267261779742, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+  - {fileID: 2671657470884160329, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+  - {fileID: -6632730658277961409, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+  - {fileID: -8172940449813823494, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+  - {fileID: -6325604239869955681, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+  - {fileID: -8313189016674032759, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+  - {fileID: -662826732460824127, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+  - {fileID: -7025049572608213442, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+  - {fileID: -3469557049789370245, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+  - {fileID: -9000999848096898229, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+  - {fileID: -1571486384134018085, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+  - {fileID: -5836652656230634843, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Environment 1 Atlas-Sheet D_5
+  - Environment 1 Atlas-Sheet D_4
+  - Environment 1 Atlas-Sheet D_1
+  - Environment 1 Atlas-Sheet D_0
+  - Environment 1 Atlas-Sheet D_3
+  - Environment 1 Atlas-Sheet D_2
+  - Environment 1 Atlas-Sheet_10
+  - Environment 1 Atlas-Sheet_11
+  - Environment 1 Atlas-Sheet_12
+  - Environment 1 Atlas-Sheet_13
+  - Environment 1 Atlas-Sheet_14
+  - Environment 1 Atlas-Sheet_15
+  - Environment 1 Atlas-Sheet_16
+  - Environment 1 Atlas-Sheet_17
+  - Environment 1 Atlas-Sheet_18
+  - Environment 1 Atlas-Sheet_19
+  - Environment 1 Atlas-Sheet_1
+  - Environment 1 Atlas-Sheet_0
+  - Environment 1 Atlas-Sheet_3
+  - Environment 1 Atlas-Sheet_2
+  - Environment 1 Atlas-Sheet_5
+  - Environment 1 Atlas-Sheet_4
+  - Environment 1 Atlas-Sheet_7
+  - Environment 1 Atlas-Sheet_6
+  - Environment 1 Atlas-Sheet_9
+  - Environment 1 Atlas-Sheet_8
+  - Environment 1 Atlas-Sheet_21
+  - Environment 1 Atlas-Sheet_20
+  - Environment 1 Atlas-Sheet_23
+  - Environment 1 Atlas-Sheet_22
+  - Environment 1 Atlas-Sheet B_4
+  - Environment 1 Atlas-Sheet B_3
+  - Environment 1 Atlas-Sheet B_2
+  - Environment 1 Atlas-Sheet B_1
+  - Environment 1 Atlas-Sheet B_0
+  - Environment 1 Atlas-Sheet C_15
+  - Environment 1 Atlas-Sheet C_14
+  - Environment 1 Atlas-Sheet C_17
+  - Environment 1 Atlas-Sheet C_16
+  - Environment 1 Atlas-Sheet C_11
+  - Environment 1 Atlas-Sheet C_10
+  - Environment 1 Atlas-Sheet C_13
+  - Environment 1 Atlas-Sheet C_12
+  - Environment 1 Atlas-Sheet C_6
+  - Environment 1 Atlas-Sheet C_7
+  - Environment 1 Atlas-Sheet C_4
+  - Environment 1 Atlas-Sheet C_5
+  - Environment 1 Atlas-Sheet C_2
+  - Environment 1 Atlas-Sheet C_3
+  - Environment 1 Atlas-Sheet C_0
+  - Environment 1 Atlas-Sheet C_1
+  - Environment 1 Atlas-Sheet C_8
+  - Environment 1 Atlas-Sheet C_9
+  m_RenderDataMap: {}
+  m_Tag: Lvl 1 Gap Fix
+  m_IsVariant: 0
