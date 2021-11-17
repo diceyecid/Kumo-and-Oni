@@ -14,20 +14,22 @@ public class button : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(exit);
-        if (exit && this.transform.position.y <= -1)
+        
+        if (exit == true && this.transform.position.y <= -1)
         {
+            print(1);
             this.transform.position = new Vector2(this.transform.position.x, this.transform.position.y + 0.1f);
         }
-        else if (exit = true && this.transform.position.y >= -1)
+        else if (exit == true && this.transform.position.y >= -1)
         {
-            exit = false;
+            //exit = false;
         }
+        
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Oni")
+        if (collision.gameObject.tag == "Oni" || collision.gameObject.tag == "Kumo")
         {
             exit = false;
             if (this.transform.position.y >= -1.3) this.transform.position = new Vector2(this.transform.position.x, this.transform.position.y - 0.1f);
@@ -36,7 +38,7 @@ public class button : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Oni")
+        if (collision.gameObject.tag == "Oni" || collision.gameObject.tag == "Kumo")
         {
             exit = true;
         }
