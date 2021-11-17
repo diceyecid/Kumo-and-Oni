@@ -11,8 +11,7 @@ public class OniAttack : MonoBehaviour
     public int damage = 40;
     private Rigidbody2D rb;
 
-    public Transform firePoint;
-    public GameObject arrowPrefab;
+    
 
     void Start()
     {
@@ -58,26 +57,7 @@ public class OniAttack : MonoBehaviour
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (this.GetComponent<SpriteRenderer>().sprite.name == "on_attacki3" || this.GetComponent<SpriteRenderer>().sprite.name == "on_attacki4")
-        {
-            if (collision.tag == "arrows")
-            {
-
-                print("parry");
-                Shoot();
-                Destroy(collision.gameObject);
-            }
-        }
-    }
-
-    void Shoot()
-    {
-        //shooting logic
-        Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
-
-    }
+    
 }
 
 

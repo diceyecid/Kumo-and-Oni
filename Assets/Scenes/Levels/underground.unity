@@ -233,13 +233,12 @@ PrefabInstance:
       propertyPath: ropeLayer.m_Bits
       value: 256
       objectReference: {fileID: 0}
+    - target: {fileID: 8988389722410106797, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
---- !u!4 &94848557 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8023758892367326528, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
-  m_PrefabInstance: {fileID: 81747356}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &889508808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -266,7 +265,7 @@ PrefabInstance:
     - target: {fileID: 3322621650441282844, guid: b6349390be8382b47b091ad30bfe2cff, type: 3}
       propertyPath: targets.Array.data[1]
       value: 
-      objectReference: {fileID: 94848557}
+      objectReference: {fileID: 0}
     - target: {fileID: 3322621650441282847, guid: b6349390be8382b47b091ad30bfe2cff, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -351,7 +350,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2768218997918998259, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2768218997918998259, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
       propertyPath: m_LocalScale.x
@@ -550,6 +549,14 @@ PrefabInstance:
       propertyPath: kumo
       value: 
       objectReference: {fileID: 1099398938}
+    - target: {fileID: 6966063094878121584, guid: 81104b0760255494da42b2e57f3f5e16, type: 3}
+      propertyPath: m_CellSize.x
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966063094878121584, guid: 81104b0760255494da42b2e57f3f5e16, type: 3}
+      propertyPath: m_CellSize.y
+      value: 0.99
+      objectReference: {fileID: 0}
     - target: {fileID: 6966063095012972157, guid: 81104b0760255494da42b2e57f3f5e16, type: 3}
       propertyPath: kumo
       value: 
