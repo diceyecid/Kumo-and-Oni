@@ -55108,6 +55108,14 @@ PrefabInstance:
       propertyPath: whatIsGround.m_Bits
       value: 72
       objectReference: {fileID: 0}
+    - target: {fileID: 8426323590337686929, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.4300194
+      objectReference: {fileID: 0}
+    - target: {fileID: 8426323590337686929, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.6600018
+      objectReference: {fileID: 0}
     - target: {fileID: 8426323590337686954, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
       propertyPath: m_TagString
       value: Kumo
@@ -55310,11 +55318,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8988389722410106797, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 187.02
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 8988389722410106797, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -23.86
+      value: 10.9
       objectReference: {fileID: 0}
     - target: {fileID: 8988389722410106797, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: m_LocalPosition.z
