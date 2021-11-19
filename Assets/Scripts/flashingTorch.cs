@@ -18,7 +18,6 @@ public class flashingTorch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(count);
         if (count > 0)
         {
             count--;
