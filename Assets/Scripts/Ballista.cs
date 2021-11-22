@@ -40,6 +40,6 @@ public class Ballista : MonoBehaviour
 	// shoot arrows automatically 
 	void Shoot()
 	{
-        Instantiate( arrow, this.transform.position - offset, this.transform.rotation );
+        Instantiate(arrow, this.transform.position - offset, this.transform.rotation );
 	}
 }
