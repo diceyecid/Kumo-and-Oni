@@ -20,9 +20,14 @@ public class boss : MonoBehaviour
 
         if (summonTimer == 0)
         {
-            print(1);
-            Instantiate(summon, new Vector2(Random.Range(-10, 20), -2.7f), this.transform.rotation);
+            this.GetComponent<Animator>().SetBool("isSummoning", true);
+        }
+        
+        if (this.GetComponent<SpriteRenderer>().sprite.name == "boss_summon6")
+        {
+            if (this.GetComponent<Animator>().GetBool("isSummoning"))Instantiate(summon, new Vector2(Random.Range(-10, 20), -2.7f), this.transform.rotation);
             summonTimer = 600;
+            this.GetComponent<Animator>().SetBool("isSummoning", false);
         }
     }
 }
