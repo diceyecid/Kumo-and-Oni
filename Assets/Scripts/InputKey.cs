@@ -5,16 +5,16 @@ using UnityEngine;
 public static class InputKey
 {
 	// Kumo keyboard controls
-	public const KeyCode KumoLeft = KeyCode.A;
-	public const KeyCode KumoRight = KeyCode.D;
-	public const KeyCode KumoJump = KeyCode.G;
-	public const KeyCode KumoAttack = KeyCode.F;
-	public const KeyCode KumoInteract = KeyCode.W;
+	public const KeyCode KUMO_LEFT = KeyCode.A;
+	public const KeyCode KUMO_RIGHT = KeyCode.D;
+	public const KeyCode KUMO_JUMP = KeyCode.G;
+	public const KeyCode KUMO_ATTACK = KeyCode.F;
+	public const KeyCode KUMO_INTERACT = KeyCode.W;
 
 	// Oni keyboard controls
-	public const KeyCode OniLeft = KeyCode.LeftArrow;
-	public const KeyCode OniRight = KeyCode.RightArrow;
-	public const KeyCode OniJump = KeyCode.Period;
-	public const KeyCode OniAttack = KeyCode.Comma;
-	public const KeyCode OniInteract = KeyCode.UpArrow;
+	public const KeyCode ONI_LEFT = KeyCode.LeftArrow;
+	public const KeyCode ONI_RIGHT = KeyCode.RightArrow;
+	public const KeyCode ONI_JUMP = KeyCode.Period;
+	public const KeyCode ONI_ATTACK = KeyCode.Comma;
+	public const KeyCode ONI_INTERACT = KeyCode.UpArrow;
 }

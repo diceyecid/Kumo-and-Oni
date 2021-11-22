@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 3248826057631880940}
   - component: {fileID: 4679535824829239721}
   - component: {fileID: 1370300408194112823}
-  m_Layer: 0
+  - component: {fileID: 1784021876153107387}
+  m_Layer: 3
   m_Name: Lever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,3 +99,28 @@ MonoBehaviour:
   left: {fileID: 21300000, guid: 03f65c4908b194642b02bbfb269b1e49, type: 3}
   neutral: {fileID: 21300000, guid: 0b90f1d189ea5ea47a5e84836a0b241e, type: 3}
   right: {fileID: 21300000, guid: fa4ba27b3d133f4429d558d749160f78, type: 3}
+--- !u!60 &1784021876153107387
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2345438980526254799}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.375, y: 1.0625}
+    newSize: {x: 1.375, y: 1.0625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths: []
