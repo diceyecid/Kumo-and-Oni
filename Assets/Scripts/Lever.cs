@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Lever : MonoBehaviour
 {
-	private const int LEFT = 0;
-	private const int NEUTRAL = 1;
-	private const int RIGHT = 2;
+	public const int LEFT = 0;
+	public const int NEUTRAL = 1;
+	public const int RIGHT = 2;
 
 	public Sprite left;
 	public Sprite neutral;
@@ -58,6 +58,14 @@ public class Lever : MonoBehaviour
     {
 		detectInteraction();
     }
+
+
+
+	// get current state of lever
+	public int getState()
+	{
+		return state;
+	}
 
 
 
