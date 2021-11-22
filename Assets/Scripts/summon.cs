@@ -18,9 +18,7 @@ public class summon : MonoBehaviour
     {
 
         if (this.GetComponent<SpriteRenderer>().sprite.name == "shadow_7")
-        {
-            print(1);
-            
+        {            
             Destroy(this.gameObject);
         }
     }
