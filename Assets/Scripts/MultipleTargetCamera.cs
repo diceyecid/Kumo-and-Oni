@@ -41,7 +41,6 @@ public class MultipleTargetCamera : MonoBehaviour
 
         else
         {
-            print(shakeTime);
             if (shakeTime > 0)
             {
                 transform.localPosition = new Vector3(orginalpos.x + Random.Range(-0.1f, 0.1f), orginalpos.y + Random.Range(-0.1f, 0.1f), orginalpos.z);
@@ -49,10 +48,12 @@ public class MultipleTargetCamera : MonoBehaviour
             }
             else
             {
-                shakeTime = 0f;
+                shakeTime = 3f;
                 this.transform.localPosition = orginalpos;
                 shake = false;
             }
+
+            print(shakeTime);
         }
     }
 
