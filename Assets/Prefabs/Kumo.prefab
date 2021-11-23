@@ -267,7 +267,7 @@ MonoBehaviour:
   checkRadius: 0.2
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 520
   climbWall:
     serializedVersion: 2
     m_Bits: 64

@@ -6,21 +6,15 @@ public class boss : MonoBehaviour
 {
     // Start is called before the first frame update
     private int summonTimer = 600;
-    private double shakeTimer = 240;
     private int hp = 10;
     public int currentHP;
     private int randomN, stage = 0;
     public GameObject summon, blade;
     public GameObject cam;
 
-    private Vector3 originalPos;
-
-    public float shakeAmount = 10f;
-    public float decreaseFactor = 1.0f;
 
     void Start()
     {
-        originalPos = cam.GetComponent<MultipleTargetCamera>().offset;
 
        
     }
@@ -28,6 +22,7 @@ public class boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //print(hp);
         summonTimer--;
         //stage1
         if (currentHP > 7)
@@ -44,7 +39,7 @@ public class boss : MonoBehaviour
                 if (this.GetComponent<Animator>().GetBool("isSummoning"))
                 {
                     if (randomN == 0)Instantiate(summon, new Vector2(Random.Range(-10, 20), -2.7f), this.transform.rotation);
-                    else if (randomN == 1) Instantiate(blade, this.transform.position, this.transform.rotation);
+                    else if (randomN == 1) Instantiate(blade, new Vector2(this.transform.position.x, this.transform.position.y -1), this.transform.rotation);
                 }
                 summonTimer = 600;
                 this.GetComponent<Animator>().SetBool("isSummoning", false);
@@ -57,21 +52,17 @@ public class boss : MonoBehaviour
                 stage = 1;
                 cam.GetComponent<MultipleTargetCamera>().shake = true;
             }
-
-            if (shakeTimer > 0 && shakeTimer < 240)
-            {
-                cam.GetComponent<MultipleTargetCamera>().offset = originalPos + Random.insideUnitSphere * shakeAmount;
-
-                shakeTimer -= Time.deltaTime * decreaseFactor;
-                shakeTimer--;
-            }
-            else
-            {
-                shakeTimer = 0f;
-                cam.GetComponent<MultipleTargetCamera>().offset = originalPos;
-            }
         }
 
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "blade")
+        {
+            hp--;
+            Destroy(collision.gameObject);
+        }
     }
 }
