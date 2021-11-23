@@ -20,7 +20,6 @@ public class spikeController : MonoBehaviour
         {
             timer = 5f;
             num = Random.Range(1, 7);
-            print(1);
             switch (num) {
                 case 1: 
                     transform.GetChild(0).gameObject.SetActive(true);
