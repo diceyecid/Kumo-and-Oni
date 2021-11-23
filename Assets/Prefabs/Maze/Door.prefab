@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7190781418114592539}
   - component: {fileID: 7190781418114592536}
   - component: {fileID: 7190781418114592537}
+  - component: {fileID: 3170427061113322989}
   - component: {fileID: 4221562246556668216}
   m_Layer: 0
   m_Name: Door
@@ -257,6 +258,28 @@ CompositeCollider2D:
       - {x: 0.000029300001, y: 0}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!68 &3170427061113322989
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7190781418114592519}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 1, y: 0}
+  - {x: 1, y: -3}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!114 &4221562246556668216
 MonoBehaviour:
   m_ObjectHideFlags: 0
