@@ -6,7 +6,7 @@ public class Diamond : MonoBehaviour
 {
 	// levers
 	public Lever leftRight;
-	public Lever upDown;
+	public Lever downUp;
 
 	private Rigidbody2D rb;
 	private float step;
@@ -32,13 +32,13 @@ public class Diamond : MonoBehaviour
 		}
 
 		// up and down movement
-		if( upDown.getState() == Lever.LEFT )
-		{
-			rb.MovePosition( transform.position + Vector3.up * step * Time.deltaTime );
-		}
-		else if( upDown.getState() == Lever.RIGHT )
+		if( downUp.getState() == Lever.LEFT )
 		{
 			rb.MovePosition( transform.position + Vector3.down * step * Time.deltaTime );
+		}
+		else if( downUp.getState() == Lever.RIGHT )
+		{
+			rb.MovePosition( transform.position + Vector3.up * step * Time.deltaTime );
 		}
     }
 }
