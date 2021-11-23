@@ -10,6 +10,7 @@ TagManager:
   - rope
   - arrows
   - kunai
+  - platform
   - blade
   layers:
   - Default
@@ -23,7 +24,7 @@ TagManager:
   - rope
   - Player
   - ballistaArrow
-  - Background
+  - 
   - 
   - 
   - 
