@@ -26,7 +26,6 @@ public class OniBlock : MonoBehaviour
             if (collision.tag == "arrows")
             {
 
-                print("parry");
                 Shoot();
                 Destroy(collision.gameObject);
             }

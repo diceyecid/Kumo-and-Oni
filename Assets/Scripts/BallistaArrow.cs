@@ -21,8 +21,12 @@ public class BallistaArrow : MonoBehaviour
 
 
     private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(gameObject);
+    { 
+        if (collision.gameObject.tag == "ground")
+        {
+            print(collision.gameObject.name);
+            Destroy(gameObject);
+        }
     }
 
 }
