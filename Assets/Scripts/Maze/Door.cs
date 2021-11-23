@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
+	// colliders 
+	public DoorCollider firstCollider;
+	public DoorCollider secondCollider;
+
 	// variables for animation
 	public bool isOpen;
 	private bool isMoving;
 	private float height;
-
-	// variables for detecting if Kumo and Oni passed the door
-	private bool isKumoPassed;
-	private bool isOniPassed;
 
     // Start is called before the first frame update
     void Start()
     {
 		isMoving = false;
 		height = 3.0f;
-		
-		isKumoPassed = false;
-		isOniPassed =  false;
 
 		if( isOpen )
 		{
@@ -33,6 +30,7 @@ public class Door : MonoBehaviour
     void Update()
     {
 		movingAnimation();
+		detectPass();
     }
 
 
@@ -69,16 +67,13 @@ public class Door : MonoBehaviour
 		}
 	}
 
-	// check if Kumo and Oni passed the door
-	private void OnTriggerExit2D( Collider2D other )
+	// detect if both Kumo and Oni passed the door
+	private void detectPass()
 	{
-		isKumoPassed = other.gameObject.tag == "Kumo" ? !isKumoPassed : isKumoPassed;
-		isOniPassed = other.gameObject.tag == "Oni" ? !isOniPassed : isOniPassed;
-
-		if( isKumoPassed && isOniPassed ) 
+		if( secondCollider.getBothPassed() )
 		{
+			firstCollider.GetComponent<EdgeCollider2D>().isTrigger = false;
 			closeDoor();
-			GetComponent<EdgeCollider2D>().isTrigger = false;
 		}
 	}
 
