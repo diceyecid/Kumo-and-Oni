@@ -9,7 +9,7 @@ public class boss : MonoBehaviour
     private int hp = 10;
     public int currentHP;
     private int randomN, stage = 0;
-    public GameObject summon, blade;
+    public GameObject summon, blade, platform;
     public GameObject cam;
 
 
@@ -25,7 +25,7 @@ public class boss : MonoBehaviour
         //print(hp);
         summonTimer--;
         //stage1
-        if (currentHP > 7)
+        if (hp > 7)
         {
 
             if (summonTimer == 0)
@@ -45,12 +45,13 @@ public class boss : MonoBehaviour
                 this.GetComponent<Animator>().SetBool("isSummoning", false);
             }
         }
-        else if (currentHP > 3)
+        else if (hp > 3)
         {
             if (stage == 0)
             {
                 stage = 1;
                 cam.GetComponent<MultipleTargetCamera>().shake = true;
+                platform.SetActive(true);
             }
         }
 

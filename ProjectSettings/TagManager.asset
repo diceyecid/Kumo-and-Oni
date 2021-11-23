@@ -10,6 +10,8 @@ TagManager:
   - rope
   - arrows
   - kunai
+  - platform
+  - blade
   layers:
   - Default
   - TransparentFX
