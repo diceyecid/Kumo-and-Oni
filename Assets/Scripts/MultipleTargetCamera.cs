@@ -18,6 +18,12 @@ public class MultipleTargetCamera : MonoBehaviour
 
     public Camera cam;
 
+
+    public float shakeAmount = 0f;
+    public float decreaseFactor = 1.0f;
+    public bool shake;
+    public float shakeTime = 10;
+    private Vector3 orginalpos;
     void Start()
     {
         cam = GetComponent<Camera>();
@@ -27,18 +33,37 @@ public class MultipleTargetCamera : MonoBehaviour
     {
         if (targets.Count == 0)
             return;
+        if (shake == false)
+        {
+            Move();
+            Zoom();
+        }
 
-        Move();
-        Zoom();
+        else
+        {
+            print(shakeTime);
+            if (shakeTime > 0)
+            {
+                transform.localPosition = new Vector3(orginalpos.x + Random.Range(-0.1f, 0.1f), orginalpos.y + Random.Range(-0.1f, 0.1f), orginalpos.z);
+                shakeTime -= Time.deltaTime;
+            }
+            else
+            {
+                shakeTime = 0f;
+                this.transform.localPosition = orginalpos;
+                shake = false;
+            }
+        }
     }
 
-    void Move()
+        void Move()
     {
         Vector3 centerPoint = GetCenterPoint();
 
         Vector3 newPosition = centerPoint + offset;
 
         transform.position = Vector3.SmoothDamp(transform.position, newPosition, ref velocity, smoothTime);
+        orginalpos = transform.position;
     }
 
     void Zoom()
