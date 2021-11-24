@@ -235,6 +235,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5774927050692996751, guid: 50d5cceb7548f4240bf6670457c9ee88, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8247954672647819150, guid: 50d5cceb7548f4240bf6670457c9ee88, type: 3}
       propertyPath: m_Name
       value: KumoStats
@@ -303,6 +307,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3357783012073825248, guid: 1048f8fe84b5e4b3a9653b785bfe28dc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5774927050692996751, guid: 1048f8fe84b5e4b3a9653b785bfe28dc, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8247954672647819150, guid: 1048f8fe84b5e4b3a9653b785bfe28dc, type: 3}
