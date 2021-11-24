@@ -21,11 +21,11 @@ public class Torch : MonoBehaviour
     {
 		if( triggerStay )
 		{
-			if( triggerObjName == "Kumo" && Input.GetKeyDown( KeyCode.E ) ) 
+			if( triggerObjName == "Kumo" && Input.GetKeyDown( InputKey.KUMO_INTERACT ) ) 
 			{
 				anim.SetBool( "isLit", !anim.GetBool( "isLit" ) );
 			}
-			else if( triggerObjName == "Oni" && Input.GetKeyDown( KeyCode.Slash ) )
+			else if( triggerObjName == "Oni" && Input.GetKeyDown( InputKey.ONI_INTERACT ) )
 			{
 				anim.SetBool( "isLit", !anim.GetBool( "isLit" ) );
 			}

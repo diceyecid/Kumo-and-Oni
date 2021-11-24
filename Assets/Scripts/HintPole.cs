@@ -21,11 +21,11 @@ public class HintPole : MonoBehaviour
 	{
 		if (triggerStay)
 		{
-			if (triggerObjName == "Kumo" && Input.GetKeyDown(KeyCode.E))
+			if (triggerObjName == "Kumo" && Input.GetKeyDown(InputKey.KUMO_INTERACT))
 			{
 				anim.SetBool("openHint", true);
 			}
-			else if (triggerObjName == "Oni" && Input.GetKeyDown(KeyCode.Slash))
+			else if (triggerObjName == "Oni" && Input.GetKeyDown(InputKey.ONI_INTERACT))
 			{
 				anim.SetBool("openHint", true);
 			}
