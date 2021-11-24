@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 6176940178592198635}
   - component: {fileID: 3963779818028747819}
   - component: {fileID: 807913070568553032}
+  - component: {fileID: 4107202228761248701}
+  - component: {fileID: 6688137122762223362}
+  - component: {fileID: 2795054744676373126}
   m_Layer: 0
   m_Name: Blue Torch
   m_TagString: Untagged
@@ -102,18 +105,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6688137122762223362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8504039930300129758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60b9031844e4043cea3120cfee87c487, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &4107202228761248701
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -140,3 +131,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1.625}
   m_EdgeRadius: 0
+--- !u!114 &6688137122762223362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8504039930300129758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b9031844e4043cea3120cfee87c487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2795054744676373126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8504039930300129758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8aa27fe349b840c09672d8d2bcdb620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kumoInteractionUI: {fileID: 4432582857936217880, guid: d6a1620a5585d44bcaea5665100f4421, type: 3}
+  oniInteractionUI: {fileID: 4432582857936217880, guid: 635f92c40d1a5425993920e80ab4134e, type: 3}
+  kumo: {fileID: 0}
+  oni: {fileID: 0}

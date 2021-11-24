@@ -6327,6 +6327,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff39f66742e5e0a4a82840a4dace73e3, type: 3}
+--- !u!1 &754197802 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8988389720891211449, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
+  m_PrefabInstance: {fileID: 8988389721893637943}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &765458568
 GameObject:
   m_ObjectHideFlags: 0
@@ -10893,6 +10898,7 @@ GameObject:
   - component: {fileID: 1008570036}
   - component: {fileID: 1008570039}
   - component: {fileID: 1008570040}
+  - component: {fileID: 1008570041}
   m_Layer: 0
   m_Name: hint_pole_1
   m_TagString: Untagged
@@ -11022,6 +11028,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2a9dc48fd0a2c4daa3092d6545cefe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1008570041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008570035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8aa27fe349b840c09672d8d2bcdb620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kumoInteractionUI: {fileID: 4432582857936217880, guid: d6a1620a5585d44bcaea5665100f4421, type: 3}
+  oniInteractionUI: {fileID: 4432582857936217880, guid: 635f92c40d1a5425993920e80ab4134e, type: 3}
+  kumo: {fileID: 324516700}
+  oni: {fileID: 754197802}
 --- !u!1 &1013377299
 GameObject:
   m_ObjectHideFlags: 0
@@ -60652,6 +60674,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2111111599}
     m_Modifications:
+    - target: {fileID: 1622942532969115902, guid: f1d4d7613d7c04fd7ab178a671e2f7b0, type: 3}
+      propertyPath: oni
+      value: 
+      objectReference: {fileID: 754197802}
+    - target: {fileID: 1622942532969115902, guid: f1d4d7613d7c04fd7ab178a671e2f7b0, type: 3}
+      propertyPath: kumo
+      value: 
+      objectReference: {fileID: 324516700}
     - target: {fileID: 2159050661367432144, guid: f1d4d7613d7c04fd7ab178a671e2f7b0, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -60660,6 +60690,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 198.8375
       objectReference: {fileID: 0}
+    - target: {fileID: 3258563371381479698, guid: f1d4d7613d7c04fd7ab178a671e2f7b0, type: 3}
+      propertyPath: oni
+      value: 
+      objectReference: {fileID: 754197802}
+    - target: {fileID: 3258563371381479698, guid: f1d4d7613d7c04fd7ab178a671e2f7b0, type: 3}
+      propertyPath: kumo
+      value: 
+      objectReference: {fileID: 324516700}
+    - target: {fileID: 4796805570546862135, guid: f1d4d7613d7c04fd7ab178a671e2f7b0, type: 3}
+      propertyPath: oni
+      value: 
+      objectReference: {fileID: 754197802}
+    - target: {fileID: 4796805570546862135, guid: f1d4d7613d7c04fd7ab178a671e2f7b0, type: 3}
+      propertyPath: kumo
+      value: 
+      objectReference: {fileID: 324516700}
     - target: {fileID: 5109994732690560601, guid: f1d4d7613d7c04fd7ab178a671e2f7b0, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -60724,6 +60770,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 198.8375
       objectReference: {fileID: 0}
+    - target: {fileID: 7834799108173330548, guid: f1d4d7613d7c04fd7ab178a671e2f7b0, type: 3}
+      propertyPath: oni
+      value: 
+      objectReference: {fileID: 754197802}
+    - target: {fileID: 7834799108173330548, guid: f1d4d7613d7c04fd7ab178a671e2f7b0, type: 3}
+      propertyPath: kumo
+      value: 
+      objectReference: {fileID: 324516700}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d4d7613d7c04fd7ab178a671e2f7b0, type: 3}
 --- !u!1001 &8988389721893637943

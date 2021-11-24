@@ -14,6 +14,8 @@ TagManager:
   - blade
   - oniInteraction
   - kumoInteraction
+  - oniStats
+  - kumoStats
   layers:
   - Default
   - TransparentFX

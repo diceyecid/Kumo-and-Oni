@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -378456926741343685}
   - component: {fileID: 974064633765995405}
   - component: {fileID: 1242779217465912782}
+  - component: {fileID: 7156284200077854215}
   m_Layer: 0
   m_Name: Yellow Torch
   m_TagString: Untagged
@@ -148,6 +149,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1.625}
   m_EdgeRadius: 0
+--- !u!114 &7156284200077854215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501292926539197530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8aa27fe349b840c09672d8d2bcdb620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kumoInteractionUI: {fileID: 4432582857936217880, guid: d6a1620a5585d44bcaea5665100f4421, type: 3}
+  oniInteractionUI: {fileID: 4432582857936217880, guid: 635f92c40d1a5425993920e80ab4134e, type: 3}
+  kumo: {fileID: 0}
+  oni: {fileID: 0}
 --- !u!1 &6195465859021188367
 GameObject:
   m_ObjectHideFlags: 0

@@ -288,6 +288,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: KumoStats
       objectReference: {fileID: 0}
+    - target: {fileID: 8247954672647819150, guid: 50d5cceb7548f4240bf6670457c9ee88, type: 3}
+      propertyPath: m_TagString
+      value: kumoStats
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50d5cceb7548f4240bf6670457c9ee88, type: 3}
 --- !u!1 &315984666 stripped
@@ -381,6 +385,10 @@ PrefabInstance:
     - target: {fileID: 8247954672647819150, guid: 1048f8fe84b5e4b3a9653b785bfe28dc, type: 3}
       propertyPath: m_Name
       value: OniStats
+      objectReference: {fileID: 0}
+    - target: {fileID: 8247954672647819150, guid: 1048f8fe84b5e4b3a9653b785bfe28dc, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1048f8fe84b5e4b3a9653b785bfe28dc, type: 3}
