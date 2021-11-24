@@ -145,13 +145,13 @@ public class Lever : MonoBehaviour
 			float height = kumo.transform.position.y - this.transform.position.y;
 
 			// Kumo interacts the lever from the left
-			if( dist > -1 && dist < 0 && height < 1 && state < RIGHT )
+			if( dist > -1.5 && dist < 0 && height < 1.5 && state < RIGHT )
 			{
 				state++;
 			}
 
 			// Kumo interacts the lever from the right
-			else if( dist > 0 && dist < 1 && height < 1 && state > LEFT )
+			else if( dist > 0 && dist < 1.5 && height < 1.5 && state > LEFT )
 			{
 				state--;
 			}
@@ -165,13 +165,13 @@ public class Lever : MonoBehaviour
 			float height = oni.transform.position.y - this.transform.position.y;
 
 			// Oni interacts the lever from the left
-			if( dist > -1 && dist < 0 && height < 1 && state < RIGHT )
+			if( dist > -1.5 && dist < 0 && height < 1.5 && state < RIGHT )
 			{
 				state++;
 			}
 
 			// Oni interacts the lever from the right
-			else if( dist > 0 && dist < 1 && height < 1 &&state > LEFT )
+			else if( dist > 0 && dist < 1.5 && height < 1.5 &&state > LEFT )
 			{
 				state--;
 			}
