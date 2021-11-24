@@ -12,6 +12,8 @@ TagManager:
   - kunai
   - platform
   - blade
+  - oniInteraction
+  - kumoInteraction
   layers:
   - Default
   - TransparentFX
