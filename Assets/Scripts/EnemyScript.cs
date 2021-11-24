@@ -36,25 +36,6 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       /* //distance between enemy and the players
-        float distToKumo = Vector2.Distance(transform.position, Kumo.position);
-        print("distToKumo:" + distToKumo);
-
-        float distToOni = Vector2.Distance(transform.position, Oni.position);
-        print("distToOni:" + distToOni);
-
-        
-        if (distToKumo < agroRange && distToKumo < distToOni)
-        {
-            ChaseKumo();
-        }else if(distToOni < agroRange && distToOni < distToKumo)
-        {
-            ChaseOni();
-        }else if(distToKumo > agroRange && distToOni > agroRange)
-        {
-            StopChasingPlayer();
-        }
-*/
 
         if (CanSeePlayer(agroRange))
         {
@@ -80,38 +61,6 @@ public class EnemyScript : MonoBehaviour
             ChasePlayer();
         }
     }
-
-    /*void ChaseKumo()
-    {
-      if(transform.position.x < Kumo.position.x)
-      {
-            //enemy is to the left side of the player, so move right
-            rb.velocity = new Vector2(moveSpeed, 0);
-            transform.localScale = new Vector2(-1, 1);
-        }
-      else if(transform.position.x > Kumo.position.x)
-        {
-            //enemy is to the right side of the player , so move left
-            rb.velocity = new Vector2(-moveSpeed, 0);
-            transform.localScale = new Vector2(1, 1);
-        }  
-    }
-
-    void ChaseOni()
-    {
-        if (transform.position.x < Oni.position.x)
-        {
-            //enemy is to the left side of the player, so move right
-            rb.velocity = new Vector2(moveSpeed, 0);
-            transform.localScale = new Vector2(-1, 1);
-        }
-        else if (transform.position.x > Oni.position.x)
-        {
-            //enemy is to the right side of the player , so move left
-            rb.velocity = new Vector2(-moveSpeed, 0);
-            transform.localScale = new Vector2(1, 1);
-        }
-    }*/
 
     bool CanSeePlayer(float distance)
     {
@@ -204,8 +153,7 @@ public class EnemyScript : MonoBehaviour
                 }
                 else if (distToOni > distToAp || distToKumo > distToAp)
                 {
-                    //animator.SetBool("Attacking", false);
-                    
+                    //animator.SetBool("Attacking", false); 
                     print("stop attacking2");
             }
             }
@@ -225,10 +173,9 @@ public class EnemyScript : MonoBehaviour
 
     void Attack()
     {
-            animator.SetBool("Attacking", true);
-
-            StopChasingPlayer();
-                   
+        animator.SetBool("Attacking", true);
+        StopChasingPlayer();
+                
             //Detect enemies in range of attack
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
@@ -237,9 +184,10 @@ public class EnemyScript : MonoBehaviour
             {
                 Debug.Log("We hit " + player.name);
                 player.GetComponent<PlayerHealth>().TakeDamage(damage);
+                
             }
+        
 
-            
     }
 
     void OnDrawGizmosSelected()

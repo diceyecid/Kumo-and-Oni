@@ -39,97 +39,115 @@ public class KumoMovement : MonoBehaviour
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        checkGround();
+        PlayerHealth kumoHealth = GetComponent<PlayerHealth>();
 
-        checkClimb();
-
-        checkJump();
-        
-
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-        //if(drop == false)isClimbable = Physics2D.OverlapCircle(topCheck.position, checkRadius, climbWall);
-
-        /* moveInput = Input.GetAxis("Horizontal");
-         rb.velocity = new Vector2(moveInput * Speed, rb.velocity.y);
-
-         if (faceRight == false && moveInput > 0)
-         {
-             Flip();
-         }
-         else if (faceRight == true && moveInput < 0)
-         {
-             Flip();
-         }*/
-
-        move();
-
-        
-        horClimb = Physics2D.OverlapCircle(topCheck.position, checkRadius, whatIsGround);
-        isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, checkRadius, whatIsGround);
-
-        if (isTouchingFront == true && isGrounded == false && moveInput != 0 && wallJumping == false && climbing == false && attached == false)
+        if (kumoHealth.health > 0)
         {
-            wallSliding = true;
+            animator.SetBool("Die", false);
+            checkGround();
+
+            checkClimb();
+
+            checkJump();
+
+
+            isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+            //if(drop == false)isClimbable = Physics2D.OverlapCircle(topCheck.position, checkRadius, climbWall);
+
+            /* moveInput = Input.GetAxis("Horizontal");
+             rb.velocity = new Vector2(moveInput * Speed, rb.velocity.y);
+
+             if (faceRight == false && moveInput > 0)
+             {
+                 Flip();
+             }
+             else if (faceRight == true && moveInput < 0)
+             {
+                 Flip();
+             }*/
+
+            move();
+
+
+            horClimb = Physics2D.OverlapCircle(topCheck.position, checkRadius, whatIsGround);
+            isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, checkRadius, whatIsGround);
+
+            if (isTouchingFront == true && isGrounded == false && moveInput != 0 && wallJumping == false && climbing == false && attached == false)
+            {
+                wallSliding = true;
+                animator.SetBool("jumping", false);
+                animator.SetBool("falling", false);
+                animator.SetBool("hanging", true);
+            }
+            else
+            {
+                wallSliding = false;
+                //animator.SetBool("falling", true);
+                animator.SetBool("hanging", false);
+            }
+
+            if (wallSliding)
+            {
+
+                rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
+            }
+
+            if (Input.GetKeyDown(KeyCode.G) && wallSliding == true)
+            {
+                wallJumping = true;
+                animator.SetBool("walljumping", true);
+                Invoke("SetWallJumpingToFalse", wallJumpTime);
+            }
+
+            if (wallJumping == true)
+            {
+                rb.velocity = new Vector2(xWallForce * -moveInput, yWallForce);
+            }
+
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up, dist, ropeLayer);
+
+            if (hit.collider != null && attached == false)
+            {
+                attached = true;
+            }
+            else
+            {
+                attached = false;
+            }
+
+            if (attached)
+            {
+                Inputver = Input.GetAxisRaw("Vertical2");
+                rb.velocity = new Vector2(rb.velocity.x, Inputver * Speed);
+                rb.gravityScale = 0;
+            }
+            else
+            {
+                rb.gravityScale = 1.6f;
+            }
+            if (isGrounded && horClimb == false || climbing) animator.SetFloat("Speed", Mathf.Abs(moveInput));
+            else
+            {
+                animator.SetFloat("Speed", 0);
+            }
+
+        }
+        else if(kumoHealth.health <= 0)
+        {
             animator.SetBool("jumping", false);
             animator.SetBool("falling", false);
-            animator.SetBool("hanging", true);
-        }
-        else{
-            wallSliding = false;
-            //animator.SetBool("falling", true);
             animator.SetBool("hanging", false);
-        }
-
-        if (wallSliding)
-        {
-            
-            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
-        }
-
-        if(Input.GetKeyDown(KeyCode.G) && wallSliding == true)
-        {
-            wallJumping = true;
-            animator.SetBool("walljumping", true);
-            Invoke("SetWallJumpingToFalse", wallJumpTime);
-        }
-
-        if(wallJumping == true)
-        {
-            rb.velocity = new Vector2(xWallForce * -moveInput, yWallForce);
-        }
-
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up, dist, ropeLayer);
-
-        if (hit.collider != null && attached == false)
-        {
-            attached = true;
-        }
-        else
-        {
-            attached = false;
-        }
-
-        if (attached)
-        {
-            Inputver = Input.GetAxisRaw("Vertical2");
-            rb.velocity = new Vector2(rb.velocity.x, Inputver * Speed);
-            rb.gravityScale = 0;
-        }
-        else
-        {
-            rb.gravityScale = 1.6f;
-        }
-        if (isGrounded && horClimb == false || climbing) animator.SetFloat("Speed", Mathf.Abs(moveInput));
-        else
-        {
+            animator.SetBool("walljumping", false);
             animator.SetFloat("Speed", 0);
+            animator.SetBool("Die", true);
         }
-
     }
 
     void Flip()
