@@ -185,8 +185,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5276110499351971492}
-  Kumo: {fileID: 0}
-  Oni: {fileID: 0}
+  Kumo: {fileID: 8426323590337686929, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+  Oni: {fileID: 8988389722410106797, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
   castPoint: {fileID: 5276110499845050690}
   moveSpeed: 2
   agroRange: 3
@@ -196,7 +196,7 @@ MonoBehaviour:
     m_Bits: 512
   attackRange: 0.2
   damage: 40
-  fireRate: 0.5
+  fireRate: 3
 --- !u!114 &5276110499351971493
 MonoBehaviour:
   m_ObjectHideFlags: 0

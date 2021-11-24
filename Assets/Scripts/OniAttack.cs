@@ -11,7 +11,9 @@ public class OniAttack : MonoBehaviour
     public int damage = 40;
     private Rigidbody2D rb;
 
-    
+    public float attackRate = 1f;
+    private float nextAttack;
+
 
     void Start()
     {
@@ -23,7 +25,12 @@ public class OniAttack : MonoBehaviour
     {
         if ((Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Comma)) && animator.GetBool("attacking") == false)
         {
-            Attack();
+            
+            if (Time.time > nextAttack)
+            {
+                nextAttack = Time.time + attackRate;
+                Attack();
+            }
         }
         else
         {

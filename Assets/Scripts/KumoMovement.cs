@@ -44,60 +44,33 @@ public class KumoMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isGrounded == true)
-        {
-            extraJumps = extraJumpsValue;
+        checkGround();
 
-            animator.SetBool("jumping", false);
-            animator.SetBool("falling", false);
-            animator.SetBool("hanging", false);
-            animator.SetBool("walljumping", false) ;
-        }
-        else
-        {
-            if (rb.velocity.y < 0)
-            {
-                animator.SetBool("jumping", false);
-                animator.SetBool("falling", true);
-                climbing = false;
-            }
-        }
+        checkClimb();
 
-        if (climbing)
-        {
-            animator.SetBool("jumping", false);
-            animator.SetBool("climbing", true);
-        }
-        else
-        {
-            animator.SetBool("climbing", false);
-        }
-
-        if (Input.GetKeyDown(KeyCode.G) && extraJumps > 0)
-        {
-            rb.velocity = Vector2.up * jumpForce;
-            extraJumps--;
-            animator.SetBool("jumping", true);
-        }
-
+        checkJump();
+        
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         //if(drop == false)isClimbable = Physics2D.OverlapCircle(topCheck.position, checkRadius, climbWall);
 
-        moveInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(moveInput * Speed, rb.velocity.y);
+        /* moveInput = Input.GetAxis("Horizontal");
+         rb.velocity = new Vector2(moveInput * Speed, rb.velocity.y);
 
-        if (faceRight == false && moveInput > 0)
-        {
-            Flip();
-        }
-        else if (faceRight == true && moveInput < 0)
-        {
-            Flip();
-        }
+         if (faceRight == false && moveInput > 0)
+         {
+             Flip();
+         }
+         else if (faceRight == true && moveInput < 0)
+         {
+             Flip();
+         }*/
 
-        isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, checkRadius, whatIsGround);
+        move();
+
+        
         horClimb = Physics2D.OverlapCircle(topCheck.position, checkRadius, whatIsGround);
+        isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, checkRadius, whatIsGround);
 
         if (isTouchingFront == true && isGrounded == false && moveInput != 0 && wallJumping == false && climbing == false && attached == false)
         {
@@ -189,4 +162,48 @@ public class KumoMovement : MonoBehaviour
         }
     }
 
+    void checkGround()
+    {
+        if (isGrounded == true)
+        {
+            extraJumps = extraJumpsValue;
+
+            animator.SetBool("jumping", false);
+            animator.SetBool("falling", false);
+            animator.SetBool("hanging", false);
+            animator.SetBool("walljumping", false);
+        }
+        else
+        {
+            if (rb.velocity.y < 0)
+            {
+                animator.SetBool("jumping", false);
+                animator.SetBool("falling", true);
+                climbing = false;
+            }
+        }
+    }
+
+    void checkClimb()
+    {
+        if (climbing)
+        {
+            animator.SetBool("jumping", false);
+            animator.SetBool("climbing", true);
+        }
+        else
+        {
+            animator.SetBool("climbing", false);
+        }
+    }
+
+    void checkJump()
+    {
+        if (Input.GetKeyDown(KeyCode.G) && extraJumps > 0)
+        {
+            rb.velocity = Vector2.up * jumpForce;
+            extraJumps--;
+            animator.SetBool("jumping", true);
+        }
+    }
 }

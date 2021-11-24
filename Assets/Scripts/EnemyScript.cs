@@ -167,9 +167,8 @@ public class EnemyScript : MonoBehaviour
                 transform.localScale = new Vector2(-1, 1);
                 isFacingLeft = false;
                 animator.SetFloat("Speed", Mathf.Abs(moveSpeed));
-                animator.SetBool("Attacking", false);
 
-            if (distToOni < distToAp || distToKumo < distToAp)
+                if (distToOni < distToAp || distToKumo < distToAp)
                 {
                     if (Time.time > nextFire)
                     {
@@ -191,7 +190,7 @@ public class EnemyScript : MonoBehaviour
                 transform.localScale = new Vector2(1, 1);
                 isFacingLeft = true;
                 animator.SetFloat("Speed", Mathf.Abs(moveSpeed));
-                animator.SetBool("Attacking", false);
+
                 if (distToOni < distToAp || distToKumo < distToAp)
                 {
                     if (Time.time > nextFire)
@@ -227,7 +226,7 @@ public class EnemyScript : MonoBehaviour
     void Attack()
     {
             animator.SetBool("Attacking", true);
-            print("attacking");
+
             StopChasingPlayer();
                    
             //Detect enemies in range of attack

@@ -108,7 +108,6 @@ public class OniMovement : MonoBehaviour
         
     }
 
-
     void Flip()
     {
         faceRight = !faceRight;
