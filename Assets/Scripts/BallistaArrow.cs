@@ -13,16 +13,24 @@ public class BallistaArrow : MonoBehaviour
         this.GetComponent<Rigidbody2D>().velocity = this.transform.right * speed * -1;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
     private void OnCollisionEnter2D(Collision2D collision)
     { 
-            Destroy(gameObject);
+           
+
+        if(collision.gameObject.name == "Oni (bigger scale reference)")
+        {
+            GameObject.Find("Oni (bigger scale reference)").GetComponent<PlayerHealth>().TakeDamage(damage);
+            StatsManager oniStats = GameObject.FindWithTag("oniStats").GetComponent<StatsManager>();
+            oniStats.LosePoint();
+        }
+
+        if (collision.gameObject.name == "Kumo")
+        {
+            GameObject.Find("Kumo").GetComponent<PlayerHealth>().TakeDamage(damage);
+
+        }
+
+        Destroy(gameObject);
     }
 
 }

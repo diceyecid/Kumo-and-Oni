@@ -31,7 +31,7 @@ public class ParryArrow : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.transform.gameObject.layer != 9)
+        if (collision.transform.gameObject.layer != 9 && collision.transform.gameObject.layer != 12)
         {
             Destroy(gameObject);
         }

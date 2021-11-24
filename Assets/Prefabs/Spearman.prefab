@@ -189,13 +189,13 @@ MonoBehaviour:
   Oni: {fileID: 8988389722410106797, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
   castPoint: {fileID: 5276110499845050690}
   moveSpeed: 2
-  agroRange: 3
+  agroRange: 5
   attackPoint: {fileID: 5276110500673977181}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 512
   attackRange: 0.2
-  damage: 40
+  damage: 1
   fireRate: 3
 --- !u!114 &5276110499351971493
 MonoBehaviour:
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 218fc76d0d267724a9585041eb04ed34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 2
 --- !u!1 &5276110499845050689
 GameObject:
   m_ObjectHideFlags: 0
