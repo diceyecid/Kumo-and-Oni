@@ -9,6 +9,7 @@ public class Door : MonoBehaviour
 	public DoorCollider secondCollider;
 
 	// variables for animation
+	public float offset = 0;
 	public bool isOpen;
 	private bool isMoving;
 	private float height;
@@ -44,9 +45,9 @@ public class Door : MonoBehaviour
 			transform.position += new Vector3( 0, Time.deltaTime, 0 );
 
 			// reached top
-			if( transform.position.y >= height )
+			if( transform.position.y >= height + offset )
 			{
-				transform.position = new Vector3( transform.position.x, height, transform.position.z );
+				transform.position = new Vector3( transform.position.x, height + offset, transform.position.z );
 				isMoving = false;
 				isOpen = true;
 			}
@@ -58,9 +59,9 @@ public class Door : MonoBehaviour
 			transform.position -= new Vector3( 0, Time.deltaTime, 0 );
 
 			// reached bottom
-			if( transform.position.y <= 0 )
+			if( transform.position.y <= offset )
 			{
-				transform.position = new Vector3( transform.position.x, 0, transform.position.z );
+				transform.position = new Vector3( transform.position.x, offset, transform.position.z );
 				isMoving = false;
 				isOpen = false;
 			}
