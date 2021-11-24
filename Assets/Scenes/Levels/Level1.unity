@@ -245,6 +245,10 @@ PrefabInstance:
       propertyPath: fireRate
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5276110499351971489, guid: 47ee1bfb998731e44a5e979728205da7, type: 3}
+      propertyPath: agroRange
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5276110499351971493, guid: 47ee1bfb998731e44a5e979728205da7, type: 3}
       propertyPath: health
       value: 10
@@ -59556,6 +59560,10 @@ PrefabInstance:
       propertyPath: health
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1197836441466699725, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 324516701}
     - target: {fileID: 1224925461880877098, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
       propertyPath: m_TagString
       value: Kumo
@@ -59971,7 +59979,7 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: 24e57c3b56a4a3941accdc2d7c3e53cf, type: 2}
     - target: {fileID: 8988389720891211431, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: damage
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8988389720891211448, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: health
@@ -59985,17 +59993,37 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8988389720891211449, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
+      propertyPath: m_TagString
+      value: Oni
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988389721808178486, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988389721808178486, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988389721808178889, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988389721808178889, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8988389722410106797, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8988389722410106797, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50.78
+      value: 44.96
       objectReference: {fileID: 0}
     - target: {fileID: 8988389722410106797, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.39
+      value: 5.36
       objectReference: {fileID: 0}
     - target: {fileID: 8988389722410106797, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: m_LocalPosition.z
