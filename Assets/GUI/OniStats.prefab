@@ -987,7 +987,7 @@ GameObject:
   - component: {fileID: 141211638694520129}
   m_Layer: 5
   m_Name: HealthBar
-  m_TagString: Untagged
+  m_TagString: oniStats
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
