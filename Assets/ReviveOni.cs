@@ -35,7 +35,7 @@ public class ReviveOni : MonoBehaviour
         if (collision.tag == "Kumo")
         {
             KumoInRange = true;
-            print("kumo enter");
+
         }
     }
 
@@ -44,7 +44,7 @@ public class ReviveOni : MonoBehaviour
         if (collision.tag == "Kumo")
         {
             KumoInRange = false;
-            print("kumo leave");
+
         }
     }
 
@@ -54,6 +54,5 @@ public class ReviveOni : MonoBehaviour
         GameObject.Find("Oni (bigger scale reference)").GetComponent<PlayerHealth>().health = 5;
         StatsManager oniStats = GameObject.FindWithTag("oniStats").GetComponent<StatsManager>();
         oniStats.GainPoint();
-        print("Oni revived");
     }
 }
