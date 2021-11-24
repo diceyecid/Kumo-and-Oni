@@ -69,7 +69,7 @@ public class EnemyScript : MonoBehaviour
                 if (!isSearching)
                 {
                     isSearching = true;
-                    Invoke("StopChasingPlayer", 3);
+                    Invoke("StopChasingPlayer", 2);
                 }
             }
             
@@ -161,13 +161,15 @@ public class EnemyScript : MonoBehaviour
 
             if (transform.position.x < Kumo.position.x || transform.position.x < Oni.position.x)
             {
-                //enemy is to the left side of the player, so move right
+            //enemy is to the left side of the player, so move right
+
                 rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
                 transform.localScale = new Vector2(-1, 1);
                 isFacingLeft = false;
                 animator.SetFloat("Speed", Mathf.Abs(moveSpeed));
+                animator.SetBool("Attacking", false);
 
-                if (distToOni < distToAp || distToKumo < distToAp)
+            if (distToOni < distToAp || distToKumo < distToAp)
                 {
                     if (Time.time > nextFire)
                     {
@@ -178,7 +180,8 @@ public class EnemyScript : MonoBehaviour
                 }
                 else if (distToOni > distToAp || distToKumo > distToAp)
                 {
-                    animator.SetBool("Attacking", false);
+                    //animator.SetBool("Attacking", false);
+                    print("stop attacking:");
                 }
             }
             else if (transform.position.x > Kumo.position.x || transform.position.x > Oni.position.x)
@@ -188,19 +191,24 @@ public class EnemyScript : MonoBehaviour
                 transform.localScale = new Vector2(1, 1);
                 isFacingLeft = true;
                 animator.SetFloat("Speed", Mathf.Abs(moveSpeed));
-
+                animator.SetBool("Attacking", false);
                 if (distToOni < distToAp || distToKumo < distToAp)
                 {
                     if (Time.time > nextFire)
                     {
                         nextFire = Time.time + fireRate;
+                        
                         Attack();
+
                     }
+
                 }
                 else if (distToOni > distToAp || distToKumo > distToAp)
                 {
-                    animator.SetBool("Attacking", false);
-                }
+                    //animator.SetBool("Attacking", false);
+                    
+                    print("stop attacking2");
+            }
             }
        
     }
@@ -219,8 +227,9 @@ public class EnemyScript : MonoBehaviour
     void Attack()
     {
             animator.SetBool("Attacking", true);
-            //StopChasingPlayer();
-
+            print("attacking");
+            StopChasingPlayer();
+                   
             //Detect enemies in range of attack
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
@@ -231,6 +240,7 @@ public class EnemyScript : MonoBehaviour
                 player.GetComponent<PlayerHealth>().TakeDamage(damage);
             }
 
+            
     }
 
     void OnDrawGizmosSelected()
@@ -244,12 +254,12 @@ public class EnemyScript : MonoBehaviour
     void FinishAnimation()
     {
         animator.SetBool("AnimationDone", true);
-
+        
     }
 
-    private void InitiateAnimation()
+    void InitiateAnimation()
     {
         animator.SetBool("AnimationDone", false);
-
     }
+
 }
