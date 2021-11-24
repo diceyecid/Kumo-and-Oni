@@ -17,4 +17,7 @@ public static class InputKey
 	public const KeyCode ONI_JUMP = KeyCode.Period;
 	public const KeyCode ONI_ATTACK = KeyCode.Comma;
 	public const KeyCode ONI_INTERACT = KeyCode.UpArrow;
+
+	// other keyboard controls
+	public const KeyCode CHEAT = KeyCode.C;
 }

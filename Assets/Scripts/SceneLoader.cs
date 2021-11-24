@@ -36,7 +36,7 @@ public static class SceneLoader
 	// Load Level 3 of the game
 	public static void LoadLevel3()
 	{
-		SceneManager.LoadScene( "Level3", LoadSceneMode.Single );
+		SceneManager.LoadScene( "lvl3", LoadSceneMode.Single );
 		SceneManager.LoadScene( "GUI", LoadSceneMode.Additive );
 	}
 }

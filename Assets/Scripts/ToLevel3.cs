@@ -15,4 +15,12 @@ public class ToLevel3 : MonoBehaviour
     {
         
     }
+
+	void OnTriggerEnter2D( Collider2D other )
+	{
+		if( other.tag == "Kumo" || other.tag == "Oni" )
+		{
+			SceneLoader.LoadLevel3();
+		}
+	}
 }
