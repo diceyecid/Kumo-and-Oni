@@ -23,6 +23,7 @@ public static class SceneLoader
 	public static void LoadLevel2()
 	{
 		SceneManager.LoadScene( "Level2", LoadSceneMode.Single );
+		SceneManager.LoadScene( "roof", LoadSceneMode.Additive );
 		SceneManager.LoadScene( "GUI", LoadSceneMode.Additive );
 	}
 
