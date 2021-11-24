@@ -20,7 +20,7 @@ public class Kunai : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && animator.GetBool("attacking") == false)
+        if (Input.GetButtonDown("Fire1"))
         {
             if(Time.time > nextFire)
             {
