@@ -32,6 +32,7 @@ public class KumoMovement : MonoBehaviour
     public float yWallForce;
     public float wallJumpTime;
     private bool attached;
+    public Transform ReviveBox;
 
     public Animator animator;
     void Start()

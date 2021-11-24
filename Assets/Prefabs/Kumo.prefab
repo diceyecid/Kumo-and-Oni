@@ -90,6 +90,63 @@ Transform:
   m_Father: {fileID: 8426323590337686929}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6173920260484692490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3453739913169887300}
+  - component: {fileID: 2990508364734251283}
+  m_Layer: 9
+  m_Name: Revive box
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3453739913169887300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6173920260484692490}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8426323590337686929}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2990508364734251283
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6173920260484692490}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.003326416, y: -0.4936819}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.140808, y: 1.5603962}
+  m_EdgeRadius: 0
 --- !u!1 &8426323590337686954
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,6 +186,7 @@ Transform:
   - {fileID: 2649490236218103818}
   - {fileID: 3863594190008109661}
   - {fileID: 8328392667812936076}
+  - {fileID: 3453739913169887300}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -281,7 +339,7 @@ MonoBehaviour:
   xWallForce: 4
   yWallForce: 8
   wallJumpTime: 0.18
-  animator: {fileID: 0}
+  animator: {fileID: 8426323590337686955}
 --- !u!114 &5651563383428694264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,8 +354,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 8328392667812936076}
   bulletPrefab: {fileID: 3316484188493569912, guid: cf8ea678f0a03324aac66ca7e8bfbba7, type: 3}
-  fireRate: 0.5
-  animator: {fileID: 0}
+  fireRate: 1
+  animator: {fileID: 8426323590337686955}
 --- !u!114 &1197836441466699725
 MonoBehaviour:
   m_ObjectHideFlags: 0
