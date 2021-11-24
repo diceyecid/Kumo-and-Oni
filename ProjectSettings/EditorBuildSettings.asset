@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/underground.unity
     guid: 7c6ea9b362f85cc41a86de566ab79d8c
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level2.unity
+    guid: eaf737f8c5f174862af28f97b9b9552c
+  - enabled: 1
+    path: Assets/Scenes/Levels/roof.unity
+    guid: 0e297268d09e881469162c9663d19f71
+  - enabled: 1
+    path: Assets/Scenes/Levels/lvl3.unity
+    guid: 2318b0b2208e8e14a8d6a55d866d36ea
   m_configObjects: {}

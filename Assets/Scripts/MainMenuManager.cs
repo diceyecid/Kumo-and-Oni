@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
@@ -23,16 +22,10 @@ public class MainMenuManager : MonoBehaviour
 		ExitButton = this.transform.Find( "ExitButton" ).GetComponent<Button>();
 
 		// Button listeners
-		PlayButton.onClick.AddListener( LoadLevel1 );
+		PlayButton.onClick.AddListener( SceneLoader.LoadLevel1 );
 		ExitButton.onClick.AddListener( QuitGame );
     }
 
-    // Load level 1 of the game
-	private void LoadLevel1()
-	{
-		SceneManager.LoadScene( "Level1", LoadSceneMode.Single );
-		SceneManager.LoadScene( "GUI", LoadSceneMode.Additive );
-	}
 
 	private void QuitGame()
 	{
