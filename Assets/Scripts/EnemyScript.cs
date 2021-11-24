@@ -78,13 +78,15 @@ public class EnemyScript : MonoBehaviour
 
         if (hit.collider != null)
         {
-            if (hit.collider.gameObject.CompareTag("Kumo") || hit.collider.gameObject.CompareTag("Oni"))
+            if (hit.collider.gameObject.layer == 9)
             {
                 val = true;
+                print("Enemy found");
             }
             else
             {
                 val = false;
+                print("No Enemy");
             }
             Debug.DrawLine(castPoint.position, endPos, Color.yellow);
         }
@@ -145,7 +147,6 @@ public class EnemyScript : MonoBehaviour
                     if (Time.time > nextFire)
                     {
                         nextFire = Time.time + fireRate;
-                        
                         Attack();
 
                     }
@@ -183,10 +184,12 @@ public class EnemyScript : MonoBehaviour
             foreach (Collider2D player in hitEnemies)
             {
                 Debug.Log("We hit " + player.name);
+
                 player.GetComponent<PlayerHealth>().TakeDamage(damage);
-                
-            }
-        
+                StatsManager oniStats = GameObject.FindWithTag("oniStats").GetComponent<StatsManager>();
+                oniStats.LosePoint();
+        }
+       
 
     }
 

@@ -28,12 +28,6 @@ public class ReviveKumo : MonoBehaviour
                 StopCoroutine(Revive());
             }
         }
-
-        
-        /*else if(OniInRange == false)
-        {
-            StopCoroutine(Revive());
-        }*/
     }
 
 

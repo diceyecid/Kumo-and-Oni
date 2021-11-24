@@ -34,11 +34,12 @@ public class OniMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animator.SetBool("Die", false);
+        
         PlayerHealth oniHealth = GetComponent<PlayerHealth>();
 
         if (oniHealth.health > 0)
         {
+            animator.SetBool("Die", false);
 
             if (isGrounded == true)
             {
@@ -111,6 +112,8 @@ public class OniMovement : MonoBehaviour
 
         }else if(oniHealth.health <= 0)
         {
+            animator.SetBool("jumping", false);
+            animator.SetBool("falling", false);
             animator.SetBool("Die", true);
         }
     }
