@@ -238,8 +238,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1044896347}
     - target: {fileID: 5276110499351971489, guid: 47ee1bfb998731e44a5e979728205da7, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5276110499351971489, guid: 47ee1bfb998731e44a5e979728205da7, type: 3}
       propertyPath: fireRate
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5276110499351971493, guid: 47ee1bfb998731e44a5e979728205da7, type: 3}
+      propertyPath: health
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5276110499351971518, guid: 47ee1bfb998731e44a5e979728205da7, type: 3}
       propertyPath: m_Name
@@ -532,6 +540,11 @@ Transform:
 --- !u!1 &324516700 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8426323590337686954, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+  m_PrefabInstance: {fileID: 2768218997870101259}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &324516701 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8426323590337686955, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
   m_PrefabInstance: {fileID: 2768218997870101259}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &339298702
@@ -59539,6 +59552,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1197836441466699725, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+      propertyPath: health
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1224925461880877098, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
       propertyPath: m_TagString
       value: Kumo
@@ -59662,6 +59679,14 @@ PrefabInstance:
     - target: {fileID: 5633169118485180627, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
       propertyPath: whatIsGround.m_Bits
       value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 5651563383428694264, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 324516701}
+    - target: {fileID: 5651563383428694264, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+      propertyPath: fireRate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8426323590337686929, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
       propertyPath: m_RootOrder
@@ -59924,6 +59949,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8988389720891211431, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8988389720891211449, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: m_Name
       value: Oni (bigger scale reference)
