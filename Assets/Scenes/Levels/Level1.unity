@@ -21473,6 +21473,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1188814927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6173920260484692490, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+  m_PrefabInstance: {fileID: 2768218997870101259}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1188814928 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3453739913169887300, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+  m_PrefabInstance: {fileID: 2768218997870101259}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1188814930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188814927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7522c1a0b7c17b49bc1ab6ddc1f6a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaitForReviveTime: 3
 --- !u!1 &1206638606
 GameObject:
   m_ObjectHideFlags: 0
@@ -60368,7 +60391,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1197836441466699725, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
       propertyPath: health
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1197836441466699725, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
       propertyPath: animator
@@ -60494,6 +60517,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 2990508364734251283, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+      propertyPath: m_Size.x
+      value: 2.4378777
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990508364734251283, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+      propertyPath: m_Size.y
+      value: 1.4837335
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990508364734251283, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.03686714
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990508364734251283, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.45535058
+      objectReference: {fileID: 0}
     - target: {fileID: 3288371173612144756, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
       propertyPath: m_Icon
       value: 
@@ -60506,6 +60545,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 324516701}
+    - target: {fileID: 5633169118485180627, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
+      propertyPath: ReviveBox
+      value: 
+      objectReference: {fileID: 1188814928}
     - target: {fileID: 5633169118485180627, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
       propertyPath: whatIsGround.m_Bits
       value: 72
@@ -60524,7 +60567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8426323590337686929, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 49.09
+      value: 33.92
       objectReference: {fileID: 0}
     - target: {fileID: 8426323590337686929, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -60793,7 +60836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8988389720891211448, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: health
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8988389720891211449, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: m_Name
@@ -60829,7 +60872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8988389722410106797, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 51.09
+      value: 38.18
       objectReference: {fileID: 0}
     - target: {fileID: 8988389722410106797, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}
       propertyPath: m_LocalPosition.y

@@ -36,6 +36,7 @@ public class OniMovement : MonoBehaviour
     {
         animator.SetBool("Die", false);
         PlayerHealth oniHealth = GetComponent<PlayerHealth>();
+
         if (oniHealth.health > 0)
         {
 
