@@ -167,6 +167,7 @@ public class EnemyScript : MonoBehaviour
         isSearching = false;
         rb.velocity = new Vector2(0, rb.velocity.y);
         animator.SetFloat("Speed", 0);
+        animator.SetBool("Attacking", false);
         print("Stop walking");
     }
 
@@ -177,17 +178,26 @@ public class EnemyScript : MonoBehaviour
         animator.SetBool("Attacking", true);
         StopChasingPlayer();
                 
-            //Detect enemies in range of attack
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        //Detect enemies in range of attack
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-            // Damage them
-            foreach (Collider2D player in hitEnemies)
+        // Damage them
+        foreach (Collider2D player in hitEnemies)
+        {
+            Debug.Log("We hit " + player.name);
+            
+            player.GetComponent<PlayerHealth>().TakeDamage(damage);
+
+            if (player.CompareTag("Oni"))
             {
-                Debug.Log("We hit " + player.name);
-
-                player.GetComponent<PlayerHealth>().TakeDamage(damage);
                 StatsManager oniStats = GameObject.FindWithTag("oniStats").GetComponent<StatsManager>();
                 oniStats.LosePoint();
+            }else if (player.CompareTag("Kumo"))
+            {
+                StatsManager kumoStats = GameObject.FindWithTag("kumoStats").GetComponent<StatsManager>();
+                kumoStats.LosePoint();
+            }
+
         }
        
 

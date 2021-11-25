@@ -53,6 +53,7 @@ public class ReviveKumo : MonoBehaviour
     {
         yield return new WaitForSeconds(WaitForReviveTime);
         GameObject.Find("Kumo").GetComponent<PlayerHealth>().health = 5;
-
+        StatsManager kumoStats = GameObject.FindWithTag("kumoStats").GetComponent<StatsManager>();
+        kumoStats.GainPoint();
     }
 }
