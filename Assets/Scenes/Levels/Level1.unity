@@ -6318,7 +6318,6 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[4].first.x
       value: 22
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 30557257467542906, guid: 81104b0760255494da42b2e57f3f5e16, type: 3}
       propertyPath: kumo
       value: 
@@ -6407,11 +6406,9 @@ PrefabInstance:
     - target: {fileID: 382233329419550785, guid: 0b8f7253961594b3cbef7a7a59ec43fb, type: 3}
       propertyPath: m_RootOrder
       value: 3
-=======
     - target: {fileID: 30557257237155322, guid: 81104b0760255494da42b2e57f3f5e16, type: 3}
       propertyPath: m_Tiles.Array.data[5].first.x
       value: 23
->>>>>>> 9678503dbbc8974ac2e25e7a3dce336ceff09c10
       objectReference: {fileID: 0}
     - target: {fileID: 30557257237155322, guid: 81104b0760255494da42b2e57f3f5e16, type: 3}
       propertyPath: m_Tiles.Array.data[6].first.x
