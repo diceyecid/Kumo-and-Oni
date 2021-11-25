@@ -724,8 +724,8 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_22
       rect:
         serializedVersion: 2
-        x: 288
-        y: 192
+        x: 0
+        y: 144
         width: 48
         height: 48
       alignment: 0
@@ -745,8 +745,8 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_23
       rect:
         serializedVersion: 2
-        x: 336
-        y: 192
+        x: 48
+        y: 144
         width: 48
         height: 48
       alignment: 0
@@ -766,7 +766,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_24
       rect:
         serializedVersion: 2
-        x: 0
+        x: 96
         y: 144
         width: 48
         height: 48
@@ -787,7 +787,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_25
       rect:
         serializedVersion: 2
-        x: 48
+        x: 144
         y: 144
         width: 48
         height: 48
@@ -808,7 +808,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_26
       rect:
         serializedVersion: 2
-        x: 96
+        x: 192
         y: 144
         width: 48
         height: 48
@@ -829,7 +829,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_27
       rect:
         serializedVersion: 2
-        x: 144
+        x: 240
         y: 144
         width: 48
         height: 48
@@ -850,7 +850,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_28
       rect:
         serializedVersion: 2
-        x: 192
+        x: 288
         y: 144
         width: 48
         height: 48
@@ -871,7 +871,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_29
       rect:
         serializedVersion: 2
-        x: 240
+        x: 336
         y: 144
         width: 48
         height: 48
@@ -892,8 +892,8 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_30
       rect:
         serializedVersion: 2
-        x: 288
-        y: 144
+        x: 0
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -913,8 +913,8 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_31
       rect:
         serializedVersion: 2
-        x: 336
-        y: 144
+        x: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -934,7 +934,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_32
       rect:
         serializedVersion: 2
-        x: 0
+        x: 96
         y: 96
         width: 48
         height: 48
@@ -955,7 +955,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_33
       rect:
         serializedVersion: 2
-        x: 48
+        x: 144
         y: 96
         width: 48
         height: 48
@@ -976,7 +976,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_34
       rect:
         serializedVersion: 2
-        x: 96
+        x: 192
         y: 96
         width: 48
         height: 48
@@ -997,7 +997,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_35
       rect:
         serializedVersion: 2
-        x: 144
+        x: 240
         y: 96
         width: 48
         height: 48
@@ -1018,7 +1018,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_36
       rect:
         serializedVersion: 2
-        x: 192
+        x: 288
         y: 96
         width: 48
         height: 48
@@ -1039,7 +1039,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_37
       rect:
         serializedVersion: 2
-        x: 240
+        x: 336
         y: 96
         width: 48
         height: 48
@@ -1060,8 +1060,8 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_38
       rect:
         serializedVersion: 2
-        x: 288
-        y: 96
+        x: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -1081,8 +1081,8 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_39
       rect:
         serializedVersion: 2
-        x: 336
-        y: 96
+        x: 48
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -1102,7 +1102,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_40
       rect:
         serializedVersion: 2
-        x: 0
+        x: 96
         y: 48
         width: 48
         height: 48
@@ -1123,7 +1123,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_41
       rect:
         serializedVersion: 2
-        x: 48
+        x: 144
         y: 48
         width: 48
         height: 48
@@ -1144,7 +1144,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_42
       rect:
         serializedVersion: 2
-        x: 96
+        x: 192
         y: 48
         width: 48
         height: 48
@@ -1165,7 +1165,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_43
       rect:
         serializedVersion: 2
-        x: 144
+        x: 240
         y: 48
         width: 48
         height: 48
@@ -1186,7 +1186,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_44
       rect:
         serializedVersion: 2
-        x: 192
+        x: 288
         y: 48
         width: 48
         height: 48
@@ -1207,7 +1207,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_45
       rect:
         serializedVersion: 2
-        x: 240
+        x: 336
         y: 48
         width: 48
         height: 48
@@ -1228,8 +1228,8 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_46
       rect:
         serializedVersion: 2
-        x: 288
-        y: 48
+        x: 0
+        y: 0
         width: 48
         height: 48
       alignment: 0
@@ -1249,8 +1249,8 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_47
       rect:
         serializedVersion: 2
-        x: 336
-        y: 48
+        x: 48
+        y: 0
         width: 48
         height: 48
       alignment: 0
@@ -1270,7 +1270,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_48
       rect:
         serializedVersion: 2
-        x: 0
+        x: 96
         y: 0
         width: 48
         height: 48
@@ -1291,7 +1291,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_49
       rect:
         serializedVersion: 2
-        x: 48
+        x: 144
         y: 0
         width: 48
         height: 48
@@ -1312,7 +1312,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_50
       rect:
         serializedVersion: 2
-        x: 96
+        x: 192
         y: 0
         width: 48
         height: 48
@@ -1333,7 +1333,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_51
       rect:
         serializedVersion: 2
-        x: 144
+        x: 240
         y: 0
         width: 48
         height: 48
@@ -1354,7 +1354,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_52
       rect:
         serializedVersion: 2
-        x: 192
+        x: 288
         y: 0
         width: 48
         height: 48
@@ -1375,7 +1375,7 @@ TextureImporter:
       name: Environment 2 Atlas-Sheet C_53
       rect:
         serializedVersion: 2
-        x: 240
+        x: 336
         y: 0
         width: 48
         height: 48
@@ -1388,48 +1388,6 @@ TextureImporter:
       bones: []
       spriteID: 8755708d109fe8c80800000000000000
       internalID: -8318437675392084616
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Environment 2 Atlas-Sheet C_54
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d38834865ac66a910800000000000000
-      internalID: 1848284154756827197
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Environment 2 Atlas-Sheet C_55
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a78090991f43bdb0800000000000000
-      internalID: -4777387808491796573
       vertices: []
       indices: 
       edges: []
