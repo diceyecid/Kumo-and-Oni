@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8575360321487505356}
   - component: {fileID: 8575360321487505395}
   - component: {fileID: 8575360321487505394}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ParryBlade
   m_TagString: blade
   m_Icon: {fileID: 0}
