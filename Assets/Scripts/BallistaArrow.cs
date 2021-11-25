@@ -20,15 +20,17 @@ public class BallistaArrow : MonoBehaviour
         if(collision.gameObject.name == "Oni (bigger scale reference)")
         {
             GameObject.Find("Oni (bigger scale reference)").GetComponent<PlayerHealth>().TakeDamage(damage);
-            StatsManager oniStats = GameObject.FindWithTag("oniStats").GetComponent<StatsManager>();
+          /*  StatsManager oniStats = GameObject.FindWithTag("oniStats").GetComponent<StatsManager>();
             oniStats.LosePoint();
+*/
         }
-
-        if (collision.gameObject.name == "Kumo")
+        else if (collision.gameObject.name == "Kumo")
         {
             GameObject.Find("Kumo").GetComponent<PlayerHealth>().TakeDamage(damage);
-
+       /*     StatsManager kumoStats = GameObject.FindWithTag("kumoStats").GetComponent<StatsManager>();
+            kumoStats.LosePoint();*/
         }
+ 
 
         Destroy(gameObject);
     }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 122141015430388049}
   m_Layer: 10
   m_Name: Ballista Arrow
-  m_TagString: arrows
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

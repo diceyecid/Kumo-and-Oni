@@ -214,11 +214,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1977271218266106174, guid: 50d5cceb7548f4240bf6670457c9ee88, type: 3}
       propertyPath: m_Name
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2941534874771184065, guid: 50d5cceb7548f4240bf6670457c9ee88, type: 3}
       propertyPath: m_Name
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3357783012073825248, guid: 50d5cceb7548f4240bf6670457c9ee88, type: 3}
       propertyPath: m_RootOrder
@@ -274,7 +274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6148910668934416480, guid: 50d5cceb7548f4240bf6670457c9ee88, type: 3}
       propertyPath: m_Name
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6990463010460320768, guid: 50d5cceb7548f4240bf6670457c9ee88, type: 3}
       propertyPath: m_Name
@@ -282,7 +282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7358542710957232887, guid: 50d5cceb7548f4240bf6670457c9ee88, type: 3}
       propertyPath: m_Name
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8247954672647819150, guid: 50d5cceb7548f4240bf6670457c9ee88, type: 3}
       propertyPath: m_Name
@@ -290,7 +290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8247954672647819150, guid: 50d5cceb7548f4240bf6670457c9ee88, type: 3}
       propertyPath: m_TagString
-      value: kumoStats
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50d5cceb7548f4240bf6670457c9ee88, type: 3}

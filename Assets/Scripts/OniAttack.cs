@@ -9,7 +9,7 @@ public class OniAttack : MonoBehaviour
     public LayerMask enemyLayers, arrows;
     public float attackRange = 0.5f;
     public int damage = 40;
-    private Rigidbody2D rb;
+    private Rigidbody2D rb; 
 
     public float attackRate = 1f;
     private float nextAttack;
@@ -47,10 +47,12 @@ public class OniAttack : MonoBehaviour
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         Collider2D[] parry = Physics2D.OverlapCircleAll(attackPoint.position, 0.8f, arrows);
         // Damage them
+
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("We hit " + enemy.name);
             enemy.GetComponent<SimpleEnemy>().TakeDamage(damage);
+            
         }
 
 
