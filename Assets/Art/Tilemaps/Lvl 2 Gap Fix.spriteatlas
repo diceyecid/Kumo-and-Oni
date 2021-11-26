@@ -33,6 +33,7 @@ SpriteAtlas:
     packables:
     - {fileID: 2800000, guid: c4a814e6883e6694fb1cb82730bd1c75, type: 3}
     - {fileID: 2800000, guid: bc6c4186cb744e54a943dd3e82109420, type: 3}
+    - {fileID: 2800000, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -78,6 +79,60 @@ SpriteAtlas:
   - {fileID: -2455711235315024799, guid: c4a814e6883e6694fb1cb82730bd1c75, type: 3}
   - {fileID: -6783187954223216124, guid: c4a814e6883e6694fb1cb82730bd1c75, type: 3}
   - {fileID: -9205546909825853203, guid: c4a814e6883e6694fb1cb82730bd1c75, type: 3}
+  - {fileID: 5915445565946502533, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -2641159606086576633, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 6654802795503278418, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -508527780812612257, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 9167777456370170629, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 2823761313001160963, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 5995227023211809450, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 1322605595026525686, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 5422857217016106694, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 7631260946964251677, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -8667349367596208735, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -8573850339581176685, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -8318437675392084616, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 5217333316582021823, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 391274314165220101, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 336499939380862521, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -736888275438832438, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 1590909328395965139, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 889122071276161726, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -7989052614796745473, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 2062405564638172626, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -9057235244420475784, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 527319217868622817, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -3929322449723528610, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 8932622208029244279, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -6107860524517690960, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -9095594594198917945, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -8168916034587440526, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -2719820338905841444, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 6354531542892494599, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 1790066545522632559, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 6789374128989139042, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 5348122965284451100, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -2411527578970601538, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 7628769741133671932, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -1718055914971198055, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -4486047722699903344, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 6402694635586714094, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -1032824955886705404, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 3291502563416314008, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -7344784727278428123, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -5989205020299086095, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -4317521601230191341, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 2357946042253841691, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 8621247733069232268, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 2251201980972778007, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -1122407071837342130, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -3731522736208417517, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 127462036152267462, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -2026630950649666323, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -5301121693718818435, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 1820005251057329078, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: -7504154332816946355, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
+  - {fileID: 1829813728075554268, guid: 4c1e28dd086c1444dbc9f1e884c1c283, type: 3}
   m_PackedSpriteNamesToIndex:
   - Environment 2 Atlas-Sheet A_12
   - Environment 2 Atlas-Sheet A_13
@@ -119,6 +174,60 @@ SpriteAtlas:
   - Environment 2 Atlas-Sheet B_1
   - Environment 2 Atlas-Sheet B_2
   - Environment 2 Atlas-Sheet B_3
+  - Environment 2 Atlas-Sheet C_9
+  - Environment 2 Atlas-Sheet C_8
+  - Environment 2 Atlas-Sheet C_47
+  - Environment 2 Atlas-Sheet C_18
+  - Environment 2 Atlas-Sheet C_50
+  - Environment 2 Atlas-Sheet C_46
+  - Environment 2 Atlas-Sheet C_19
+  - Environment 2 Atlas-Sheet C_51
+  - Environment 2 Atlas-Sheet C_45
+  - Environment 2 Atlas-Sheet C_52
+  - Environment 2 Atlas-Sheet C_44
+  - Environment 2 Atlas-Sheet C_1
+  - Environment 2 Atlas-Sheet C_53
+  - Environment 2 Atlas-Sheet C_43
+  - Environment 2 Atlas-Sheet C_0
+  - Environment 2 Atlas-Sheet C_42
+  - Environment 2 Atlas-Sheet C_3
+  - Environment 2 Atlas-Sheet C_41
+  - Environment 2 Atlas-Sheet C_2
+  - Environment 2 Atlas-Sheet C_40
+  - Environment 2 Atlas-Sheet C_5
+  - Environment 2 Atlas-Sheet C_4
+  - Environment 2 Atlas-Sheet C_10
+  - Environment 2 Atlas-Sheet C_7
+  - Environment 2 Atlas-Sheet C_11
+  - Environment 2 Atlas-Sheet C_6
+  - Environment 2 Atlas-Sheet C_12
+  - Environment 2 Atlas-Sheet C_13
+  - Environment 2 Atlas-Sheet C_14
+  - Environment 2 Atlas-Sheet C_15
+  - Environment 2 Atlas-Sheet C_49
+  - Environment 2 Atlas-Sheet C_16
+  - Environment 2 Atlas-Sheet C_48
+  - Environment 2 Atlas-Sheet C_17
+  - Environment 2 Atlas-Sheet C_21
+  - Environment 2 Atlas-Sheet C_20
+  - Environment 2 Atlas-Sheet C_23
+  - Environment 2 Atlas-Sheet C_22
+  - Environment 2 Atlas-Sheet C_25
+  - Environment 2 Atlas-Sheet C_24
+  - Environment 2 Atlas-Sheet C_27
+  - Environment 2 Atlas-Sheet C_26
+  - Environment 2 Atlas-Sheet C_29
+  - Environment 2 Atlas-Sheet C_28
+  - Environment 2 Atlas-Sheet C_38
+  - Environment 2 Atlas-Sheet C_39
+  - Environment 2 Atlas-Sheet C_36
+  - Environment 2 Atlas-Sheet C_37
+  - Environment 2 Atlas-Sheet C_34
+  - Environment 2 Atlas-Sheet C_35
+  - Environment 2 Atlas-Sheet C_32
+  - Environment 2 Atlas-Sheet C_33
+  - Environment 2 Atlas-Sheet C_30
+  - Environment 2 Atlas-Sheet C_31
   m_RenderDataMap: {}
   m_Tag: Lvl 2 Gap Fix
   m_IsVariant: 0
