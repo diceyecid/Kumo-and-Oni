@@ -17,7 +17,6 @@ public class button : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(pos);
         if (this.transform.position.y <= pos && exit == true) this.transform.position = new Vector2(this.transform.position.x, this.transform.position.y + 0.0005f);
 
         if (this.transform.position.y >= pos) pressed = false;
