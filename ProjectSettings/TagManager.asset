@@ -16,6 +16,8 @@ TagManager:
   - kumoInteraction
   - oniStats
   - kumoStats
+  - shield
+  - boss
   layers:
   - Default
   - TransparentFX
