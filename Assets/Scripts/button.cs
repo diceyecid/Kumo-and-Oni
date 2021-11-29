@@ -7,16 +7,17 @@ public class button : MonoBehaviour
     // Start is called before the first frame update
     private bool exit, colliding, oni, kumo;
     public bool pressed;
-    public int pos;
+    private float pos;
 
     void Start()
     {
+        pos = this.transform.position.y;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        print(pos);
         if (this.transform.position.y <= pos && exit == true) this.transform.position = new Vector2(this.transform.position.x, this.transform.position.y + 0.0005f);
 
         if (this.transform.position.y >= pos) pressed = false;
