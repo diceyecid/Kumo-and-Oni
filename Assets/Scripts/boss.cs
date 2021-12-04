@@ -101,8 +101,8 @@ public class boss : MonoBehaviour
             ground.SetActive(false);
             stage3.SetActive(true);
             platform.SetActive(false);
-            kumo.transform.position = new Vector2(-9, kumo.transform.position.y);
-            oni.transform.position = new Vector2(-2, oni.transform.position.y);
+            /*kumo.transform.position = new Vector2(-9, kumo.transform.position.y);
+            oni.transform.position = new Vector2(-2, oni.transform.position.y);*/
             Destroy(this.gameObject);
         }
 
