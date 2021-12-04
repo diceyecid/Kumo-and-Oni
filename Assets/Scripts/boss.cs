@@ -6,7 +6,7 @@ public class boss : MonoBehaviour
 {
     // Start is called before the first frame update
     private int summonTimer = 600;
-    private int hp = 4;
+    private int hp = 5;
     public int currentHP;
     private int randomN, stage = 0, num;
     public GameObject summon, blade, platform, ground;
