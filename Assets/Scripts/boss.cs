@@ -6,17 +6,19 @@ public class boss : MonoBehaviour
 {
     // Start is called before the first frame update
     private int summonTimer = 600;
-    private int hp = 3;
+    private int hp = 4;
     public int currentHP;
     private int randomN, stage = 0, num;
     public GameObject summon, blade, platform, ground;
-    public GameObject cam, spikes, stage3;
-
-
+    public GameObject cam, spikes, stage3, kumo, oni;
+    public GameObject shield, dmgShield;
+    private float dmg = 1f;
+    private bool hurtAnim;
+    private Vector3 orginalpos;
     void Start()
     {
+        orginalpos = transform.position;
 
-       
     }
 
     // Update is called once per frame
@@ -94,11 +96,29 @@ public class boss : MonoBehaviour
         }
         else
         {
+
             cam.GetComponent<MultipleTargetCamera>().shake = true;
             ground.SetActive(false);
             stage3.SetActive(true);
             platform.SetActive(false);
+            kumo.transform.position = new Vector2(-9, kumo.transform.position.y);
+            oni.transform.position = new Vector2(-2, oni.transform.position.y);
             Destroy(this.gameObject);
+        }
+
+
+        if (dmg > 0 && hurtAnim)
+        {
+            dmg -= Time.deltaTime;
+            transform.localPosition = new Vector3(orginalpos.x + Random.Range(-0.1f, 0.1f), orginalpos.y + Random.Range(-0.1f, 0.1f), orginalpos.z);
+        }
+        else
+        {
+            hurtAnim = false;
+            dmg = 1f;
+            shield.SetActive(true);
+            dmgShield.SetActive(false);
+            transform.localPosition = orginalpos;
         }
     }
 
@@ -108,6 +128,9 @@ public class boss : MonoBehaviour
         {
             hp--;
             Destroy(collision.gameObject);
+            shield.SetActive(false);
+            dmgShield.SetActive(true);
+            hurtAnim = true;
         }
     }
 }
