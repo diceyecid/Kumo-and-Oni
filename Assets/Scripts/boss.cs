@@ -6,7 +6,7 @@ public class boss : MonoBehaviour
 {
     // Start is called before the first frame update
     private int summonTimer = 600;
-    private int hp = 5;
+    private int hp = 3;
     public int currentHP;
     private int randomN, stage = 0, num;
     public GameObject summon, blade, platform, ground;
@@ -24,6 +24,7 @@ public class boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currentHP = hp;
         //print(hp);
         summonTimer--;
 
@@ -103,7 +104,7 @@ public class boss : MonoBehaviour
             platform.SetActive(false);
             /*kumo.transform.position = new Vector2(-9, kumo.transform.position.y);
             oni.transform.position = new Vector2(-2, oni.transform.position.y);*/
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
 
 
@@ -132,5 +133,10 @@ public class boss : MonoBehaviour
             dmgShield.SetActive(true);
             hurtAnim = true;
         }
+    }
+
+    public int getHP()
+    {
+        return hp;
     }
 }

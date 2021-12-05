@@ -68,4 +68,9 @@ public class stage3 : MonoBehaviour
             }
         }
     }
+
+    public int getHP()
+    {
+        return hp;
+    }
 }
