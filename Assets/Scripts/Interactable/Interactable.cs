@@ -9,8 +9,8 @@ public class Interactable : MonoBehaviour
 	public GameObject kumoInteractionUI;
 	public GameObject oniInteractionUI;
 
-	public GameObject kumo;
-	public GameObject oni;
+	private GameObject kumo;
+	private GameObject oni;
 
 	private GameObject popup;
 	private Vector3 offset;
@@ -18,6 +18,11 @@ public class Interactable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		// get Kumo and Oni
+		kumo = GameObject.FindGameObjectsWithTag( "Kumo" )[0];
+		oni = GameObject.FindGameObjectsWithTag( "Oni" )[0];
+
+		// set up pop up
 		popup = null;
 		offset = new Vector3( 0, GetComponent<SpriteRenderer>().bounds.size.y * 1.5f, 0 );
     }

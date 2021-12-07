@@ -61,16 +61,30 @@ public class Lever : MonoBehaviour
 
 
 
+/********** getters and setters **********/
+
 	// get current state of lever
 	public int getState()
 	{
 		return state;
 	}
 
+	// set current state of lever
+	public void setState( int s )
+	{
+		state = s;
 
+		// change the sprite and collider to the new state
+		spriteRenderer.sprite = sprites[state];
+		polygonCollider.SetPath( 0, colliderPoints[state] );
+	}
+
+
+
+/********** private methods **********/
 
 	// initialize the collider points for each state
-	void initColliderPoints( Vector2[][] colliderPoints )
+	private void initColliderPoints( Vector2[][] colliderPoints )
 	{
 		// left state
 		colliderPoints[LEFT] = new Vector2[16];
@@ -135,7 +149,7 @@ public class Lever : MonoBehaviour
 
 
 	// detect player input to identify interaction with lever 
-	void detectInteraction()
+	private void detectInteraction()
 	{
 		// Kumo interaction with lever
 		if( Input.GetKeyDown( InputKey.KUMO_INTERACT ) ) 
@@ -147,13 +161,13 @@ public class Lever : MonoBehaviour
 			// Kumo interacts the lever from the left
 			if( dist > -1.5 && dist < 0 && height < 1.5 && state < RIGHT )
 			{
-				state++;
+				setState( state + 1 );
 			}
 
 			// Kumo interacts the lever from the right
 			else if( dist > 0 && dist < 1.5 && height < 1.5 && state > LEFT )
 			{
-				state--;
+				setState( state - 1 );
 			}
 		}
 
@@ -167,25 +181,16 @@ public class Lever : MonoBehaviour
 			// Oni interacts the lever from the left
 			if( dist > -1.5 && dist < 0 && height < 1.5 && state < RIGHT )
 			{
-				state++;
+				setState( state + 1 );
 			}
 
 			// Oni interacts the lever from the right
 			else if( dist > 0 && dist < 1.5 && height < 1.5 &&state > LEFT )
 			{
-				state--;
+				setState( state - 1 );
 			}
 		}
 
-		// no interation
-		else
-		{
-			return;
-		}
-
-		// change the sprite and collider to the new state
-		spriteRenderer.sprite = sprites[state];
-		polygonCollider.SetPath( 0, colliderPoints[state] );
 		return;
 	}
 }
