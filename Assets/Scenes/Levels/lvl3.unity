@@ -55019,11 +55019,11 @@ PrefabInstance:
     - target: {fileID: 6874350545881380187, guid: 09884440b1e194c939081fcda507ab63, type: 3}
       propertyPath: oni
       value: 
-      objectReference: {fileID: 1153047474}
+      objectReference: {fileID: 949637195}
     - target: {fileID: 6874350545881380187, guid: 09884440b1e194c939081fcda507ab63, type: 3}
       propertyPath: kumo
       value: 
-      objectReference: {fileID: 1153047474}
+      objectReference: {fileID: 596128666}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09884440b1e194c939081fcda507ab63, type: 3}
 --- !u!1 &1076562349
@@ -58388,11 +58388,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6a1620a5585d44bcaea5665100f4421, type: 3}
---- !u!1 &1153047474 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4432582857936217880, guid: d6a1620a5585d44bcaea5665100f4421, type: 3}
-  m_PrefabInstance: {fileID: 1153047473}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1169639474
 GameObject:
   m_ObjectHideFlags: 0
