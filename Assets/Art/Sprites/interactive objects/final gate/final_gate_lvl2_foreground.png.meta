@@ -1,7 +1,67 @@
 fileFormatVersion: 2
 guid: 5cc287e74f1a5404ca1a79035512dfdc
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1158936366301553145
+    second: final_gate_lvl2_foreground_0
+  - first:
+      213: -2765197821639539507
+    second: final_gate_lvl2_foreground_1
+  - first:
+      213: -2110338831672829547
+    second: final_gate_lvl2_foreground_2
+  - first:
+      213: 3337961299733229327
+    second: final_gate_lvl2_foreground_3
+  - first:
+      213: -1021671842285590519
+    second: final_gate_lvl2_foreground_4
+  - first:
+      213: -7653698063579325989
+    second: final_gate_lvl2_foreground_5
+  - first:
+      213: -7887629342986971901
+    second: final_gate_lvl2_foreground_6
+  - first:
+      213: 4649157127092191921
+    second: final_gate_lvl2_foreground_7
+  - first:
+      213: -4376573337860804022
+    second: final_gate_lvl2_foreground_8
+  - first:
+      213: -5359633560831671823
+    second: final_gate_lvl2_foreground_9
+  - first:
+      213: -66871662835395751
+    second: final_gate_lvl2_foreground_10
+  - first:
+      213: 7752518017975074166
+    second: final_gate_lvl2_foreground_11
+  - first:
+      213: 7642949477224828128
+    second: final_gate_lvl2_foreground_12
+  - first:
+      213: 2011353395182009700
+    second: final_gate_lvl2_foreground_13
+  - first:
+      213: 7496337982208861107
+    second: final_gate_lvl2_foreground_14
+  - first:
+      213: -9205759648357094524
+    second: final_gate_lvl2_foreground_15
+  - first:
+      213: 4915315718275166460
+    second: final_gate_lvl2_foreground_16
+  - first:
+      213: 4803399830536281509
+    second: final_gate_lvl2_foreground_17
+  - first:
+      213: 222384728299294181
+    second: final_gate_lvl2_foreground_18
+  - first:
+      213: 3104163035694179179
+    second: final_gate_lvl2_foreground_19
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +101,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +135,441 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_0
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1afae1c7e551010800000000000000
+      internalID: 1158936366301553145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_1
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc4cd7b5b3b00a9d0800000000000000
+      internalID: -2765197821639539507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_2
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5999d6e730296b2e0800000000000000
+      internalID: -2110338831672829547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_3
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0fa998ed12d25e20800000000000000
+      internalID: 3337961299733229327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_4
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9086c8b5fda42d1f0800000000000000
+      internalID: -1021671842285590519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_5
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd95246892a98c590800000000000000
+      internalID: -7653698063579325989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_6
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305505b27e2898290800000000000000
+      internalID: -7887629342986971901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_7
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b24e4956cf158040800000000000000
+      internalID: 4649157127092191921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_8
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a427c5fbcb94343c0800000000000000
+      internalID: -4376573337860804022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_9
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1cd584ca1ce95b0800000000000000
+      internalID: -5359633560831671823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_10
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9531823b39c621ff0800000000000000
+      internalID: -66871662835395751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_11
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d3830101a769b60800000000000000
+      internalID: 7752518017975074166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_12
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec4e323e06311a60800000000000000
+      internalID: 7642949477224828128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_13
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d799d9143c9eb10800000000000000
+      internalID: 2011353395182009700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_14
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3e3d17da7580860800000000000000
+      internalID: 7496337982208861107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_15
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48bec00cf529e3080800000000000000
+      internalID: -9205759648357094524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_16
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf07fa27a95b63440800000000000000
+      internalID: 4915315718275166460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_17
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad594542ba19a240800000000000000
+      internalID: 4803399830536281509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_18
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed40cd6bb1161300800000000000000
+      internalID: 222384728299294181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final_gate_lvl2_foreground_19
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63237b95d3341b20800000000000000
+      internalID: 3104163035694179179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
