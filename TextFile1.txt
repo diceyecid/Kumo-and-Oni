@@ -1,0 +1,105 @@
+public class dialogueManager : MonoBehaviour
+{
+    public Text textLabel, characterName;
+    public Image image;
+    public GameObject people1, people2, people3;
+
+    public TextAsset dialogueFile;
+    public int index;
+    List<string> textList = new List<string>();
+    public bool finish;
+    bool textFinish;
+    public string name1, name2, name3;
+    void Awake()
+    {
+        if(characterName != null) characterName.gameObject.SetActive(true);
+        textLabel.gameObject.SetActive(true);
+        if (image != null) image.gameObject.SetActive(true);
+        fileReader(dialogueFile);
+    }
+
+    private void OnEnable()
+    {
+        StartCoroutine(SetTextUI());
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && index == textList.Count)
+        {
+            if (characterName != null) characterName.gameObject.SetActive(false);
+            textLabel.gameObject.SetActive(false);
+            if (image != null) image.gameObject.SetActive(false);
+            finish = true;
+            if(people1 != null) people1.SetActive(false);
+            if(people2 != null) people2.SetActive(false);
+            if(people3 != null) people3.SetActive(false);
+            index = 0;
+            this.gameObject.SetActive(false);
+        }
+
+        if (Input.GetMouseButtonDown(0) && textFinish && finish == false)
+        {
+            StartCoroutine(SetTextUI()); 
+        }
+    }
+
+    void fileReader(TextAsset file)
+    {
+        textList.Clear();
+        index = 0;
+
+        var lineData = file.text.Split('\n');
+
+        foreach (var line in lineData)
+        {
+            textList.Add(line);
+        }
+    }
+
+    IEnumerator SetTextUI()
+    {
+        textFinish = false;
+        textLabel.text = "";
+        switch (textList[index])
+        {
+            case "A\r":
+                if (people3 != null) people3.SetActive(false);
+                if (people2 != null) people2.SetActive(false);
+                if (people1 != null) people1.SetActive(true);
+                characterName.text = name1;
+                index++;
+                break;
+
+            case "B\r":
+                if (people3 != null) people3.SetActive(false);
+                if (people1 != null) people1.SetActive(false);
+                if (people2 != null) people2.SetActive(true);
+                characterName.text = name2;
+                index++;
+                break;
+
+            case "C\r":
+                if (people1 != null) people1.SetActive(false);
+                if (people2 != null) people2.SetActive(false);
+                if (people3 != null) people3.SetActive(true);
+                characterName.text = name3;
+                index++;
+                break;
+            default:
+                if (people1 != null) people1.SetActive(false);
+                if (people3 != null) people3.SetActive(false);
+                if (people2 != null) people2.SetActive(false);
+                break;
+        }
+        for (int i = 0; i < textList[index].Length; i++)
+        {
+            textLabel.text += textList[index][i];
+            yield return new WaitForSeconds(0.01f);
+
+        }
+        textFinish = true;
+        index++;
+
+    }
+}
