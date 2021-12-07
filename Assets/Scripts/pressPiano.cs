@@ -7,7 +7,6 @@ public class pressPiano : MonoBehaviour
     private bool pressing, climbing, falling;
     private Rigidbody2D rb;
     public float top, bot, length;
-    public GameObject kumo;
 
 
     // Start is called before the first frame update
@@ -38,11 +37,6 @@ public class pressPiano : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.tag == "Kumo" && climbing == false)
-        {
-
-            climbing = true;
-        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -50,12 +44,12 @@ public class pressPiano : MonoBehaviour
         {
             pressing = true;
         }
-        if (collision.transform.tag == "Kumo")
+        /*if (collision.transform.tag == "Kumo")
         {
             kumo.transform.position = new Vector2(kumo.transform.position.x, transform.position.y - length);
             kumo.GetComponent<Rigidbody2D>().velocity = new Vector2(kumo.GetComponent<Rigidbody2D>().velocity.x, 0);
             kumo.GetComponent<KumoMovement>().climbing = true;
-        }
+        }*/
         
     }
 
