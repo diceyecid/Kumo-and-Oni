@@ -131,7 +131,7 @@ public class EnemyScript : MonoBehaviour
                 else if (distToOni > distToAp || distToKumo > distToAp)
                 {
                     //animator.SetBool("Attacking", false);
-                    print("stop attacking:");
+                    //print("stop attacking:");
                 }
             }
             else if (transform.position.x > Kumo.position.x || transform.position.x > Oni.position.x)

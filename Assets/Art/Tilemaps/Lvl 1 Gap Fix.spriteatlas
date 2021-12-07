@@ -35,6 +35,8 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
     - {fileID: 2800000, guid: 48de437b800450b4289df86ace5c8eb6, type: 3}
     - {fileID: 2800000, guid: 6d9fec11f8589a046bea1a04ebacbe2e, type: 3}
+    - {fileID: 2800000, guid: 7bb29292186462447ad673acaefb595a, type: 3}
+    - {fileID: 2800000, guid: 427e5dc449885b34bad848cb2502443b, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -46,6 +48,32 @@ SpriteAtlas:
   - {fileID: 4014360146882392030, guid: 6d9fec11f8589a046bea1a04ebacbe2e, type: 3}
   - {fileID: -6610253020818966630, guid: 6d9fec11f8589a046bea1a04ebacbe2e, type: 3}
   - {fileID: -8598649104569827965, guid: 6d9fec11f8589a046bea1a04ebacbe2e, type: 3}
+  - {fileID: -9002343074325901620, guid: 7bb29292186462447ad673acaefb595a, type: 3}
+  - {fileID: -1876840175065265723, guid: 7bb29292186462447ad673acaefb595a, type: 3}
+  - {fileID: -2146695679355235492, guid: 7bb29292186462447ad673acaefb595a, type: 3}
+  - {fileID: -6542649559235253885, guid: 7bb29292186462447ad673acaefb595a, type: 3}
+  - {fileID: -5584868221102005820, guid: 7bb29292186462447ad673acaefb595a, type: 3}
+  - {fileID: -1378990313633294695, guid: 7bb29292186462447ad673acaefb595a, type: 3}
+  - {fileID: -179557145451105579, guid: 7bb29292186462447ad673acaefb595a, type: 3}
+  - {fileID: -4604727729396695222, guid: 7bb29292186462447ad673acaefb595a, type: 3}
+  - {fileID: -6009289781677905071, guid: 7bb29292186462447ad673acaefb595a, type: 3}
+  - {fileID: -5360660507765682005, guid: 7bb29292186462447ad673acaefb595a, type: 3}
+  - {fileID: 3794092291034870740, guid: 7bb29292186462447ad673acaefb595a, type: 3}
+  - {fileID: -4058047370172878731, guid: 7bb29292186462447ad673acaefb595a, type: 3}
+  - {fileID: 985935240607654701, guid: 427e5dc449885b34bad848cb2502443b, type: 3}
+  - {fileID: -3784388531547988380, guid: 427e5dc449885b34bad848cb2502443b, type: 3}
+  - {fileID: 2916925458094743220, guid: 427e5dc449885b34bad848cb2502443b, type: 3}
+  - {fileID: -2683897481695024762, guid: 427e5dc449885b34bad848cb2502443b, type: 3}
+  - {fileID: -1723980447697799475, guid: 427e5dc449885b34bad848cb2502443b, type: 3}
+  - {fileID: 2921825243083964396, guid: 427e5dc449885b34bad848cb2502443b, type: 3}
+  - {fileID: -2357033313509900702, guid: 427e5dc449885b34bad848cb2502443b, type: 3}
+  - {fileID: -7949663464716778479, guid: 427e5dc449885b34bad848cb2502443b, type: 3}
+  - {fileID: 6598024637527797788, guid: 427e5dc449885b34bad848cb2502443b, type: 3}
+  - {fileID: -5108540130244368584, guid: 427e5dc449885b34bad848cb2502443b, type: 3}
+  - {fileID: -3165220442201851181, guid: 427e5dc449885b34bad848cb2502443b, type: 3}
+  - {fileID: -3512491760315646986, guid: 427e5dc449885b34bad848cb2502443b, type: 3}
+  - {fileID: 7517748688564138506, guid: 427e5dc449885b34bad848cb2502443b, type: 3}
+  - {fileID: -8700223210184936040, guid: 427e5dc449885b34bad848cb2502443b, type: 3}
   - {fileID: -5508730883306770088, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
   - {fileID: 5471212883752380692, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
   - {fileID: 2646795109626025010, guid: 044aebc5bada35948b9d81d777e62c91, type: 3}
@@ -100,6 +128,32 @@ SpriteAtlas:
   - Environment 1 Atlas-Sheet D_0
   - Environment 1 Atlas-Sheet D_3
   - Environment 1 Atlas-Sheet D_2
+  - Environment 1 Atlas-Sheet E_8
+  - Environment 1 Atlas-Sheet E_9
+  - Environment 1 Atlas-Sheet E_4
+  - Environment 1 Atlas-Sheet E_5
+  - Environment 1 Atlas-Sheet E_6
+  - Environment 1 Atlas-Sheet E_7
+  - Environment 1 Atlas-Sheet E_0
+  - Environment 1 Atlas-Sheet E_1
+  - Environment 1 Atlas-Sheet E_2
+  - Environment 1 Atlas-Sheet E_3
+  - Environment 1 Atlas-Sheet E_11
+  - Environment 1 Atlas-Sheet E_10
+  - Environment 1 Atlas-Sheet F_3
+  - Environment 1 Atlas-Sheet F_2
+  - Environment 1 Atlas-Sheet F_1
+  - Environment 1 Atlas-Sheet F_0
+  - Environment 1 Atlas-Sheet F_7
+  - Environment 1 Atlas-Sheet F_6
+  - Environment 1 Atlas-Sheet F_5
+  - Environment 1 Atlas-Sheet F_4
+  - Environment 1 Atlas-Sheet F_9
+  - Environment 1 Atlas-Sheet F_8
+  - Environment 1 Atlas-Sheet F_12
+  - Environment 1 Atlas-Sheet F_13
+  - Environment 1 Atlas-Sheet F_10
+  - Environment 1 Atlas-Sheet F_11
   - Environment 1 Atlas-Sheet_10
   - Environment 1 Atlas-Sheet_11
   - Environment 1 Atlas-Sheet_12

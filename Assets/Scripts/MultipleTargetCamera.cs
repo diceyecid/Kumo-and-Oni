@@ -53,7 +53,6 @@ public class MultipleTargetCamera : MonoBehaviour
                 shake = false;
             }
 
-            print(shakeTime);
         }
     }
 

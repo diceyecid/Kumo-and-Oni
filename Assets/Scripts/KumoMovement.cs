@@ -169,7 +169,8 @@ public class KumoMovement : MonoBehaviour
     void move()
     {
         moveInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(moveInput * Speed, rb.velocity.y);
+        if (climbing == false) rb.velocity = new Vector2(moveInput * Speed, rb.velocity.y);
+        else rb.velocity = new Vector2(moveInput * 3, rb.velocity.y);
 
         if (faceRight == false && moveInput > 0)
         {
