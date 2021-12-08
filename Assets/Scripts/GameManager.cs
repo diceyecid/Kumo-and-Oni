@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	public int currentLevel{ get; private set; }
+	public int currentLevel{ get; set; }
 	public int kumoHealth{ get; private set; }
 	public int oniHealth{ get; private set; }
 
@@ -39,7 +39,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-       currentLevel = 0;
 	   kumoHealth = 5;
 	   oniHealth = 5;
     }
@@ -47,17 +46,20 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        GameObject kumo = GameObject.FindWithTag("Kumo");
-        PlayerHealth kumoHealth = kumo.GetComponent<PlayerHealth>();
+		if( SceneLoader.currentLevel > 0 )
+		{
+			GameObject kumo = GameObject.FindWithTag("Kumo");
+			PlayerHealth kumoHealth = kumo.GetComponent<PlayerHealth>();
 
-        GameObject oni = GameObject.FindWithTag("Oni");
-        PlayerHealth oniHealth = oni.GetComponent<PlayerHealth>();
+			GameObject oni = GameObject.FindWithTag("Oni");
+			PlayerHealth oniHealth = oni.GetComponent<PlayerHealth>();
 
-        if(oniHealth.health <= 0 && kumoHealth.health <= 0)
-        {
-            print("Gameover");
-            GameOver();
-        }
+			if(oniHealth.health <= 0 && kumoHealth.health <= 0)
+			{
+				print("Gameover");
+				GameOver();
+			}
+		}
     }
 
 
@@ -70,7 +72,6 @@ public class GameManager : MonoBehaviour
 	public void Init()
 	{
 		SceneLoader.LoadLevel1();
-		currentLevel = 1;
 	}
 
 	// players died, game over
@@ -79,7 +80,24 @@ public class GameManager : MonoBehaviour
 		SceneLoader.LoadGameOver();
 	}
 
-	// finishes level
+	// reset current level
+	public void ResetLevel()
+	{
+		switch( currentLevel )
+		{
+			case 1: 
+				SceneLoader.LoadLevel1();
+				break;
+			case 2:
+				SceneLoader.LoadLevel2();
+				break; 
+			case 3:
+				SceneLoader.LoadLevel3();
+				break; 
+		}
+	}
+
+	// finishes level 1
 	public void FinishLevel1()
 	{
 		// save health stats 
@@ -87,6 +105,15 @@ public class GameManager : MonoBehaviour
 		oniHealth = GameObject.FindWithTag( "Oni" ).GetComponent<PlayerHealth>().health;
 		
 		SceneLoader.LoadLevel2();
-		currentLevel = 2;
+	}
+
+	// finishes level 2
+	public void FinishLevel2()
+	{
+		// save health stats 
+		kumoHealth = GameObject.FindWithTag( "Kumo" ).GetComponent<PlayerHealth>().health;
+		oniHealth = GameObject.FindWithTag( "Oni" ).GetComponent<PlayerHealth>().health;
+		
+		SceneLoader.LoadLevel3();
 	}
 }

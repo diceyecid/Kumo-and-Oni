@@ -15,11 +15,11 @@ public class GameOverScreen : MonoBehaviour
 
     public void ResetButton()
     {
-        SceneLoader.LoadLevel1();
+		SceneLoader.ResetLevel();
     }
 
     public void ExitButton()
     {
-        SceneManager.LoadScene("MainMenu");
-    }
+        SceneLoader.LoadMainMenu();
+	}
 }

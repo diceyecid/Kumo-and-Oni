@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public static class SceneLoader
 {
+	public static int currentLevel{ get; private set; }
+
 	// Load the main menu of the game
 	public static void LoadMainMenu()
 	{
         SceneManager.LoadScene( "MainMenu", LoadSceneMode.Single );
+		currentLevel = 0;
 	}
 
 	// Load intro narrative
@@ -21,6 +24,7 @@ public static class SceneLoader
 	{
 		SceneManager.LoadScene( "Level1", LoadSceneMode.Single );
 		SceneManager.LoadScene( "GUI", LoadSceneMode.Additive );
+		currentLevel = 1;
 	}
 
     // Load underground of level 1
@@ -28,6 +32,7 @@ public static class SceneLoader
 	{
 		SceneManager.LoadScene( "underground", LoadSceneMode.Single );
 		SceneManager.LoadScene( "GUI", LoadSceneMode.Additive );
+		currentLevel = 1;
 	}
 
 	// Load transition narrative between level 1 and 2
@@ -41,6 +46,7 @@ public static class SceneLoader
 		SceneManager.LoadScene( "Level2", LoadSceneMode.Single );
 		SceneManager.LoadScene( "roof", LoadSceneMode.Additive );
 		SceneManager.LoadScene( "GUI", LoadSceneMode.Additive );
+		currentLevel = 2;
 	}
 
     // Load roof of level 2
@@ -48,6 +54,7 @@ public static class SceneLoader
 	{
 		SceneManager.LoadScene( "roof", LoadSceneMode.Single );
 		SceneManager.LoadScene( "GUI", LoadSceneMode.Additive );
+		currentLevel = 2;
 	}
 
 	// Load transition narrative between level 2 and 3
@@ -60,6 +67,7 @@ public static class SceneLoader
 	{
 		SceneManager.LoadScene( "lvl3", LoadSceneMode.Single );
 		SceneManager.LoadScene( "GUI", LoadSceneMode.Additive );
+		currentLevel = 3;
 	}
 
 	// Load good ending of the game
@@ -76,5 +84,23 @@ public static class SceneLoader
 	public static void LoadGameOver()
 	{
 		SceneManager.LoadScene( "GameOver", LoadSceneMode.Single );
+		currentLevel = 0;
+	}
+
+	// reset current level
+	public static void ResetLevel()
+	{
+		switch( currentLevel )
+		{
+			case 1: 
+				SceneLoader.LoadLevel1();
+				break;
+			case 2:
+				SceneLoader.LoadLevel2();
+				break; 
+			case 3:
+				SceneLoader.LoadLevel3();
+				break; 
+		}
 	}
 }
