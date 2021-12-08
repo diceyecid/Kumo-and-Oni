@@ -293,7 +293,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   attackRange: 0.2
-  damage: 1
+  damage: 2
   attackRate: 0.5
 --- !u!114 &8988389720891211448
 MonoBehaviour:
