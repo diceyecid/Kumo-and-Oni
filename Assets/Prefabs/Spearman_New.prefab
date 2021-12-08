@@ -139,6 +139,7 @@ MonoBehaviour:
   damage: 1
   attackRate: 3
   rb: {fileID: 94134542397835264}
+  myHealth: {fileID: 0}
   groundCheck: {fileID: 94134542165413243}
   groundLayer:
     serializedVersion: 2
@@ -152,6 +153,9 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
+  bossLayer:
+    serializedVersion: 2
+    m_Bits: 32768
   animator: {fileID: 94134542397835270}
 --- !u!50 &94134542397835264
 Rigidbody2D:

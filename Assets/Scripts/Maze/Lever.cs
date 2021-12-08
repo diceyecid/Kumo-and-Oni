@@ -154,6 +154,7 @@ public class Lever : MonoBehaviour
 		// Kumo interaction with lever
 		if( Input.GetKeyDown( InputKey.KUMO_INTERACT ) ) 
 		{
+			SoundManager.PlaySound("lever");
 			// distance between Kumo and lever
 			float dist = kumo.transform.position.x - this.transform.position.x;
 			float height = kumo.transform.position.y - this.transform.position.y;
@@ -174,6 +175,7 @@ public class Lever : MonoBehaviour
 		// Oni interaction with lever
 		else if( Input.GetKeyDown( InputKey.ONI_INTERACT ) )
 		{
+			SoundManager.PlaySound("lever");
 			// distance between Oni and lever
 			float dist = oni.transform.position.x - this.transform.position.x;
 			float height = oni.transform.position.y - this.transform.position.y;

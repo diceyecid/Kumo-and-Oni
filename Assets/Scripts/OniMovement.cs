@@ -61,11 +61,13 @@ public class OniMovement : MonoBehaviour
             {
                 rb.velocity = Vector2.up * jumpForce;
                 animator.SetBool("jumping", true);
+                SoundManager.PlaySound("jump");
                 extraJumps--;
             }
             else if ((Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Period)) && extraJumps == 0 && isGrounded == true)
             {
                 rb.velocity = Vector2.up * jumpForce;
+                SoundManager.PlaySound("jump");
                 animator.SetBool("jumping", true);
             }
 

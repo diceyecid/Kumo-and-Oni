@@ -41,6 +41,7 @@ public class OniAttack : MonoBehaviour
     void Attack()
     {
         //play an attack animation 
+        SoundManager.PlaySound("oniAttack");
         animator.SetBool("attacking", true);
 
         //Detect enemies in range of attack

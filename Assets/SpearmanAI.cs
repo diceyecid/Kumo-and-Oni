@@ -18,6 +18,7 @@ public class SpearmanAI : MonoBehaviour
     private bool isMoving;
 
     public Rigidbody2D rb;
+    public GameObject myHealth;
 
     public Transform groundCheck;
     public LayerMask groundLayer;
@@ -28,6 +29,7 @@ public class SpearmanAI : MonoBehaviour
     public Transform backCheck;
 
     public LayerMask enemyLayer;
+    public LayerMask bossLayer;
 
     public Animator animator;
 
@@ -43,17 +45,20 @@ public class SpearmanAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Walk();
+  
 
-        if (mustPartrol)
-        {
-            Patrol();
-        }
+            Walk();
 
-        if (playerInRange)
-        {
-            StartCoroutine(Attack());
-        }
+            if (mustPartrol)
+            {
+                Patrol();
+            }
+
+            if (playerInRange)
+            {
+                StartCoroutine(Attack());
+            }
+
     }
 
     private void FixedUpdate()
@@ -81,7 +86,7 @@ public class SpearmanAI : MonoBehaviour
     void Patrol()
     {
         //flip when no more ground or touches walk
-        if (mustTurn || bodyCollider.IsTouchingLayers(groundLayer) || playerBehind || bodyCollider.IsTouchingLayers(enemyLayer))
+        if (mustTurn || bodyCollider.IsTouchingLayers(groundLayer) || playerBehind || bodyCollider.IsTouchingLayers(enemyLayer) || bodyCollider.IsTouchingLayers(bossLayer))
         {
             Flip();
         }

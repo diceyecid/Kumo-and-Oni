@@ -8,6 +8,7 @@ public class SimpleEnemy : MonoBehaviour
     public GameObject self;
     private const int INV_TIME = 5;
 
+
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -28,7 +29,7 @@ public class SimpleEnemy : MonoBehaviour
 
     private IEnumerator Blink()
     {
-        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        SpriteRenderer sr = self.GetComponent<SpriteRenderer>();
         Color defaultColor = sr.color;
 
 

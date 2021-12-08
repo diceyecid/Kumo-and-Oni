@@ -224,6 +224,7 @@ public class KumoMovement : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
             extraJumps--;
             animator.SetBool("jumping", true);
+            SoundManager.PlaySound("jump");
         }
     }
 }
