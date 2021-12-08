@@ -115,6 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dab8ff79a9e5d4a4a8412cedea9da374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: {fileID: 5276110499351971518, guid: 47ee1bfb998731e44a5e979728205da7, type: 3}
+  enemies: {fileID: 94134542397835276, guid: 997ae55649b02d64f9210c1564895972, type: 3}
   kumo: {fileID: 8426323590337686954, guid: 6a7f05c2cfc7d3b4180bf43de726c63f, type: 3}
   oni: {fileID: 8988389720891211449, guid: 60e4da7f0a6b5894391fdf8a24b03919, type: 3}

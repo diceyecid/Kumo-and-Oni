@@ -8,8 +8,8 @@ public class summon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemies.GetComponent<EnemyScript>().Kumo = kumo.transform;
-        enemies.GetComponent<EnemyScript>().Oni = oni.transform;
+        /*enemies.GetComponent<EnemyScript>().Kumo = kumo.transform;
+        enemies.GetComponent<EnemyScript>().Oni = oni.transform;*/
         Instantiate(enemies, this.transform.position, this.transform.rotation);
     }
 
