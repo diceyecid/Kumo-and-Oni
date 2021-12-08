@@ -13,9 +13,10 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	public int currentLevel{ get; set; }
 	public int kumoHealth{ get; private set; }
 	public int oniHealth{ get; private set; }
+	public bool gotArtifact1{ private get; set; }
+	public bool gotArtifact2{ private get; set; }
 
 
 
@@ -41,6 +42,8 @@ public class GameManager : MonoBehaviour
     {
 	   kumoHealth = 5;
 	   oniHealth = 5;
+	   gotArtifact1 = false;
+	   gotArtifact2 = false;
     }
 
     // Update is called once per frame
@@ -80,23 +83,6 @@ public class GameManager : MonoBehaviour
 		SceneLoader.LoadGameOver();
 	}
 
-	// reset current level
-	public void ResetLevel()
-	{
-		switch( currentLevel )
-		{
-			case 1: 
-				SceneLoader.LoadLevel1();
-				break;
-			case 2:
-				SceneLoader.LoadLevel2();
-				break; 
-			case 3:
-				SceneLoader.LoadLevel3();
-				break; 
-		}
-	}
-
 	// finishes level 1
 	public void FinishLevel1()
 	{
@@ -104,7 +90,7 @@ public class GameManager : MonoBehaviour
 		kumoHealth = GameObject.FindWithTag( "Kumo" ).GetComponent<PlayerHealth>().health;
 		oniHealth = GameObject.FindWithTag( "Oni" ).GetComponent<PlayerHealth>().health;
 		
-		SceneLoader.LoadLevel2();
+		SceneLoader.LoadTransition1();
 	}
 
 	// finishes level 2
@@ -114,6 +100,19 @@ public class GameManager : MonoBehaviour
 		kumoHealth = GameObject.FindWithTag( "Kumo" ).GetComponent<PlayerHealth>().health;
 		oniHealth = GameObject.FindWithTag( "Oni" ).GetComponent<PlayerHealth>().health;
 		
-		SceneLoader.LoadLevel3();
+		SceneLoader.LoadTransition2();
+	}
+	
+	// finishes level 3
+	public void FinishLevel3()
+	{
+		// clear health stats
+		kumoHealth = 5;
+		oniHealth = 5;
+		
+		if( gotArtifact1 && gotArtifact2 )
+			SceneLoader.LoadGoodEnding();
+		else
+			SceneLoader.LoadBadEnding();
 	}
 }
