@@ -22,6 +22,7 @@ public class ReviveKumo : MonoBehaviour
             {
                 
                 StartCoroutine(Revive());
+
             }
             else if (!OniInRange && Input.GetKeyUp(KeyCode.Comma))
             {
@@ -52,7 +53,7 @@ public class ReviveKumo : MonoBehaviour
     IEnumerator Revive()
     {
         yield return new WaitForSeconds(WaitForReviveTime);
-
+        SoundManager.PlaySound("heal");
         GameObject.Find("Kumo").GetComponent<PlayerHealth>().health = 5;
         StatsManager kumoStats = GameObject.FindWithTag("kumoStats").GetComponent<StatsManager>();
         for (int i = 0; i < maxHealth; i++)
