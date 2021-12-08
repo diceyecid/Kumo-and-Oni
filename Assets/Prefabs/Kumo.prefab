@@ -100,6 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3453739913169887300}
   - component: {fileID: 2990508364734251283}
+  - component: {fileID: 8508954439463281689}
   m_Layer: 12
   m_Name: Revive box
   m_TagString: Untagged
@@ -147,6 +148,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.140808, y: 1.5603962}
   m_EdgeRadius: 0
+--- !u!114 &8508954439463281689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6173920260484692490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7522c1a0b7c17b49bc1ab6ddc1f6a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaitForReviveTime: 3
+  maxHealth: 5
 --- !u!1 &8426323590337686954
 GameObject:
   m_ObjectHideFlags: 0

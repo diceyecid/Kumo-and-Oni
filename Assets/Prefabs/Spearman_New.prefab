@@ -149,6 +149,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   backCheck: {fileID: 8315701494989958281}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
   animator: {fileID: 94134542397835270}
 --- !u!50 &94134542397835264
 Rigidbody2D:

@@ -6,8 +6,7 @@ public class ReviveKumo : MonoBehaviour
 {
     public int WaitForReviveTime = 3;
     private bool OniInRange;
-    
-
+    public int maxHealth = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +20,10 @@ public class ReviveKumo : MonoBehaviour
         if(GameObject.Find("Kumo").GetComponent<PlayerHealth>().health <= 0) {
             if (OniInRange && Input.GetKeyDown(KeyCode.Comma))
             {
+                
                 StartCoroutine(Revive());
             }
-            else if (OniInRange && Input.GetKeyUp(KeyCode.Comma))
+            else if (!OniInRange && Input.GetKeyUp(KeyCode.Comma))
             {
                 StopCoroutine(Revive());
             }
@@ -51,15 +51,11 @@ public class ReviveKumo : MonoBehaviour
 
     IEnumerator Revive()
     {
-		int reviveHealth = 5;
-
         yield return new WaitForSeconds(WaitForReviveTime);
-        GameObject.Find("Kumo").GetComponent<PlayerHealth>().health = reviveHealth;
+
+        GameObject.Find("Kumo").GetComponent<PlayerHealth>().health = 5;
         StatsManager kumoStats = GameObject.FindWithTag("kumoStats").GetComponent<StatsManager>();
-		
-		for( int i = 0; i < reviveHealth; i++ )
-		{
-			kumoStats.GainPoint();
-		}
+        for (int i = 0; i < maxHealth; i++)
+            kumoStats.GainPoint();
     }
 }
