@@ -32,6 +32,6 @@ public class GameControl : MonoBehaviour
 
     public void GameOver()
     {
-        GameOverScreen.Setup();
+		GameManager.Instance.GameOver();
     }
 }
