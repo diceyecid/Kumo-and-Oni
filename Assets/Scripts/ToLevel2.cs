@@ -20,7 +20,7 @@ public class ToLevel2 : MonoBehaviour
 	{
 		if( other.tag == "Kumo" || other.tag == "Oni" )
 		{
-			SceneLoader.LoadLevel2();
+			GameManager.Instance.FinishLevel1();
 		}
 	}
 }

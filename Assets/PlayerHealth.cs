@@ -16,9 +16,13 @@ public class PlayerHealth : MonoBehaviour
 
 	void Start()
 	{
-		// get healthUI object
 		if( gameObject.CompareTag( "Oni" ) )
 		{
+			// get health if game manager exists
+			if( GameManager.Instance )
+				health = GameManager.Instance.oniHealth;
+
+			// get healthUI object
 			if( GameObject.FindWithTag( "oniStats" ) )
 			{
 				healthUI = GameObject.FindWithTag( "oniStats" ).GetComponent<StatsManager>();
@@ -26,6 +30,11 @@ public class PlayerHealth : MonoBehaviour
 		}
 		else if( gameObject.CompareTag( "Kumo" ) )
 		{
+			// get health if game manager exists
+			if( GameManager.Instance )
+				health = GameManager.Instance.kumoHealth;
+
+			// get healthUI object
 			if( GameObject.FindWithTag( "kumoStats" ) )
 			{
 				healthUI = GameObject.FindWithTag( "kumoStats" ).GetComponent<StatsManager>();

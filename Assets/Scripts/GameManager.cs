@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
+	public int currentLevel;
+	public int kumoHealth;
+	public int oniHealth;
+
 
 
 /********** life cycle hooks **********/ 
@@ -28,13 +32,16 @@ public class GameManager : MonoBehaviour
 		else if( _instance != this )
 			Destroy( gameObject );
 
+		// make this game manager stay consistent across scene loads
 		DontDestroyOnLoad( gameObject );
 	}
 	
     // Start is called before the first frame update
     private void Start()
     {
-        
+       currentLevel = 0;
+	   kumoHealth = 5;
+	   oniHealth = 5;
     }
 
     // Update is called once per frame
@@ -63,11 +70,23 @@ public class GameManager : MonoBehaviour
 	public void Init()
 	{
 		SceneLoader.LoadLevel1();
+		currentLevel = 1;
 	}
 
 	// players died, game over
 	public void GameOver()
 	{
 		SceneLoader.LoadGameOver();
+	}
+
+	// finishes level
+	public void FinishLevel1()
+	{
+		// save health stats 
+		kumoHealth = GameObject.FindWithTag( "Kumo" ).GetComponent<PlayerHealth>().health;
+		oniHealth = GameObject.FindWithTag( "Oni" ).GetComponent<PlayerHealth>().health;
+		
+		SceneLoader.LoadLevel2();
+		currentLevel = 2;
 	}
 }
