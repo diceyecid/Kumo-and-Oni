@@ -6,6 +6,7 @@ public class ReviveOni : MonoBehaviour
 {
     public int WaitForReviveTime = 3;
     private bool KumoInRange;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class ReviveOni : MonoBehaviour
             {
                 StartCoroutine(Revive());
             }
-            else if (KumoInRange && Input.GetKeyUp(KeyCode.F))
+            else if (!KumoInRange && Input.GetKeyUp(KeyCode.F))
             {
                 StopCoroutine(Revive());
             }
@@ -50,9 +51,15 @@ public class ReviveOni : MonoBehaviour
 
     IEnumerator Revive()
     {
+        animator.SetBool("revive", true);
         yield return new WaitForSeconds(WaitForReviveTime);
+
         GameObject.Find("Oni (bigger scale reference)").GetComponent<PlayerHealth>().health = 5;
         StatsManager oniStats = GameObject.FindWithTag("oniStats").GetComponent<StatsManager>();
         oniStats.GainPoint();
+        animator.SetBool("revive", false);
+
+        
+        
     }
 }

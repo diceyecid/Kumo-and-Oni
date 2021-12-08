@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WaitForReviveTime: 3
+  animator: {fileID: 8988389720891211429}
 --- !u!61 &4694271945733283839
 BoxCollider2D:
   m_ObjectHideFlags: 0

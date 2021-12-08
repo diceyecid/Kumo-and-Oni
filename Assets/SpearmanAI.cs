@@ -109,8 +109,8 @@ public class SpearmanAI : MonoBehaviour
             nextFire = Time.time + attackRate;
             AttackPlayer();
         }
-        
-        
+
+
         yield return new WaitForSeconds(WaitForAttack);
 
         animator.SetBool("Attacking", false);

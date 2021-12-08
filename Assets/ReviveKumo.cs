@@ -6,8 +6,7 @@ public class ReviveKumo : MonoBehaviour
 {
     public int WaitForReviveTime = 3;
     private bool OniInRange;
-    
-
+   
 
     // Start is called before the first frame update
     void Start()
