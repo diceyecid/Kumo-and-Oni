@@ -43,8 +43,12 @@ public class boss : MonoBehaviour
             {
                 if (this.GetComponent<Animator>().GetBool("isSummoning"))
                 {
-                    if (randomN == 0)Instantiate(summon, new Vector2(Random.Range(-10, 20), -2.7f), this.transform.rotation);
-                    else if (randomN == 1) Instantiate(blade, new Vector2(this.transform.position.x, this.transform.position.y -1), this.transform.rotation);
+                    if (randomN == 0) Instantiate(summon, new Vector2(Random.Range(-10, 20), -2.7f), this.transform.rotation);
+                    else if (randomN == 1)
+                    {
+                        SoundManager.PlaySound("slash");
+                        Instantiate(blade, new Vector2(this.transform.position.x, this.transform.position.y - 1), this.transform.rotation);
+                    }
                 }
                 summonTimer = 600;
                 this.GetComponent<Animator>().SetBool("isSummoning", false);
@@ -88,7 +92,11 @@ public class boss : MonoBehaviour
                                 break;
                         }
                     }
-                    else if (randomN == 1) Instantiate(blade, new Vector2(this.transform.position.x, this.transform.position.y - 1), this.transform.rotation);
+                    else if (randomN == 1)
+                    {
+                        SoundManager.PlaySound("slash");
+                        Instantiate(blade, new Vector2(this.transform.position.x, this.transform.position.y - 1), this.transform.rotation);
+                    }
                 }
                 summonTimer = 400;
                 this.GetComponent<Animator>().SetBool("isSummoning", false);

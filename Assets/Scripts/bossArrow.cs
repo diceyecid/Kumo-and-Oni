@@ -13,11 +13,6 @@ public class bossArrow : MonoBehaviour
         this.GetComponent<Rigidbody2D>().velocity = this.transform.right * speed * -1;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-    }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
