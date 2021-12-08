@@ -27,12 +27,13 @@ public class stage3 : MonoBehaviour
             this.GetComponent<Animator>().SetBool("isSummoning", true);
             if (this.GetComponent<SpriteRenderer>().sprite.name == "boss_summon6")
             {
+                
                 Instantiate(blade, new Vector2(this.transform.position.x, this.transform.position.y - 1), this.transform.rotation);
                 summonTimer = Random.Range(500, 1000);
                 this.GetComponent<Animator>().SetBool("isSummoning", false);
             }
         }
-
+        
         if (shakeTime > 0 && hurting)
         {
             shakeTime -= Time.deltaTime;
