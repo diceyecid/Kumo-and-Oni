@@ -45,7 +45,7 @@ public class OniAttack : MonoBehaviour
 
         //Detect enemies in range of attack
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        Collider2D[] parry = Physics2D.OverlapCircleAll(attackPoint.position, 0.8f, arrows);
+        //Collider2D[] parry = Physics2D.OverlapCircleAll(attackPoint.position, 0.8f, arrows);
         
         // Damage them
         foreach (Collider2D enemy in hitEnemies)

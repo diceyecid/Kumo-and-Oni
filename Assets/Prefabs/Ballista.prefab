@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8830519241302931489}
   - component: {fileID: 7555726841425651892}
   - component: {fileID: 7328311239513530457}
+  - component: {fileID: -1413548316064623467}
   m_Layer: 0
   m_Name: Ballista
   m_TagString: Untagged
@@ -143,3 +144,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow: {fileID: 7487519464508922110, guid: 95106086f8535423f99a5fb281e9642c, type: 3}
+--- !u!114 &-1413548316064623467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910329587676189822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218fc76d0d267724a9585041eb04ed34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  self: {fileID: 1910329587676189822}

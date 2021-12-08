@@ -21,8 +21,10 @@ public class OniBlock : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+
         if (Oni.GetComponent<SpriteRenderer>().sprite.name == "on_attacki3" || Oni.GetComponent<SpriteRenderer>().sprite.name == "on_attacki4")
         {
+
             if (collision.tag == "arrows")
             {
 
@@ -38,4 +40,5 @@ public class OniBlock : MonoBehaviour
         Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
 
     }
+
 }

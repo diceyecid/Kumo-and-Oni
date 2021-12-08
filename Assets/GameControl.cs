@@ -19,6 +19,7 @@ public class GameControl : MonoBehaviour
     {
         GameObject kumo = GameObject.Find("Kumo");
         PlayerHealth kumoHealth = kumo.GetComponent<PlayerHealth>();
+
         GameObject oni = GameObject.Find("Oni (bigger scale reference)");
         PlayerHealth oniHealth = oni.GetComponent<PlayerHealth>();
 

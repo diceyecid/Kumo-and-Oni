@@ -4,23 +4,15 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     // Start is called before the first frame update
     public int health;
-=======
-    public int health = 100;
 	
 	private StatsManager healthUI;
->>>>>>> fdf54fdb9567cc115d286691dc679093ef08d7a3
-=======
+
 	private const int INV_TIME = 5; 	// invincible time in 0.1 second
 
-    public int health = 100;
-	
-	private StatsManager healthUI;
 	private bool isInvincible;
->>>>>>> ce3c982e72945d73594cf3d4c893c9a90a9d9e5e
+
 
 	void Start()
 	{

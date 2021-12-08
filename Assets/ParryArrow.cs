@@ -20,20 +20,26 @@ public class ParryArrow : MonoBehaviour
         //Debug.Log(collision.name);
 
         SimpleEnemy enemy = collision.GetComponent<SimpleEnemy>();
+
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
+            Destroy(gameObject);
         }
+
 
         //Instantiate(impactEffect, transform.position, transform.rotation);
 
+        if (collision.gameObject.layer == 3)
+            Destroy(gameObject);
+
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    /*private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.transform.gameObject.layer != 9 && collision.transform.gameObject.layer != 13 && collision.tag != "shield" && collision.transform.gameObject.layer != 3)
         {
             Destroy(gameObject);
         }
-    }
+    }*/
 }
