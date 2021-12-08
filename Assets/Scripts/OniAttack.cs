@@ -8,7 +8,7 @@ public class OniAttack : MonoBehaviour
     public Transform attackPoint;
     public LayerMask enemyLayers, arrows;
     public float attackRange = 0.5f;
-    public int damage = 40;
+    public int damage;
     private Rigidbody2D rb; 
 
     public float attackRate = 1f;
@@ -52,8 +52,8 @@ public class OniAttack : MonoBehaviour
         {
             Debug.Log("We hit " + enemy.name);
             enemy.GetComponent<SimpleEnemy>().TakeDamage(damage);
-            
         }
+
 
 
     }
