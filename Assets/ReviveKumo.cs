@@ -51,7 +51,6 @@ public class ReviveKumo : MonoBehaviour
 
     IEnumerator Revive()
     {
-        
         yield return new WaitForSeconds(WaitForReviveTime);
 
         GameObject.Find("Kumo").GetComponent<PlayerHealth>().health = 5;
