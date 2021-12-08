@@ -28,6 +28,7 @@ public class ShieldmanAI : MonoBehaviour
     public Transform backCheck;
 
     public LayerMask enemyLayer;
+    public Collider2D shieldCollider;
 
     public Animator animator;
 
@@ -54,6 +55,9 @@ public class ShieldmanAI : MonoBehaviour
         {
             StartCoroutine(Attack());
         }
+
+        if(shieldCollider.CompareTag("kunai"))
+            SoundManager.PlaySound("kumoAttack");
     }
 
     private void FixedUpdate()
