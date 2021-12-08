@@ -37,7 +37,9 @@ public class OniBlock : MonoBehaviour
     void Shoot()
     {
         //shooting logic
+        SoundManager.PlaySound("parry");
         Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
+
 
     }
 

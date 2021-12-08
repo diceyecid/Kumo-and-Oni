@@ -29,6 +29,7 @@ public class SpearmanAI : MonoBehaviour
     public Transform backCheck;
 
     public LayerMask enemyLayer;
+    public LayerMask bossLayer;
 
     public Animator animator;
 
@@ -85,7 +86,7 @@ public class SpearmanAI : MonoBehaviour
     void Patrol()
     {
         //flip when no more ground or touches walk
-        if (mustTurn || bodyCollider.IsTouchingLayers(groundLayer) || playerBehind || bodyCollider.IsTouchingLayers(enemyLayer))
+        if (mustTurn || bodyCollider.IsTouchingLayers(groundLayer) || playerBehind || bodyCollider.IsTouchingLayers(enemyLayer) || bodyCollider.IsTouchingLayers(bossLayer))
         {
             Flip();
         }

@@ -43,8 +43,9 @@ public class PlayerHealth : MonoBehaviour
 		if( health > 0 && !isInvincible )
 		{
 			health -= damage;
+			SoundManager.PlaySound("damaged");
 
-			if( healthUI )
+			if ( healthUI )
 			{
 				healthUI.LosePoint();		
 			}
