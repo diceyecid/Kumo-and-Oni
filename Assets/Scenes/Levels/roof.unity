@@ -48625,6 +48625,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1910329587676189822, guid: 0b8f7253961594b3cbef7a7a59ec43fb, type: 3}
+      propertyPath: m_TagString
+      value: eyeOfSky
+      objectReference: {fileID: 0}
     - target: {fileID: 8830519241302931489, guid: 0b8f7253961594b3cbef7a7a59ec43fb, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -49277,7 +49281,7 @@ GameObject:
   - component: {fileID: 1058901368}
   m_Layer: 0
   m_Name: artifact 2
-  m_TagString: Untagged
+  m_TagString: eyeOfSky
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

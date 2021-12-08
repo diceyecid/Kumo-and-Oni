@@ -13,19 +13,9 @@ public class GameOverScreen : MonoBehaviour
         print("Gameover screen active");
     }
 
-    public void ReloadLevel1()
+    public void RetryButton()
     {
 		SceneLoader.ResetLevel();
-    }
-
-    public void ReloadLevel2()
-    {
-        SceneLoader.LoadLevel2();
-    }
-
-    public void ReloadLevel3()
-    {
-        SceneLoader.LoadLevel3();
     }
 
     public void ExitButton()

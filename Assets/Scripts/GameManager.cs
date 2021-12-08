@@ -15,8 +15,8 @@ public class GameManager : MonoBehaviour
 
 	public int kumoHealth{ get; private set; }
 	public int oniHealth{ get; private set; }
-	public bool gotArtifact1{ private get; set; }
-	public bool gotArtifact2{ private get; set; }
+	public bool gotHeartOfEarth{ private get; set; }
+	public bool gotEyeOfSky{ private get; set; }
 
 
 
@@ -71,12 +71,6 @@ public class GameManager : MonoBehaviour
 
 
 
-	// initialize game from level 1
-	public void Init()
-	{
-		SceneLoader.LoadLevel1();
-	}
-
 	// players died, game over
 	public void GameOver()
 	{
@@ -110,7 +104,7 @@ public class GameManager : MonoBehaviour
 		kumoHealth = 5;
 		oniHealth = 5;
 		
-		if( gotArtifact1 && gotArtifact2 )
+		if( gotHeartOfEarth && gotEyeOfSky )
 			SceneLoader.LoadGoodEnding();
 		else
 			SceneLoader.LoadBadEnding();

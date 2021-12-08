@@ -22,7 +22,7 @@ public class MainMenuManager : MonoBehaviour
 		ExitButton = this.transform.Find( "ExitButton" ).GetComponent<Button>();
 
 		// Button listeners
-		PlayButton.onClick.AddListener( GameManager.Instance.Init );
+		PlayButton.onClick.AddListener( SceneLoader.LoadIntro );
 		ExitButton.onClick.AddListener( QuitGame );
     }
 

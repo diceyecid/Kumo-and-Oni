@@ -18,6 +18,8 @@ TagManager:
   - kumoStats
   - shield
   - boss
+  - heartOfEarth
+  - eyeOfSky
   layers:
   - Default
   - TransparentFX

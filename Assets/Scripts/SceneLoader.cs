@@ -89,7 +89,6 @@ public static class SceneLoader
 	public static void LoadGameOver()
 	{
 		SceneManager.LoadScene( "GameOver", LoadSceneMode.Single );
-		currentLevel = 0;
 	}
 
 	// Load level

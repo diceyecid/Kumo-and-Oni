@@ -24,5 +24,14 @@ public class collectItem : MonoBehaviour
             door.SetBool("isOpening", true);
             Destroy(this.gameObject);
         }
+		
+		if( gameObject.CompareTag( "heartOfEarth" ) )
+		{
+			GameManager.Instance.gotHeartOfEarth = true;
+		}
+		else if( gameObject.CompareTag( "eyeOfSky" ) )
+		{
+			GameManager.Instance.gotEyeOfSky = true;
+		}
     }
 }

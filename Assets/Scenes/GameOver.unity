@@ -364,7 +364,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1694177427}
         m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
-        m_MethodName: ReloadScene
+        m_MethodName: RetryButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
