@@ -19,7 +19,6 @@ public class hpController : MonoBehaviour
         if (hp > 3) hp = boss1.gameObject.GetComponent<boss>().getHP();
         else hp = boss2.gameObject.GetComponent<stage3>().getHP();
 
-        print(hp);
         if (hp == 10)
         {
             hp10.SetActive(true);

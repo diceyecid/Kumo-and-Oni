@@ -6,6 +6,7 @@ public class groundSpike : MonoBehaviour
 {
     // Start is called before the first frame update
     private Animator[] spikes;
+    private int damage = 1;
     void Start()
     {
         spikes = gameObject.GetComponentsInChildren<Animator>();
@@ -28,4 +29,6 @@ public class groundSpike : MonoBehaviour
             }
         }
     }
+
+
 }
