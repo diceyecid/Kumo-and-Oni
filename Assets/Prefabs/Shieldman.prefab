@@ -370,6 +370,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   backCheck: {fileID: 7090557620291956607}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
   animator: {fileID: 7090557621349592371}
 --- !u!95 &7090557621349592371
 Animator:

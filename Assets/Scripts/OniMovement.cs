@@ -39,6 +39,7 @@ public class OniMovement : MonoBehaviour
 
         if (oniHealth.health > 0)
         {
+            animator.SetBool("revive", false);
             animator.SetBool("Die", false);
 
             if (isGrounded == true)
