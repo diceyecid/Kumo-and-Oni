@@ -15,7 +15,7 @@ public class GameOverScreen : MonoBehaviour
 
     public void ResetButton()
     {
-        SceneManager.LoadScene("Level1");
+        SceneLoader.LoadLevel1();
     }
 
     public void ExitButton()
