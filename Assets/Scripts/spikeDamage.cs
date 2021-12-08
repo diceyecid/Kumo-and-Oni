@@ -14,7 +14,10 @@ public class spikeDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (this.GetComponent<SpriteRenderer>().sprite != null && this.GetComponent<SpriteRenderer>().sprite.name == "shadow_spikes_idle_1")
+        {
+            this.GetComponent<BoxCollider2D>().enabled = true;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)

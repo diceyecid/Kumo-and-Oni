@@ -15,7 +15,6 @@ public class spikeController : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        print(timer);
         if (timer <0)
         {
             timer = 5f;
