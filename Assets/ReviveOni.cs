@@ -50,9 +50,15 @@ public class ReviveOni : MonoBehaviour
 
     IEnumerator Revive()
     {
+		int reviveHealth = 5;
+
         yield return new WaitForSeconds(WaitForReviveTime);
-        GameObject.Find("Oni (bigger scale reference)").GetComponent<PlayerHealth>().health = 5;
+        GameObject.Find("Oni (bigger scale reference)").GetComponent<PlayerHealth>().health = reviveHealth;
         StatsManager oniStats = GameObject.FindWithTag("oniStats").GetComponent<StatsManager>();
-        oniStats.GainPoint();
+
+		for( int i = 0; i < reviveHealth; i++ )
+		{
+			oniStats.GainPoint();
+		}
     }
 }
