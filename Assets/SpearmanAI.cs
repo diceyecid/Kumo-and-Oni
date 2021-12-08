@@ -18,6 +18,7 @@ public class SpearmanAI : MonoBehaviour
     private bool isMoving;
 
     public Rigidbody2D rb;
+    public GameObject myHealth;
 
     public Transform groundCheck;
     public LayerMask groundLayer;
@@ -43,17 +44,20 @@ public class SpearmanAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Walk();
+  
 
-        if (mustPartrol)
-        {
-            Patrol();
-        }
+            Walk();
 
-        if (playerInRange)
-        {
-            StartCoroutine(Attack());
-        }
+            if (mustPartrol)
+            {
+                Patrol();
+            }
+
+            if (playerInRange)
+            {
+                StartCoroutine(Attack());
+            }
+
     }
 
     private void FixedUpdate()
