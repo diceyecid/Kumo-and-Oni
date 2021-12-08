@@ -59,7 +59,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.21650124, y: -0.6085426}
+  m_Offset: {x: 0.35792828, y: -0.6085426}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -70,7 +70,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5669975, y: 0.88297236}
+  m_Size: {x: 0.3649578, y: 0.88297236}
   m_EdgeRadius: 0
 --- !u!1 &7090557620291956604
 GameObject:
@@ -304,7 +304,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3861885, y: -0.6670563}
+  m_Offset: {x: -0.27362537, y: -0.45924646}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -315,7 +315,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.27010345, y: 0.85523796}
+  m_Size: {x: 0.49522972, y: 1.4209427}
   m_EdgeRadius: 0
 --- !u!61 &7090557621349592373
 BoxCollider2D:
@@ -373,6 +373,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
+  shieldCollider: {fileID: 7090557621349592372}
   animator: {fileID: 7090557621349592371}
 --- !u!95 &7090557621349592371
 Animator:

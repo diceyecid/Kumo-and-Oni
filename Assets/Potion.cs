@@ -26,7 +26,8 @@ public class Potion : MonoBehaviour
         {
             KumoHealth = GameObject.Find("Kumo").GetComponent<PlayerHealth>().health;
             KumoHealth += heal;
-            
+            SoundManager.PlaySound("heal");
+
             if (KumoHealth > 5)
             {
                 KumoHealth = 5;
@@ -46,12 +47,12 @@ public class Potion : MonoBehaviour
 
             GameObject.Find("Oni (bigger scale reference)").GetComponent<PlayerHealth>().health = 5;
             OniHealth += heal;
-            print(OniHealth);
+            SoundManager.PlaySound("heal");
+
 
             if (OniHealth > 5)
             {
                 OniHealth = 5;
-                print(OniHealth);
             }
 
             

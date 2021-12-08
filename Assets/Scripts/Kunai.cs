@@ -41,6 +41,7 @@ public class Kunai : MonoBehaviour
         //shooting logic
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         animator.SetBool("attacking", true);
+        SoundManager.PlaySound("kumoAttack");
 
     }
 }

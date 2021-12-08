@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip oniAttackSound, jumpSound, damagedSound, parrySound, leverSound, bowReleaseSound;
+    public static AudioClip oniAttackSound, kumoAttackSound, jumpSound, damagedSound, parrySound, leverSound, bowReleaseSound, healingSound;
     static AudioSource aduioSrc;
 
     // Start is called before the first frame update
     void Start()
     {
         oniAttackSound = Resources.Load<AudioClip>("oniAttack");
+        kumoAttackSound = Resources.Load<AudioClip>("kumoAttack");
         jumpSound = Resources.Load<AudioClip>("jump");
         damagedSound = Resources.Load<AudioClip>("damaged");
         parrySound = Resources.Load<AudioClip>("parry");
         bowReleaseSound = Resources.Load<AudioClip>("bowRelease");
         leverSound = Resources.Load<AudioClip>("lever");
+        healingSound = Resources.Load<AudioClip>("heal");
+
 
         aduioSrc = GetComponent<AudioSource>();
     }
@@ -47,6 +50,12 @@ public class SoundManager : MonoBehaviour
                 break;
             case "lever":
                 aduioSrc.PlayOneShot(leverSound);
+                break;
+            case "heal":
+                aduioSrc.PlayOneShot(healingSound);
+                break;
+            case "kumoAttack":
+                aduioSrc.PlayOneShot(kumoAttackSound);
                 break;
         }
     }
