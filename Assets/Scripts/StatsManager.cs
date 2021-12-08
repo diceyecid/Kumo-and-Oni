@@ -15,12 +15,25 @@ public class StatsManager : MonoBehaviour
 	{
 		MaxPoint = Bar.transform.childCount;
 		Point = MaxPoint;
+
+		// get game manager health
+		if( GameManager.Instance )
+		{
+			if( gameObject.CompareTag( "oniStats" ) )
+			{
+				SetPoint( GameManager.Instance.oniHealth );
+			}
+			else if( gameObject.CompareTag( "kumoStats" ) )
+			{
+				SetPoint( GameManager.Instance.kumoHealth );
+			}
+		}
     }
 
     // Update is called once per frame
     void Update()
     {
-		TestPoint();
+		//TestPoint();
     }
 
 	// Test bar changes
@@ -54,5 +67,35 @@ public class StatsManager : MonoBehaviour
 			Bar.transform.GetChild( Point ).gameObject.SetActive( true );
 			Point++;
 		}
+	}
+
+	// Set point, return if set successful
+	public bool SetPoint( int p )
+	{
+		if( p < 0 || p > MaxPoint )
+			return false;
+
+		else if( p == Point )
+			return true;
+
+		else if( p < Point )
+		{
+			int diff = Point - p;
+			for( int i = 0; i < diff; i++ )
+			{
+				LosePoint();
+			}
+		}
+
+		else if( p > Point )
+		{
+			int diff = Point - p;
+			for( int i = 0; i < diff; i++ )
+			{
+				GainPoint();
+			}
+		}
+
+		return true;
 	}
 }

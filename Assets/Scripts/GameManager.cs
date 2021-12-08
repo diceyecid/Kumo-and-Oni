@@ -13,9 +13,9 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	public int currentLevel;
-	public int kumoHealth;
-	public int oniHealth;
+	public int currentLevel{ get; private set; }
+	public int kumoHealth{ get; private set; }
+	public int oniHealth{ get; private set; }
 
 
 
@@ -47,10 +47,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        GameObject kumo = GameObject.Find("Kumo");
+        GameObject kumo = GameObject.FindWithTag("Kumo");
         PlayerHealth kumoHealth = kumo.GetComponent<PlayerHealth>();
 
-        GameObject oni = GameObject.Find("Oni (bigger scale reference)");
+        GameObject oni = GameObject.FindWithTag("Oni");
         PlayerHealth oniHealth = oni.GetComponent<PlayerHealth>();
 
         if(oniHealth.health <= 0 && kumoHealth.health <= 0)
