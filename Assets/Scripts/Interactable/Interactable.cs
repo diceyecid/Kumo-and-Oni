@@ -15,6 +15,9 @@ public class Interactable : MonoBehaviour
 	private GameObject popup;
 	private Vector3 offset;
 
+	// optional offset
+	public Vector3 customOffset;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +27,15 @@ public class Interactable : MonoBehaviour
 
 		// set up pop up
 		popup = null;
-		offset = new Vector3( 0, GetComponent<SpriteRenderer>().bounds.size.y * 1.5f, 0 );
+
+		if( customOffset != Vector3.zero )
+		{
+			offset = customOffset;
+		}
+		else
+		{
+			offset = new Vector3( 0, GetComponent<SpriteRenderer>().bounds.size.y * 1.5f, 0 );
+		}
     }
 
     // Update is called once per frame
