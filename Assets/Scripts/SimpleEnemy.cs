@@ -24,7 +24,6 @@ public class SimpleEnemy : MonoBehaviour
     
         StartCoroutine(Blink());
 
-        
     }
 
     private IEnumerator Blink()
@@ -44,4 +43,5 @@ public class SimpleEnemy : MonoBehaviour
         Destroy(self);
     }
 }
+
 

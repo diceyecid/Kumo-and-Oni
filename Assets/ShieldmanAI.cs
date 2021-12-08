@@ -56,8 +56,8 @@ public class ShieldmanAI : MonoBehaviour
             StartCoroutine(Attack());
         }
 
-        if(shieldCollider.CompareTag("kunai"))
-            SoundManager.PlaySound("kumoAttack");
+       
+            
     }
 
     private void FixedUpdate()
@@ -152,5 +152,19 @@ public class ShieldmanAI : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, 0.1f);
         Gizmos.DrawWireSphere(playerCheck.position, 0.1f);
         Gizmos.DrawWireSphere(backCheck.position, 0.1f);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("kunai"))
+        {
+            SoundManager.PlaySound("kumoAttack");
+            print("Block");
+        }
     }
 }
