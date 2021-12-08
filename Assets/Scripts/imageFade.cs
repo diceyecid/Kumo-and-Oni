@@ -7,13 +7,13 @@ public class imageFade : MonoBehaviour
 {
     public CanvasGroup img1, img2;
 
-    public void Fade()
+    public void FadeIn()
+    {
+        StartCoroutine(FadeImage(img2, img2.alpha, 1));
+    }
+    public void FadeOut()
     {
         StartCoroutine(FadeImage(img1, img1.alpha, 0));
-        if (img1.alpha == 0)
-        {
-            StartCoroutine(FadeImage(img2, img1.alpha, 1));
-        }
     }
 
     public IEnumerator FadeImage(CanvasGroup cg, float start, float end, float lerp = 0.5f)
@@ -31,10 +31,14 @@ public class imageFade : MonoBehaviour
 
             cg.alpha = current;
 
-            if (percentage >= 1) break;
+            if (percentage >= 1){
+                if (current == 0) Destroy(cg.gameObject);
+                break;
+                }
 
             yield return new WaitForEndOfFrame();
         }
         print("done");
+        
     }
 }
