@@ -325,12 +325,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Long time ago, in the castle of Lord Turudo, Kumo and Oni are two of the
-    best students of Turudo himself.
-
-
-    One day, a magical scroll is received
-    from the Shadow Empire, demanding an unreasonable tribute.'
+  m_text: After fighting their way through their possessed comrades, Kumo and Oni
+    make sure that the casualties are not worthless.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -942,9 +938,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Lord Turudo sends Kumo and Oni to deal with the situation.\n As they have
-    just gone for more than a day, the Shadow Lord has ultimately posses the soul
-    of Turudo.\nThe castle and all its guards are now under the command of the Shadow."
+  m_text: They eventually reach the entrance of the castle, only that the familiar
+    hallways are now stenched by Shadow Magic...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

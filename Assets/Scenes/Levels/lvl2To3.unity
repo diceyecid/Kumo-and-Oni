@@ -436,12 +436,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Long time ago, in the castle of Lord Turudo, Kumo and Oni are two of the
-    best students of Turudo himself.
-
-
-    One day, a magical scroll is received
-    from the Shadow Empire, demanding an unreasonable tribute.'
+  m_text: Having all the riddles solved, the way to Lord Turudo's Chamber are now
+    cleared, but Kumo and Oni can sense a dark and evil force settling inside of
+    the chamber.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -504,7 +501,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -286.09515, y: -206.1948, z: -287.92328, w: -348.70483}
+  m_margin: {x: -286.09515, y: -206.1948, z: -386.2275, w: -348.70483}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -720,9 +717,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Lord Turudo sends Kumo and Oni to deal with the situation.\n As they have
-    just gone for more than a day, the Shadow Lord has ultimately posses the soul
-    of Turudo.\nThe castle and all its guards are now under the command of the Shadow."
+  m_text: The phantom of the Shadow Lord can be seen peeking out of Turudo's body.
+    The entire chamber is covered in darkness, where the Shadow Magic strives. Kumo
+    and Oni have only one option right now, that is to confront the Shadow Lord.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
