@@ -8,9 +8,9 @@ public class textManager : MonoBehaviour
     // Start is called before the first frame update
     public TextAsset textfile;
     private bool finish;
-    List<string> textList = new List<string>();
+    private List<string> textList = new List<string>();
     public int index;
-    bool textFinish;
+    private bool textFinish;
     public Text textLabel;
     void Start()
     {
@@ -26,10 +26,11 @@ public class textManager : MonoBehaviour
             this.gameObject.SetActive(false);
         }
 
-        if (Input.GetMouseButtonDown(0) && textFinish && finish == false)
+        if (Input.GetMouseButtonDown(0) && finish == false)
         {
             StartCoroutine(SetTextUI());
         }
+
     }
 
     void fileReader(TextAsset file)
@@ -50,12 +51,14 @@ public class textManager : MonoBehaviour
         for (int i = 0; i < textList[index].Length; i++)
         {
             textLabel.text += textList[index][i];
+            print(textLabel.text);
             yield return new WaitForSeconds(0.01f);
 
         }
         textFinish = true;
         index++;
 
+        
     }
 }
 
