@@ -187,17 +187,6 @@ public class EnemyScript : MonoBehaviour
             Debug.Log("We hit " + player.name);
             
             player.GetComponent<PlayerHealth>().TakeDamage(damage);
-
-            if (player.CompareTag("Oni"))
-            {
-                StatsManager oniStats = GameObject.FindWithTag("oniStats").GetComponent<StatsManager>();
-                oniStats.LosePoint();
-            }else if (player.CompareTag("Kumo"))
-            {
-                StatsManager kumoStats = GameObject.FindWithTag("kumoStats").GetComponent<StatsManager>();
-                kumoStats.LosePoint();
-            }
-
         }
        
 
