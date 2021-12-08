@@ -22,7 +22,6 @@ public class ReviveOni : MonoBehaviour
         {
             if (KumoInRange && Input.GetKeyDown(KeyCode.F))
             {
-
                 StartCoroutine(Revive());
             }
             else if (!KumoInRange && Input.GetKeyUp(KeyCode.F))
