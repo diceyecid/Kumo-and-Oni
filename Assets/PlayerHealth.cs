@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Start is called before the first frame update
     public int health;
 =======
@@ -12,9 +13,18 @@ public class PlayerHealth : MonoBehaviour
 	
 	private StatsManager healthUI;
 >>>>>>> fdf54fdb9567cc115d286691dc679093ef08d7a3
+=======
+	private const int INV_TIME = 5; 	// invincible time in 0.1 second
+
+    public int health = 100;
+	
+	private StatsManager healthUI;
+	private bool isInvincible;
+>>>>>>> ce3c982e72945d73594cf3d4c893c9a90a9d9e5e
 
 	void Start()
 	{
+		// get healthUI object
 		if( gameObject.CompareTag( "Oni" ) )
 		{
 			if( GameObject.FindWithTag( "oniStats" ) )
@@ -29,15 +39,43 @@ public class PlayerHealth : MonoBehaviour
 				healthUI = GameObject.FindWithTag( "kumoStats" ).GetComponent<StatsManager>();
 			}
 		}
+
+		// not invincible as default
+		isInvincible = false;
 	}
 
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
 
-		if( healthUI )
+	// player takes damage
+    public void TakeDamage( int damage )
+    {
+		if( health > 0 && !isInvincible )
 		{
-			healthUI.LosePoint();		
+			health -= damage;
+
+			if( healthUI )
+			{
+				healthUI.LosePoint();		
+			}
+
+			StartCoroutine( Blink() );
 		}
     }
+
+
+	// blinking animation by altering opacity of sprite
+	private IEnumerator Blink()
+	{
+		SpriteRenderer sr = GetComponent<SpriteRenderer>();
+		Color defaultColor = sr.color;
+
+		isInvincible = true;
+		for( int i = 0; i < INV_TIME; i++ )
+		{
+			sr.color = new Color( 1f, 1f, 1f, 0f );
+			yield return new WaitForSeconds( 0.05f );
+			sr.color = defaultColor;
+			yield return new WaitForSeconds( 0.05f );
+		}
+		isInvincible = false;
+	}
 }
