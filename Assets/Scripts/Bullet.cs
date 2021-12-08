@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed = 20f;
-    public int damage = 40;
+    public float speed;
+    public int damage;
     public Rigidbody2D rb;
-    //public GameObject impactEffect;
+
 
     
     void Start()
@@ -17,16 +17,15 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log(collision.name);
+
 
         SimpleEnemy enemy = collision.GetComponent<SimpleEnemy>();
-        if(enemy != null)
+        
+        if(enemy != null && collision.gameObject.name != "Ballista")
         {
             enemy.TakeDamage(damage);
+
         }
-
-        //Instantiate(impactEffect, transform.position, transform.rotation);
-
     }
 
 	private void OnTriggerStay2D( Collider2D collision )
