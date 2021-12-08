@@ -52,11 +52,12 @@ public class PlayerHealth : MonoBehaviour
 		if( health > 0 && !isInvincible )
 		{
 			health -= damage;
-			SoundManager.PlaySound("damaged");
+			//SoundManager.PlaySound("damaged");
 
 			if ( healthUI )
 			{
-				healthUI.LosePoint();		
+				for( int i = 0; i < damage; i++ )
+					healthUI.LosePoint();		
 			}
 
 			StartCoroutine( Blink() );
