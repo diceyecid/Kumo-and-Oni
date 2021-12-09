@@ -19,7 +19,11 @@ public class stage3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hp == 0) Destroy(this.gameObject);
+        if (hp == 0) 
+		{
+			Destroy(this.gameObject);
+			GameManager.Instance.FinishLevel3();
+		}
         summonTimer--;
 
         if (summonTimer < 0 && hurting == false)
