@@ -19,9 +19,9 @@ public class Cheat : MonoBehaviour
       	ShellMenu.gameObject.SetActive( false );
 
 		// Button listeners
-		Level1.onClick.AddListener( SceneLoader.LoadLevel1 );
-		Level2.onClick.AddListener( SceneLoader.LoadLevel2 );
-		Level3.onClick.AddListener( SceneLoader.LoadLevel3 );
+		Level1.onClick.AddListener( SceneLoader.LoadIntro );
+		Level2.onClick.AddListener( SceneLoader.LoadTransition1 );
+		Level3.onClick.AddListener( SceneLoader.LoadTransition2 );
     }
 
 	void Update()
