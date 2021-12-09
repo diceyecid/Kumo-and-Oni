@@ -43,8 +43,12 @@ public class boss : MonoBehaviour
             {
                 if (this.GetComponent<Animator>().GetBool("isSummoning"))
                 {
-                    if (randomN == 0)Instantiate(summon, new Vector2(Random.Range(-10, 20), -2.7f), this.transform.rotation);
-                    else if (randomN == 1) Instantiate(blade, new Vector2(this.transform.position.x, this.transform.position.y -1), this.transform.rotation);
+                    if (randomN == 0) Instantiate(summon, new Vector2(Random.Range(-10, 20), -2.7f), this.transform.rotation);
+                    else if (randomN == 1)
+                    {
+                        SoundManager.PlaySound("slash");
+                        Instantiate(blade, new Vector2(this.transform.position.x, this.transform.position.y - 1), this.transform.rotation);
+                    }
                 }
                 summonTimer = 600;
                 this.GetComponent<Animator>().SetBool("isSummoning", false);
@@ -69,26 +73,36 @@ public class boss : MonoBehaviour
                         switch (num)
                         {
                             case 1:
+                                SoundManager.PlaySound("spike");
                                 spikes.transform.GetChild(0).gameObject.SetActive(true);
                                 break;
                             case 2:
+                                SoundManager.PlaySound("spike");
                                 spikes.transform.GetChild(1).gameObject.SetActive(true);
                                 break;
                             case 3:
+                                SoundManager.PlaySound("spike");
                                 spikes.transform.GetChild(2).gameObject.SetActive(true);
                                 break;
                             case 4:
+                                SoundManager.PlaySound("spike");
                                 spikes.transform.GetChild(3).gameObject.SetActive(true);
                                 break;
                             case 5:
+                                SoundManager.PlaySound("spike");
                                 spikes.transform.GetChild(4).gameObject.SetActive(true);
                                 break;
                             case 6:
+                                SoundManager.PlaySound("spike");
                                 spikes.transform.GetChild(5).gameObject.SetActive(true);
                                 break;
                         }
                     }
-                    else if (randomN == 1) Instantiate(blade, new Vector2(this.transform.position.x, this.transform.position.y - 1), this.transform.rotation);
+                    else if (randomN == 1)
+                    {
+                        SoundManager.PlaySound("slash");
+                        Instantiate(blade, new Vector2(this.transform.position.x, this.transform.position.y - 1), this.transform.rotation);
+                    }
                 }
                 summonTimer = 400;
                 this.GetComponent<Animator>().SetBool("isSummoning", false);
