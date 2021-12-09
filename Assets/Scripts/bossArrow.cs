@@ -15,8 +15,12 @@ public class bossArrow : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
+    }
 
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.gameObject.name == "Oni (bigger scale reference)")
         {
             GameObject.Find("Oni (bigger scale reference)").GetComponent<PlayerHealth>().TakeDamage(damage);
@@ -25,8 +29,5 @@ public class bossArrow : MonoBehaviour
         {
             GameObject.Find("Kumo").GetComponent<PlayerHealth>().TakeDamage(damage);
         }
-
-
     }
-
 }

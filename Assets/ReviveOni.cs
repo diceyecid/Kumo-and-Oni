@@ -22,7 +22,6 @@ public class ReviveOni : MonoBehaviour
         {
             if (KumoInRange && Input.GetKeyDown(KeyCode.F))
             {
-                print("revive");
                 StartCoroutine(Revive());
             }
             else if (!KumoInRange && Input.GetKeyUp(KeyCode.F))
@@ -53,9 +52,10 @@ public class ReviveOni : MonoBehaviour
 
     IEnumerator Revive()
     {
-        animator.SetBool("revive", true);
+       
 
         yield return new WaitForSeconds(WaitForReviveTime);
+        SoundManager.PlaySound("heal");
 
         GameObject.Find("Oni (bigger scale reference)").GetComponent<PlayerHealth>().health = 5;
         StatsManager oniStats = GameObject.FindWithTag("oniStats").GetComponent<StatsManager>();
